@@ -20,16 +20,6 @@ GeoDIDs are:
 > **✅ Web3-native. \(?\)**  
 > GeoDIDs are optimized to be decentralized. \(more detail and justification here\)
 
-{% tabs %}
-{% tab title="First Tab" %}
-
-{% endtab %}
-
-{% tab title="Second Tab" %}
-
-{% endtab %}
-{% endtabs %}
-
 \[sweet satellite image here\]
 
 ### Why are GeoDIDs necessary?
