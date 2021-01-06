@@ -1,8 +1,8 @@
-# Initial page
+# Welcome
 
-Welcome to the Astral Protocol. 
+{% hint style="info" %}
+**Need some information about Astral?**
+{% endhint %}
 
-We are building tools to help Web3 developers work with spatial data in their decentralized applications. 
-
-### 
+Astral docs serves as the main hub for all Astral documentation:
 
