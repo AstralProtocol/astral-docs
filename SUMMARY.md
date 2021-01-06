@@ -1,7 +1,17 @@
 # Table of contents
 
-* [Astral](README.md)
+* [Intro](README.md)
 * [Progress](progress.md)
-* [GeoDIDs](geodids.md)
-* [Whitepaper](whitepaper.md)
+
+## Whitepaper <a id="whitepaper-1"></a>
+
+* [Description](whitepaper-1/description.md)
+
+## GeoDIDs <a id="geodids-1"></a>
+
+* [GeoDIDs](geodids-1/geodids.md)
+
+## Usage
+
+* [Quick-start](usage/quick-start.md)
 

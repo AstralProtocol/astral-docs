@@ -1,8 +1,8 @@
 ---
-description: Building tools to enable the location-based decentralized web.
+description: Astral - Building tools to enable the location-based decentralized web.
 ---
 
-# Astral
+# Intro
 
 
 
@@ -14,9 +14,9 @@ Astral docs serves as the main hub for all Astral documentation:
 
 {% page-ref page="progress.md" %}
 
-{% page-ref page="geodids.md" %}
 
-{% page-ref page="whitepaper.md" %}
+
+
 
 
 
