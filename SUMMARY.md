@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Astral](README.md)
 * [Progress](progress.md)
 * [GeoDIDs](geodids.md)
+* [Whitepaper](whitepaper.md)
 
