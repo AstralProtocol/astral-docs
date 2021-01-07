@@ -3,13 +3,13 @@
 * [Intro](README.md)
 * [Progress](progress.md)
 
-## Whitepaper <a id="whitepaper-1"></a>
+## Whitepaper
 
-* [Description](whitepaper-1/description.md)
+* [Description](whitepaper/whitepaper-description.md)
 
-## GeoDIDs <a id="geodids-1"></a>
+## GeoDID <a id="geodids"></a>
 
-* [Intro](geodids-1/geodids.md)
+* [Intro](geodids/geodid-intro.md)
 
 ## Usage
 
