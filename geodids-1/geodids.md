@@ -2,7 +2,7 @@
 description: A primer on geographic decentralized identifiers
 ---
 
-# GeoDIDs
+# Intro
 
 A GeoDID is a [decentralized identifier](https://w3c-ccg.github.io/did-spec/) for identifying _**spatial data assets**_ for use in Web3 applications. 
 

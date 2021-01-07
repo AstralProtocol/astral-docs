@@ -9,7 +9,7 @@
 
 ## GeoDIDs <a id="geodids-1"></a>
 
-* [GeoDIDs](geodids-1/geodids.md)
+* [Intro](geodids-1/geodids.md)
 
 ## Usage
 
