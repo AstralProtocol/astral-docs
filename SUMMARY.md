@@ -10,6 +10,8 @@
 ## GeoDID <a id="geodids"></a>
 
 * [Intro](geodids/geodid-intro.md)
+* [Why are GeoDIDs necessary?](geodids/why-are-geodids-necessary.md)
+* [What is a "spatial data asset"?](geodids/what-is-a-spatial-data-asset.md)
 
 ## Usage
 
