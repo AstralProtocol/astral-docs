@@ -36,10 +36,9 @@ polygon = [[[ -43.06640, 17.47643 ],
             [ -37.26562, 11.52308 ],
             [ -43.06640, 17.47643 ]]]
             # ^^ The first and last coordinate are the same
-
 ```
 
-![Example of vector features from Saylor Academy, https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s11-geospatial-analysis-i-vector-o.html.](../.gitbook/assets/vector.jpg)
+![Example of vector features from Saylor Academy, https://saylordotorg.github.io/text\_essentials-of-geographic-information-systems/s11-geospatial-analysis-i-vector-o.html.](../.gitbook/assets/vector.jpg)
 {% endtab %}
 {% endtabs %}
 
@@ -48,3 +47,4 @@ Spatial data assets are data assets - binary files, or directories of files - th
 {% hint style="info" %}
 More background on [GeoJSON](https://macwright.com/2015/03/23/geojson-second-bite.html) and [geojson.io](http://geojson.io/), a tool for creating and exploring GeoJSON files, and more on [GeoTIFFs](https://www.gislounge.com/what-is-a-geotiff/), plus a [sample](https://cbers.stac.cloud/item/wMAdB8x2xmsNbdUHrc28srEdZpy/A6ExZs3csirxV7jSsrFicBf2TKBJB9xubxeAy/h88cG3tZLsmVu6iM7Mjx5Pg5agdpJnF346adC9/5XYvhxvrpCphAXhLWgKjphETpsBRhKdZV1d8LAooTo3K/93J54CWKozr1bRfaJ86XbTqHyztjFiPbckxGhpGCb9tDFFyG9NFRRyXGchpjoZzHNL2HJ2PYVENgW9?si=0&t=preview#6/-34.060280/-64.037544).
 {% endhint %}
+
