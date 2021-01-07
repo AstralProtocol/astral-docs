@@ -2,7 +2,7 @@
 description: Astral - Building tools to enable the location-based decentralized web.
 ---
 
-# Intro
+# Index
 
 
 
