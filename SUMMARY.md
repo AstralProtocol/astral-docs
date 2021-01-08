@@ -2,7 +2,6 @@
 
 * [Index](README.md)
 * [Progress](progress.md)
-* [Roadmap](roadmap.md)
 
 ## Whitepaper
 
