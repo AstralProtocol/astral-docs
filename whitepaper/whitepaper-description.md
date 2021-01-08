@@ -1,18 +1,21 @@
-# Introduction
+# Motivation
 
 Spatial data contains information relevant to locations in the physical world. Different locations have different rules - depending on where you are you have to abide to a different regulatory framework.
 
 To create decentralized applications that leverage spatial data and location information, we need to be able to store and access spatial data in ways that ensure it is simple and reliable for Web3 developers to work with. 
 
-{% hint style="info" %}
-The purpose of the Astral project is to create the bindings between Web3 and spatial data technologies.
-{% endhint %}
+**Geospatial data matters.**
 
-The Astral project encompasses the research and development of the [GeoDID ](../geodids/geodid-intro.md)specification and IPLD encoded geoTIFFs. It will also include the development of the Astral Protocol, which will implement the CRUD operations related to the GeoDID Documents and the pre-processing of the GeoTIFFs.
+But there are issues with the way it is  being used:
 
-The GeoDID specification will act as the default web3 specification for working with geo-spatial data sets. Each DID Document will contain several assets endpoints and its respective metadata. The IPLD encoded GeoTIFFs will be implemented through an IPLD codec that will encode the GeoTIFF and enable GET Range requests, by a byte serving technique that will query the proper bytes through IPLD selectors.
+* Lack of transparency between spatial data providers and end users. How do we know spatial data can be trusted?
+* No Web3 app has truly been able to bring the blockchain nature into the “real world”
+* Spatial enabled fields, like finance, cannot move forward unless there is a proven way to ensure the validity of geospatial data 
 
-**The desired result of this project is to bring geospatial capabilities to the web3 ecosystem. By creating the necessary specifications and tools, we can enable the use of geospatial data and analysis within web3, which, in turn, will create a new wave of decentralized applications and use cases of this kind of data.**
+**In sum, we need a better way to access and archive satellite and sensor data.**
 
-Our research and development efforts are showing that innovations at the convergence of these technologies will enable an ecosystem of new, durable tools and mechanisms to re-align human and organizational incentives towards agreed-upon social and environmental objectives.
+Now, consensus networks create a durable shared reality in the informational domain, and smart contracts enable anyone to program incentives based on arbitrary conditions.
+
+We believe that bringing advanced spatial data technologies into the Web3 fold will enable an ecosystem of spatial dApps to support our transition to a just, sustainable and resilient world.   
+
 

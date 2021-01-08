@@ -6,8 +6,10 @@
 
 ## Whitepaper
 
-* [Introduction](whitepaper/whitepaper-description.md)
-* [Value of the Protocol](whitepaper/value-of-the-protocol.md)
+* [Motivation](whitepaper/whitepaper-description.md)
+* [Value](whitepaper/value-of-the-protocol.md)
+* [The Overall Capability](whitepaper/the-overall-capability.md)
+* [Astral](whitepaper/astral.md)
 
 ## GeoDID <a id="geodids"></a>
 

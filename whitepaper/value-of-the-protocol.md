@@ -1,4 +1,4 @@
-# Value of the Protocol
+# Value
 
 For the past 10 years, the geospatial community has been building and solidifying a native ecosystem in the web2 space. AWS S3, AWS Lambda, GCP BigQuery GIS, to name a few. The go-to standard for storing, retrieving, processing, and analyzing geospatial data, has traditionally been with cloud service providers.
 
