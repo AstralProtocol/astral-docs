@@ -12,8 +12,6 @@ Our vision is to build a protocol and community dedicated to creating an ecosyst
 
 Astral docs serves as the main hub for all Astral documentation:
 
-{% page-ref page="roadmap.md" %}
-
 {% page-ref page="progress.md" %}
 
 
