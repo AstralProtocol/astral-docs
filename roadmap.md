@@ -25,7 +25,6 @@ Tech, Growth, Community.
         <ul>
           <li>/# of projects using Astral code</li>
           <li>$ funding raised on Gitcoin</li>
-          <li></li>
         </ul>
       </td>
     </tr>
@@ -36,7 +35,6 @@ Tech, Growth, Community.
           <li>/# number of funders on Gitcoin</li>
           <li>/# of countries represented</li>
           <li>/# of active contributors</li>
-          <li>???</li>
         </ul>
       </td>
     </tr>
@@ -47,7 +45,7 @@ Tech, Growth, Community.
 
 #### **Tech**
 
-* [ ] **PRODUCT**-**MARKET** **FIT?!?!**
+* [ ] **PRODUCT**-**MARKET** **FIT?**
 * [ ] Plan and architect: spatial data , oracle, smart contracts and tools.
 * [ ] Filecoin Grant Tasks:
   * [ ] Research, write and submit draft GeoDID Method Specification.
