@@ -12,9 +12,9 @@
 
 ## GeoDID <a id="geodids"></a>
 
-* [Introduction](geodids/geodid-intro.md)
-* [Why are GeoDIDs necessary?](geodids/why-are-geodids-necessary.md)
-* [What is a "spatial data asset"?](geodids/what-is-a-spatial-data-asset.md)
+* [Introduction](geodids/geodid-intro/README.md)
+  * [Why are GeoDIDs necessary?](geodids/geodid-intro/why-are-geodids-necessary.md)
+  * [What is a "spatial data asset"?](geodids/geodid-intro/what-is-a-spatial-data-asset.md)
 * [Core specification](geodids/core-specification.md)
 * [GeoDID Extensions](geodids/geodid-extensions.md)
 

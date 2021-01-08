@@ -18,7 +18,7 @@ img = [[ 1, 0, 1 ],
        [ 1, 0, 1 ]]
 ```
 
-![](../.gitbook/assets/raster.png)
+![](../../.gitbook/assets/raster.png)
 {% endtab %}
 
 {% tab title="Vector" %}
@@ -38,7 +38,7 @@ polygon = [[[ -43.06640, 17.47643 ],
             # ^^ The first and last coordinate are the same
 ```
 
-![Example of vector features from Saylor Academy, https://saylordotorg.github.io/text\_essentials-of-geographic-information-systems/s11-geospatial-analysis-i-vector-o.html.](../.gitbook/assets/vector.jpg)
+![Example of vector features from Saylor Academy, https://saylordotorg.github.io/text\_essentials-of-geographic-information-systems/s11-geospatial-analysis-i-vector-o.html.](../../.gitbook/assets/vector.jpg)
 {% endtab %}
 {% endtabs %}
 
