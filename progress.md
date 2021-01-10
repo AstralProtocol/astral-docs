@@ -8,6 +8,16 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### 12 January 2020
+
+* Joined KERNEL 2 - Fairlaunch track!
+* Published our [Gitbook](https://docs.astral.global/) with Astral documentation.
+* Drafting GeoDID Method Specification, working on scaling problems with IPLD-encoded GeoTIFFs for the Filecoin Development Grant.
+* Advisory call with Andrew Hill, CEO at [Textile](https://textile.io/) - great advice on how to approach to building Web3-native geospatial technologies.
+* Community
+  * 58 Twitter followers
+  * 29 Gitcoin grant contributors
+
 #### 5 January 2020
 
 * Astral received a [Filecoin Development Grant](https://filecoin.io/blog/filecoin-dev-grants-wave-4-5-gitcoin/) to develop a few key pieces of the Astral Protocol: a GeoDID Method Specification \(more soon!\) and IPLD-encoded GeoTIFFs, for Web3-native geospatial imagery. [Our grant details](https://github.com/filecoin-project/devgrants/blob/efaac115b71df7b373354c72600aa9818fc6710a/open-grant-proposals/open-proposal-astral-protocol.md).

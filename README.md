@@ -2,7 +2,7 @@
 description: Astral - Building tools to enable the location-based decentralized web.
 ---
 
-# Index
+# Welcome
 
 Our vision is to build a protocol and community dedicated to creating an ecosystem of location-based Web3 applications and spatial contracts. A modular architecture, each component useful on its own, but designed to work together.
 
