@@ -9,7 +9,11 @@
   * [GeoDIDs](astral-protocol/geodids-1.md)
   * [Oracles](astral-protocol/oracles.md)
   * [Spatial Contracts](astral-protocol/spatial-contracts.md)
-  * [Astral Protocol](astral-protocol/astral.md)
+  * [Astral Protocol](astral-protocol/astral/README.md)
+    * [Primer](astral-protocol/astral/primer.md)
+    * [Default GeoDID](astral-protocol/astral/default-geodid.md)
+    * [GeoDID Collection Specification](astral-protocol/astral/geodid-collection-specification.md)
+    * [GeoDID Item Specification](astral-protocol/astral/geodid-item-specification.md)
 * [Progress](progress.md)
 
 ## Develop

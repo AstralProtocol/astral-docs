@@ -1,0 +1,2 @@
+# GeoDID Collection Specification
+
