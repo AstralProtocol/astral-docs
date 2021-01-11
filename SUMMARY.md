@@ -31,15 +31,12 @@
   * [GeoDID Item Specification](geodids/geodid-core-specification/geodid-item-specification.md)
   * [GeoDID Collection Specification](geodids/geodid-core-specification/geodid-collection-specification.md)
   * [GeoDID Extensions Overview](geodids/geodid-core-specification/geodid-extensions.md)
-
----
-
-* [GeoDID Extensions](geodid-extensions-1/README.md)
-  * [GeoJSON](geodid-extensions-1/geojson.md)
-  * [GeoTIFF](geodid-extensions-1/geotiff/README.md)
-    * [IPLD-encoded GeoTIFF](geodid-extensions-1/geotiff/ipld-encoded-geotiff.md)
-    * [Cloud-optimized GeoTIFF](geodid-extensions-1/geotiff/cloud-optimized-geotiff.md)
-  * [STAC](geodid-extensions-1/stac/README.md)
-    * [STAC Items](geodid-extensions-1/stac/stac-items.md)
-    * [STAC Catalogs](geodid-extensions-1/stac/stac-catalogs.md)
+* [GeoDID Extensions](geodids/geodid-extensions-1/README.md)
+  * [GeoJSON](geodids/geodid-extensions-1/geojson.md)
+  * [GeoTIFF](geodids/geodid-extensions-1/geotiff/README.md)
+    * [IPLD-encoded GeoTIFF](geodids/geodid-extensions-1/geotiff/ipld-encoded-geotiff.md)
+    * [Cloud-optimized GeoTIFF](geodids/geodid-extensions-1/geotiff/cloud-optimized-geotiff.md)
+  * [STAC](geodids/geodid-extensions-1/stac/README.md)
+    * [STAC Items](geodids/geodid-extensions-1/stac/stac-items.md)
+    * [STAC Catalogs](geodids/geodid-extensions-1/stac/stac-catalogs.md)
 
