@@ -46,8 +46,6 @@ These docs will help you learn more about spatial data and how it works, exactly
 
 {% page-ref page="../../develop/geodid-quick-start.md" %}
 
-{% page-ref page="../../develop/astral-documentation/" %}
-
 {% page-ref page="../geodid-core-specification/" %}
 
 

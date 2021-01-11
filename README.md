@@ -12,7 +12,11 @@ Our vision is to build a protocol and community dedicated to creating an ecosyst
 
 Astral docs serves as the main hub for all Astral documentation:
 
+{% page-ref page="astral-protocol/" %}
+
 {% page-ref page="progress.md" %}
+
+{% page-ref page="develop/geodid-quick-start.md" %}
 
 
 

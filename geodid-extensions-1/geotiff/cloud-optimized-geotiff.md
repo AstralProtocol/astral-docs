@@ -1,0 +1,2 @@
+# Cloud-optimized GeoTIFF
+

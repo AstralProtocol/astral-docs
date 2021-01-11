@@ -1,0 +1,4 @@
+# GeoDID Collection Specification
+
+TBA
+

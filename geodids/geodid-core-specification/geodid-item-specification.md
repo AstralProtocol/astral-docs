@@ -1,0 +1,4 @@
+# GeoDID Item Specification
+
+TBA
+

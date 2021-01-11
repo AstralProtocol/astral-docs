@@ -10,7 +10,7 @@ The components stitched together to enable this new spatial dApp ecosystem are:
 * **Data storage** on distributed systems.
 * **Data analytics**, including privacy-preserving techniques like compute-to-data and enclave computing. 
 * An **oracle** system
-* And our governance and spatial registry **smart contracts**
+* Governance and spatial registry **smart contracts**
 
 ![Astral Protocol: Web3 spatial data standard](../.gitbook/assets/image%20%282%29.png)
 
