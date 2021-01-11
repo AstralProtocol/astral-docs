@@ -17,6 +17,9 @@ So naturally, we ask:
 * How could spatial data and Web3 technologies fit together? 
 * How might we make use of this convergence, to serve us in our task of improving measures of human dignity, and our ability to act as stewards of the planet? 
 
-As a response to our enquiry into these questions, we propose the **Astral Protocol**.  
+As a response to our enquiry into these questions, we are creating the **Astral Protocol**.
+
+
+
 
 

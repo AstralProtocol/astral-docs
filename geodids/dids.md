@@ -14,17 +14,11 @@ Each [DID document](https://www.w3.org/TR/did-core/#dfn-did-documents) can expre
 
 ![Figure 1: The basic architecture of the DID ](../.gitbook/assets/screen-shot-2021-01-10-at-10.40.34-am.png)
 
-DID Controller -
+To learn more about DIDs and why they're useful:
 
-DID Method -
+* [W3C DID Core](https://w3c.github.io/did-core/)
+* [Ceramic Network](https://ceramic.network/)
+* [Decentralized identifiers fundamentals and deep dive](https://www.youtube.com/watch?v=SHuRRaOBMz4)
 
-Verifiable Data Registry -
 
-DID Subject -
-
-DID Document - 
-
-DID Resolver - 
-
-Resolving vs. Dereferencing -
 

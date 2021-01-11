@@ -1,4 +1,4 @@
 # GeoDID Collection Specification
 
-TBA
+Under construction - stay tuned! [@AstralProtocol](https://twitter.com/AstralProtocol)
 

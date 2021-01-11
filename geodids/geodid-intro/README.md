@@ -8,16 +8,16 @@ A GeoDID is a [decentralized identifier](https://w3c-ccg.github.io/did-spec/) fo
 
 GeoDIDs are:
 
-**✅User-controlled.**  
+**✅   User-controlled.**  
 DIDs are independently created in a permissionless way: no centralized authority is required to approve or issue identifiers.
 
-**✅Cryptographically-verifiable.**  
+**✅   Cryptographically-verifiable.**  
 DIDs are controlled using cryptographic keys - not your key, not your data.
 
-**✅Versatile and composable.**  
+**✅   Versatile and composable.**  
 GeoDIDs are designed to represent spatial data in as flexible a way as possible. This means they can be adapted to suit user requirements - from cryptonative dapps to enterprise and government use cases - and can be [integrated across platforms and ecosystems](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#interoperable-data-ecosystems).
 
-**✅Web3-native.**   
+**✅   Web3-native.**   
 GeoDIDs are built to be a building block for the mobile and location-based decentralized web. 
 
 ![Silvery oil slicks near the mouth of the Mississippi River, captured by NASA&apos;s Terra spacecraft in 2010. https://www.nasa.gov/topics/earth/features/oil20100526.html](../../.gitbook/assets/satellite.jpg)
@@ -43,8 +43,6 @@ Our vision is to develop a set of tools for working with spatial data in smart c
 To easily create, read, update and destroy GeoDIDs, Astral is developing software modules to abstract away a lot of complexity of working with DIDs, varying spatial data formats etc. 
 
 These docs will help you learn more about spatial data and how it works, exactly what's going on under the hood with GeoDIDs, or to dive straight into building.
-
-{% page-ref page="../../develop/geodid-quick-start.md" %}
 
 {% page-ref page="../geodid-core-specification/" %}
 

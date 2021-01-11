@@ -2,7 +2,7 @@
 
 
 
-// Talk about IPLD-encoding of STAC stuff :D 
+Under construction - stay tuned! [@AstralProtocol](https://twitter.com/AstralProtocol)
 
 {% page-ref page="stac-items.md" %}
 

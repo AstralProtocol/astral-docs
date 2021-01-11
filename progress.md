@@ -13,7 +13,7 @@ description: Weekly updates from the Astral team
 * Drafting GeoDID Method Specification, working on scaling problems with IPLD-encoded GeoTIFFs for the Filecoin Development Grant.
 * Advisory call with Andrew Hill, CEO at [Textile](https://textile.io/) - great advice on how to approach to building Web3-native geospatial technologies.
 * Community
-  * 58 Twitter followers
+  * 61 Twitter followers
   * 29 Gitcoin grant contributors
 
 #### 5 January 2020

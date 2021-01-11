@@ -4,16 +4,16 @@
 * [Astral Protocol](astral-protocol/README.md)
   * [Motivation](astral-protocol/whitepaper-description.md)
   * [Value](astral-protocol/value-of-the-protocol.md)
-  * [The Overall Capability](astral-protocol/the-overall-capability.md)
-  * [Astral Protocol](astral-protocol/astral/README.md)
-    * [GeoDID Specification](astral-protocol/astral/geodids-1.md)
-    * [Oracles](astral-protocol/astral/oracles.md)
-    * [Spatial Contracts](astral-protocol/astral/spatial-contracts.md)
+  * [The Stack](astral-protocol/the-overall-capability/README.md)
+    * [Data](astral-protocol/the-overall-capability/geodids-1.md)
+    * [Oracles](astral-protocol/the-overall-capability/oracles.md)
+    * [Spatial Contracts](astral-protocol/the-overall-capability/spatial-contracts.md)
+  * [Astral Protocol](astral-protocol/astral.md)
 * [Progress](progress.md)
 
 ## Develop
 
-* [Build with Astral](develop/build-with-astral.md)
+* [Build Astral](develop/build-with-astral.md)
 * [Quickstart](develop/geodid-quick-start.md)
 * [Storing spatial data](develop/storing-spatial-data.md)
 * [Creating GeoDIDs](develop/creating-geodids.md)
@@ -39,4 +39,8 @@
   * [STAC](geodids/geodid-extensions-1/stac/README.md)
     * [STAC Items](geodids/geodid-extensions-1/stac/stac-items.md)
     * [STAC Catalogs](geodids/geodid-extensions-1/stac/stac-catalogs.md)
+
+---
+
+* [Roadmap](roadmap.md)
 
