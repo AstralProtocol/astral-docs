@@ -16,8 +16,6 @@ This Gitbook serves as the main hub for all Astral documentation:
 
 {% page-ref page="progress.md" %}
 
-{% page-ref page="develop/geodid-quick-start.md" %}
-
 {% page-ref page="roadmap.md" %}
 
 
