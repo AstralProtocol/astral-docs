@@ -4,8 +4,6 @@ description: Weekly updates from the Astral team
 
 # Progress
 
-
-
 ### Weekly Updates
 
 #### 12 January 2020
