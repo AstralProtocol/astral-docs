@@ -14,11 +14,11 @@ Astral is creating tools and standards to work with geospatial and location data
 
 The applications enabled by the spatial data layer of the decentralized web are wide-ranging and revolutionary - and we have barely touched the surface. We are learning by building - some examples:
 
-* We prototyped [Spatial.sol](https://github.com/AstralProtocol/spatial-sol) - a library of geometric and topological functions in Solidity,
-* We prototyped [Geolocker](https://github.com/johnx25bd/ethlondon), a verifiable spatial data registry on 3Box and Ethereum, with a team at ETHLondon 2020,
+* We prototyped [Spatial.sol](https://github.com/AstralProtocol/spatial-sol) - a library of geometric and topological functions in Solidity.
+* We prototyped [Geolocker](https://github.com/johnx25bd/ethlondon), a verifiable spatial data registry on 3Box and Ethereum, with a team at ETHLondon 2020.
 * We designed the Hyperaware Protocol - a spatial governance protocol for connected devices - and built [a prototype implementation](https://hyperaware.io/) - a congestion zone system running on IoT + smart contracts.
-* We participated in KERNEL's Genesis Block, where a team formed and we built a ****[**prototype sustainability-linked bond**](https://github.com/AstralProtocol/sprout) ****on Ethereum and IPFS, which aligns financial and ecological incentives by adjusting the amount a borrower needs to pay each year based on a measurement of environmental health,
-* We started work on "geographic decentralized identifiers", or GeoDIDs, during the APOLLO Fellowship, and won prizes at the ETHOnline and the SkynetDB hackathons for our work prototyping tools to work with satellite imagery stored using GeoDIDs
+* We participated in KERNEL's Genesis Block, where a team formed and we built a ****[prototype sustainability-linked bond](https://github.com/AstralProtocol/sprout) ****on Ethereum and IPFS, which aligns financial and ecological incentives by adjusting the amount a borrower needs to pay each year based on a measurement of environmental health.
+* We started work on "geographic decentralized identifiers", or GeoDIDs, during the APOLLO Fellowship, and won prizes at the ETHOnline and the SkynetDB hackathons for our work prototyping tools to work with satellite imagery stored using GeoDIDs.
 
 All of these projects point towards our goal, which is to develop the capability to work with spatial data on the decentralized web. We've realized that we need to develop the specifications and tools needed to work with this type of data in the web3 space, without having to opt for a web2 alternative. 
 

@@ -4,14 +4,9 @@
 
 ## **Abstract**
 
-[Decentralized Identifiers \(DIDs\)](https://w3c.github.io/did-core/) are globally-unique identifiers that 
+Geographic decentralized identifiers, or GeoDIDs, are DIDs designed to identify spatial data assets and to be compatible with any distributed ledger or network. Spatial data has unique properties that require special treatment; this GeoDID Method Specification defines an approach in creating, reading, updating and deleting identifiers for these assets using DIDs. 
 
-Geographic decentralized identifiers, or GeoDIDs, are DIDs designed to identify spatial data assets. Spatial data has unique properties that require special treatment; this GeoDID Method Specification defines an approach in creating, reading, updating and deleting identifiers for these assets using DIDs. 
-
-
-
-designed to be compatible with any distributed ledger or network. The GeoDID method is meant to make working with DIDs very simple when trusting Spatial Data Providers for assisting in resolving DID Documents \(geotiff files and geojson files within datasets\). **\[this is a bit misleading - GeoDIDs will be used by spatial data providers - but that**   
-
+The GeoDID method is meant to make working with DIDs very simple when trusting Spatial Data Providers for assisting in resolving DID Documents \(geotiff files and geojson files within datasets\). **\[this is a bit misleading - GeoDIDs will be used by spatial data providers - but that** 
 
 Linked Data Signatures are difficult to work with when operating a server or running a local node of some distributed system / blockchain is a requirement.  
 

@@ -16,14 +16,14 @@ We're developing Geographic Decentralized Identifiers \(GeoDIDs\) as the primiti
 
 ### Oracles
 
-To date our oracle systems are quite simple, and we're looking for strong developers who are interested in implementing Chainlink \(or other\) oracles to pull spatial data from GeoDIDs into smart contracts.
+To date our oracle systems are quite simple, and we're looking for developers who are interested in implementing those to pull spatial data from GeoDIDs into smart contracts.
 
 ### Spatial Contracts
 
 We have been developing patterns and libraries to work with spatial data in smart contracts for a few years now, and are looking for additional support. Specifically, we are working on:
 
 * A Solidity library of geometric and topological functions, much like [Turf.js](https://turfjs.org/).
-* A verifiable spatial data registry for GeoDIDs
+* A verifiable spatial data registry for GeoDIDs:
   * A zone registry, where users can control polygons representing areas of space on, beneath or above the Earth's surface.
 * Front-end packages and dApp interfaces to connect with spatial contracts.
 

@@ -20,7 +20,7 @@ GeoDIDs are designed to represent spatial data in as flexible a way as possible.
 **✅   Web3-native.**   
 GeoDIDs are built to be a building block for the mobile and location-based decentralized web. 
 
-![Silvery oil slicks near the mouth of the Mississippi River, captured by NASA&apos;s Terra spacecraft in 2010. https://www.nasa.gov/topics/earth/features/oil20100526.html](../../.gitbook/assets/satellite.jpg)
+![Silvery oil slicks near the mouth of the Mississippi River, captured by NASA&apos;s Terra spacecraft in 2010.](../../.gitbook/assets/satellite.jpg)
 
 ### What is spatial data? 
 
@@ -44,9 +44,7 @@ To easily create, read, update and destroy GeoDIDs, Astral is developing softwar
 
 These docs will help you learn more about spatial data and how it works, exactly what's going on under the hood with GeoDIDs, or to dive straight into building.
 
+{% page-ref page="../../develop/geodid-quick-start.md" %}
+
 {% page-ref page="../geodid-core-specification/" %}
-
-
-
-
 
