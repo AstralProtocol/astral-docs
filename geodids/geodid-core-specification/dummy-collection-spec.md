@@ -4,7 +4,7 @@ description: >-
   for specification.
 ---
 
-# GeoDID Collection Specification
+# Dummy Collection Spec
 
 ## The GeoDID Collection 
 
