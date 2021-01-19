@@ -6,6 +6,16 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### **19 January 2020**
+
+* Early tests on [Spatial.sol](https://github.com/AstralProtocol/spatial-sol), a Solidity library of geometric and topological functions - watch this space!
+* Refinements of the draft GeoDID Method Specification.
+* Chat with a VC about the past, present and future of the spatial Web3.
+* Chatting about trusted location proofs with a security-minded developer in KERNEL.
+* Community
+  * 80 Twitter followers
+  * 2 new Gitcoin grant contributors
+
 #### 12 January 2020
 
 * Joined KERNEL 2 - Fairlaunch track!
