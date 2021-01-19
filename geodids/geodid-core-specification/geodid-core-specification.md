@@ -88,5 +88,3 @@ This object describes a relationship with another entity. These entities can be 
 | rel | string | **REQUIRED** Relationship between the current document and the linked document. See chapter "Relation types" for more information. |
 | id | string | **OPTIONAL** The DID URL that dereferences to the entity's GeoDID Document. This field is required if you want to create a hierarchy of GeoDID Documents \(ex. GeoDID collection is parent to GeoDID Items or Collections\).  |
 
-
-
