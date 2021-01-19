@@ -4,7 +4,7 @@ description: >-
   for specification.
 ---
 
-# Dummy Collection Spec
+# GeoDID Collection Specification
 
 ## The GeoDID Collection 
 
@@ -64,6 +64,4 @@ As of right now, the Collection extends the default GeoDID Specification without
    ]
 ]
 ```
-
-## 
 

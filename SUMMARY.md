@@ -29,7 +29,7 @@
   * [Introduction to GeoDIDs](geodids/dids/introduction-to-geodids.md)
 * [GeoDID Core](geodids/geodid-core-specification/README.md)
   * [GeoDID Core Specification](geodids/geodid-core-specification/geodid-core-specification.md)
-  * [Dummy Collection Spec](geodids/geodid-core-specification/dummy-collection-spec.md)
+  * [GeoDID Collection Specification](geodids/geodid-core-specification/geodid-collection-specification.md)
   * [GeoDID Item Specification](geodids/geodid-core-specification/geodid-item-specification.md)
   * [GeoDID Extensions Overview](geodids/geodid-core-specification/geodid-extensions.md)
 * [GeoDID Extensions](geodids/geodid-extensions-1/README.md)
