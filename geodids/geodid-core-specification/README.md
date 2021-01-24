@@ -6,12 +6,9 @@
 
 Geographic decentralized identifiers, or GeoDIDs, are DIDs designed to identify spatial data assets and to be compatible with any distributed ledger or network. Spatial data has unique properties that require special treatment; this GeoDID Method Specification defines an approach in creating, reading, updating and deleting identifiers for these assets using DIDs. In creating a GeoDID, data controllers permissionlessly create irrevocable, cryptographically-verifiable identities for spatial data assets that can be useful in decentralized applications.
 
+The objective of GeoDID is to encourage contribution to the DID Spec and Linked Data Signatures to identify and ensure trustable spatial data, and allow rapid development of extensions to these without requiring the use of slow, complicated, types of trustless infrastructure, such as blockchains or other distributed systems.
 
-
-TODO @jared : Linked Data Signatures are difficult to work with when operating a server or running a local node of some distributed system / blockchain is a requirement.  
-TODO @jared: The objective of GeoDID is to encourage contribution to the DID Spec and Linked Data Signatures to identify and ensure trustable spatial data, and allow rapid development of extensions to these without requiring the use of slow, complicated, types of trustless infrastructure, such as blockchains or other distributed systems.
-
-TODO Something about how we use the STAC model of Items and Collections.
+The GeoDID is inspired by the STAC Specification and utilizes a similar linked data structure. The structure alleviates a handful of problems associated with traversing large datasets, and allows for ease of use for the end user. We adopted relationship between Collections/Catalogs and Items. The general premise of these types is: each "Collection" can either contain one of the following types, sub collections or items; and each "Item" will contain several service endpoints that dereference to geo-spatial assets. This hierarchy of encapsulating linked data within the GeoDIDs will allow for user's to find or create the data/datasets that they need easily.
 
 ### Motivation
 
@@ -33,22 +30,29 @@ TODO: more info here, similar to \[this\]\([https://sovrin-foundation.github.io/
 
 #### Namestring Generation Method
 
-TODO @jared input here - or does this make sense?
-
 For the draft version of this specification, `<specific-identifier>` referenced above is created by computing a Keccak256 hash of the DID controller's public key concatenated with the UNIX time, `keccak256(pub_key + time)`. In future we will design a method for generated the `<geodid-specific-identifier>` that fulfills the following requirements:
 
 * Acts as a checksum: with the GeoDID, a user can verify the integrity of the GeoDID Document;
 * Use IPFS's multibase [https://github.com/multiformats/multibase](https://github.com/multiformats/multibase)
-* Maybe in the DID fragment we can include information about how to resolve the GeoDID doc? Like bytes 5-10 indicate which blockchain it's stored on or something? Anticipating multi-chain scenarios ... but this is def more advanced than we need right now. 
-* TODO anything else? 
+* Maybe in the DID fragment we can include information about how to resolve the GeoDID doc? Like bytes 5-10 indicate which blockchain it's stored on or something? Anticipating multi-chain scenarios ... but this is def more advanced than we need right now.
 
-An example DID for the GeoDID method:
+#### Identifying the correct GeoDID 
+
+The `links`  and `service` arrays in the GeoDID will contain several references to other GeoDIDs. The idea is that if the GeoDID is the root DID in the hierarchy, regardless of its type, then it has the base DID identifier. If the GeoDID is a sub-collection or sub-item then it is referenced via path, and if it is an asset within the sub-item's service array, then it is referenced via fragment.
+
+**Standalone or Root GeoDIDs utilize Base DID Identifier:**
 
 `did:geo:9H8WRbfd4K3kQ2NTxT6L2wTNyMj1ARCaVVsT5GJ87Jw2`
 
-#### Identifying GeoDID 
+**Paths reference other GeoDID sub-Collections or sub-Items**
 
-TODO This section should describe how different objects in the `service` array need to be identified by the [DID fragment](https://w3c.github.io/did-core/#fragment) - so something like `did:geo:1234123412341234#asset-id`. @jared what was your thinking behind the DID path and fragments you put in the example DID Docs in Slack?   
+`did:geo:9H8WRbfd4K3kQ2NTxT6L2wTNyMj1ARCaVVsT5GJ87Jw2/sub-collection-A/sub-item-1`
+
+**Fragments reference assets within the GeoDID sub-Items**
+
+`did:geo:9H8WRbfd4K3kQ2NTxT6L2wTNyMj1ARCaVVsT5GJ87Jw2/sub-collection-A/sub-item-1#raster-image-1`
+
+`did:geo:9H8WRbfd4K3kQ2NTxT6L2wTNyMj1ARCaVVsT5GJ87Jw2/sub-collection-A/sub-item-1#thumbnail`  
 
 
 ## 3. CRUD Operation Definitions
