@@ -4,11 +4,11 @@
 
 ## **Abstract**
 
-Geographic decentralized identifiers, or GeoDIDs, are DIDs designed to identify spatial data assets and to be compatible with any distributed ledger or network. Spatial data has unique properties that require special treatment; this GeoDID Method Specification defines an approach in creating, reading, updating and deleting identifiers for these assets using DIDs. In creating a GeoDID, data controllers permissionlessly create irrevocable, cryptographically-verifiable identities for spatial data assets that can be useful in decentralized applications.
+Geographic decentralized identifiers, or GeoDIDs, are DIDs designed to identify spatial data assets and to be compatible with any distributed ledger or network. Spatial data has unique properties that require special treatment - the GeoDID Method Specification defines an approach in creating, reading, updating and deleting identifiers for these assets using DIDs. In creating a GeoDID, data controllers permissionlessly create irrevocable, cryptographically-verifiable identities for spatial data assets that can be useful in decentralized applications.
 
-The objective of GeoDID is to encourage contribution to the DID Spec and Linked Data Signatures to identify and ensure trustable spatial data, and allow rapid development of extensions to these without requiring the use of slow, complicated, types of trustless infrastructure, such as blockchains or other distributed systems.
+The objective of the GeoDID is to encourage contribution to the DID specification and Linked Data Signatures to identify and ensure trustable spatial data. This will allow rapid development of extensions to these without requiring the usage of trustless infrastructures such as blockchains or other distributed systems.
 
-The GeoDID is inspired by the STAC Specification and utilizes a similar linked data structure. The structure alleviates a handful of problems associated with traversing large datasets, and allows for ease of use for the end user. We adopted relationship between Collections/Catalogs and Items. The general premise of these types is: each "Collection" can either contain one of the following types, sub collections or items; and each "Item" will contain several service endpoints that dereference to geo-spatial assets. This hierarchy of encapsulating linked data within the GeoDIDs will allow for user's to find or create the data/datasets that they need easily.
+The GeoDID is inspired by the STAC specification and utilizes a similar linked data structure. The structure alleviates a handful of problems associated with traversing large datasets, and allows for ease of use for the end user. We adopted relationship between Collections/Catalogs and Items. The general premise of these types is: each "Collection" can either contain one of the following types, sub collections or items; and each "Item" will contain several service endpoints that dereference to geo-spatial assets. This hierarchy of encapsulating linked data within the GeoDIDs will allow for user's to find or create the data/datasets that they need easily.
 
 ### Motivation
 
@@ -26,34 +26,33 @@ A DID that uses this method MUST begin with the following prefix: `did:geo`. Per
 
 All GeoDIDs are base58 encoded using the Bitcoin / IPFS alphabets of a 16-byte UUID. 
 
-TODO: more info here, similar to \[this\]\([https://sovrin-foundation.github.io/sovrin/spec/did-method-spec-template.html\#namespace-specific-identifier-nsi](https://sovrin-foundation.github.io/sovrin/spec/did-method-spec-template.html#namespace-specific-identifier-nsi)\).
+**TODO: more info here, similar to \[this\]\(**[**https://sovrin-foundation.github.io/sovrin/spec/did-method-spec-template.html\#namespace-specific-identifier-nsi**](https://sovrin-foundation.github.io/sovrin/spec/did-method-spec-template.html#namespace-specific-identifier-nsi)**\).**
 
 #### Namestring Generation Method
 
-For the draft version of this specification, `<specific-identifier>` referenced above is created by computing a Keccak256 hash of the DID controller's public key concatenated with the UNIX time, `keccak256(pub_key + time)`. In future we will design a method for generated the `<geodid-specific-identifier>` that fulfills the following requirements:
+For the draft version of this specification, `<specific-identifier>` referenced above is created by computing a Keccak256 hash of the DID controller's public key concatenated with the UNIX time, `keccak256(pub_key + time).` In the future we will design a method for generated the `<geodid-specific-identifier>` that fulfills the following requirements:
 
 * Acts as a checksum: with the GeoDID, a user can verify the integrity of the GeoDID Document;
-* Use IPFS's multibase [https://github.com/multiformats/multibase](https://github.com/multiformats/multibase)
+* Uses IPFS's multibase [https://github.com/multiformats/multibase](https://github.com/multiformats/multibase);
 * Maybe in the DID fragment we can include information about how to resolve the GeoDID doc? Like bytes 5-10 indicate which blockchain it's stored on or something? Anticipating multi-chain scenarios ... but this is def more advanced than we need right now.
 
 #### Identifying the correct GeoDID 
 
-The `links`  and `service` arrays in the GeoDID will contain several references to other GeoDIDs. The idea is that if the GeoDID is the root DID in the hierarchy, regardless of its type, then it has the base DID identifier. If the GeoDID is a sub-collection or sub-item then it is referenced via path, and if it is an asset within the sub-item's service array, then it is referenced via fragment.
+The `links`  and `service` arrays in the GeoDID will contain several references to other GeoDIDs. The idea is that if the GeoDID is the root DID in the hierarchy, regardless of its type, then it has the base DID identifier. Additionally, if the GeoDID is a sub-collection or sub-item it is referenced via path; if it is an asset within the sub-item's service array it is referenced via fragment.
 
-**Standalone or Root GeoDIDs utilize Base DID Identifier:**
+**Standalone or Root GeoDIDs using the Base DID Identifier:**
 
 `did:geo:9H8WRbfd4K3kQ2NTxT6L2wTNyMj1ARCaVVsT5GJ87Jw2`
 
-**Paths reference other GeoDID sub-Collections or sub-Items**
+**Paths reference other GeoDID sub-Collections or sub-Items:**
 
 `did:geo:9H8WRbfd4K3kQ2NTxT6L2wTNyMj1ARCaVVsT5GJ87Jw2/sub-collection-A/sub-item-1`
 
-**Fragments reference assets within the GeoDID sub-Items**
+**Fragments reference assets within the GeoDID sub-Items:**
 
 `did:geo:9H8WRbfd4K3kQ2NTxT6L2wTNyMj1ARCaVVsT5GJ87Jw2/sub-collection-A/sub-item-1#raster-image-1`
 
-`did:geo:9H8WRbfd4K3kQ2NTxT6L2wTNyMj1ARCaVVsT5GJ87Jw2/sub-collection-A/sub-item-1#thumbnail`  
-
+`did:geo:9H8WRbfd4K3kQ2NTxT6L2wTNyMj1ARCaVVsT5GJ87Jw2/sub-collection-A/sub-item-1#thumbnail`
 
 ## 3. CRUD Operation Definitions
 
@@ -75,7 +74,7 @@ TODO: is this ^^^ accurate? My vote is the GeoDID Core does not rely on IDX or C
 
 #### Process
 
-1. Loop through the spatial data assets to be included in the GeoDID. If they are not URLs, compute the CIDs. For each, create an object containing the `did` \(including fragment\), `extension` , and `serviceEndpoint`, like this: 
+1. Loop through the spatial data assets to be included in the GeoDID. If they are not URLs, compute the CIDs. For each, create an object containing the `did` \(including fragment\), `extension` and `serviceEndpoint,`like this: 
 
 ```text
       {
@@ -85,15 +84,15 @@ TODO: is this ^^^ accurate? My vote is the GeoDID Core does not rely on IDX or C
       }
 ```
 
-2. Generate list of objects describing `links` - TODO @jared can you describe how this works?
+2. Generate a list of objects describing `links` - **TODO @jared can you describe how this works?**
 
-3. Generate initial `item_metadata` object, a GeoJSON Feature object including a Polygon containing the area enclosed by the spatial data  asset, as well as bbox and the datetime of the moment of registration.  
-TODO the Polygon will vary based on the extension I think ... what if it is a single point? Or a collection of points? / what if it is difficult to get access to the underlying data, i.e. they just want to register a large file's URL?   
+3. Generate initial `item_metadata`object:  a GeoJSON feature object including a polygon containing the area enclosed by the spatial data asset, as well as the bounding box and the date-time of the registration.  
+**TODO the Polygon will vary based on the extension I think ... what if it is a single point? Or a collection of points? / what if it is difficult to get access to the underlying data, i.e. they just want to register a large file's URL?**   
 TODO: Will we have a `collection_metadata` object for GeoDID Collections?   
   
-&gt; Question: Can we put this metadata into the service array? For some reason I get the sense that adding custom attributes to the top level of the DID Document is poor practice. Can we make it so the first object in `service` is the `did_metadata`, and the second is the `item_metadata` - then subsequent elements in the array are the assets like we have planned? [See how the Ocean Protocol DID Method Specification does it ...](https://github.com/oceanprotocol/OEPs/blob/master/7/v0.2/README.md#ddo-services)
+**&gt; Question: Can we put this metadata into the service array? For some reason I get the sense that adding custom attributes to the top level of the DID Document is poor practice. Can we make it so the first object in `service` is the `did_metadata`, and the second is the `item_metadata` - then subsequent elements in the array are the assets like we have planned?** [**See how the Ocean Protocol DID Method Specification does it ...**](https://github.com/oceanprotocol/OEPs/blob/master/7/v0.2/README.md#ddo-services)\*\*\*\*
 
-4. Generate initial `did_metadata`, including the GeoDID type \(`item` or `collection`\) and the ISO 8601 timestamp in the format `YYYY-MM-DDThh:mm:ss.sTZD` \(eg `1997-07-16T19:20:30.45+01:00`\)
+4. Generate initial `did_metadata,`including the GeoDID type \(`item` or `collection`\) and the ISO 8601 timestamp in the format `YYYY-MM-DDThh:mm:ss.sTZD` \(e.g. `1997-07-16T19:20:30.45+01:00`\)
 
  \(TODO is this timestamp of the moment the GeoDID is created? Probs yeah?\).
 
@@ -135,11 +134,11 @@ That way we can:
 
 ### Read \(Resolve\)
 
-In the alpha implementation of the specification a GeoDID document can be resolved by invoking the `resolve(<GeoDID fragment>)` method at contract address `<0x______>` on Ethereum's Ropsten testnet. This contract stores a mapping of GeoDID fragments =&gt;  an array of GeoDID document CIDs. The last CID in the array identifies the current valid GeoDID  Document, and is the CID returned by the `resolve` method.
+In the alpha implementation of the specification a GeoDID document can be resolved by invoking the`resolve(<GeoDID fragment>)` method at contract address `<0x______>` on Ethereum's Ropsten testnet. This contract stores a mapping of GeoDID fragments to an array of GeoDID document CIDs. The last CID in the array identifies the current valid GeoDID  Document and is the CID returned by the `resolve` method.
 
-The GeoDID Document identified by the CID can the be resolved using a browser with native IPFS support \(`ipfs://<CID>`\), or by  resolving via a gateway, like `ipfs.io/ipfs/<GeoDID Document CID>`
+The GeoDID document identified by the CID can the be resolved using a browser with native IPFS support \(`ipfs://<CID>`\), or by  resolving via a gateway, like `ipfs.io/ipfs/<GeoDID Document CID>`
 
-The GeoDID Document can the be parsed and analyzed by the client, or spatial data assets can be fetched from their respective service endpoints. Do note that sometimes data assets will be identified by CIDs and stored on the IPFS network, while other service endpoints may be HTTP URLs - appropriate resolution methods will be required.
+The GeoDID Document can then be parsed and analyzed by the client, or spatial data assets can be fetched from their respective service endpoints. Do note that sometimes data assets will be identified by CIDs and stored on the IPFS network, while other service endpoints may be HTTP URLs - appropriate resolution methods will be required.
 
 #### Controller Address 
 

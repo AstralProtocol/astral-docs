@@ -23,10 +23,9 @@
 
 ## GeoDIDs
 
-* [Introduction and Primers](geodids/dids/README.md)
-  * [Spatial Data Primer](geodids/dids/what-is-a-spatial-data-asset.md)
-  * [DID Primer](geodids/dids/did-primer.md)
-  * [Introduction to GeoDIDs](geodids/dids/introduction-to-geodids.md)
+* [Spatial Data Primer](geodids/what-is-a-spatial-data-asset.md)
+* [DID Primer](geodids/did-primer.md)
+* [Introduction to GeoDIDs](geodids/introduction-to-geodids.md)
 * [GeoDID Core](geodids/geodid-core-specification/README.md)
   * [GeoDID Core Specification](geodids/geodid-core-specification/geodid-core-specification.md)
   * [GeoDID Collection Specification](geodids/geodid-core-specification/geodid-collection-specification.md)

@@ -10,7 +10,5 @@ GeoDIDs are designed to work with any spatial data assets, leaving the user to d
 
 Learn more about DIDs and GeoDIDs here:
 
-{% page-ref page="../../geodids/dids/" %}
-
 
 
