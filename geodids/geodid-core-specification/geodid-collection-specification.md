@@ -8,7 +8,7 @@ description: >-
 
 ## The GeoDID Collection 
 
-As of right now, the Collection extends the default GeoDID Specification without any added fields. It is up to the user to add what they deem necessary, however, the collection must function as a DID that will reference other DID documents or URL links. The metadata added to it must reflect that. 
+As of right now, the Collection extends the default GeoDID Specification without any added fields. It is up to the user to add what they deem necessary,. However, the collection must function as a DID that will reference other DID documents or URL links. The metadata added to it must reflect that. 
 
 ### Example of GeoDID Collection
 
