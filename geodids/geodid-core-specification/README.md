@@ -38,7 +38,7 @@ For the draft version of this specification, `<specific-identifier>` referenced 
 
 #### Identifying the correct GeoDID 
 
-The `links`  and `service` arrays in the GeoDID will contain several references to other GeoDIDs. The idea is that if the GeoDID is the root DID in the hierarchy, regardless of its type, then it has the base DID identifier. Additionally, if the GeoDID is a sub-collection or sub-item it is referenced via path; if it is an asset within the sub-item's service array it is referenced via fragment.
+The `service` arrays in the GeoDID will contain several references to other GeoDIDs and/or assets. The idea is that if the GeoDID is the root DID in the hierarchy, regardless of its type, then it has the base DID identifier. If the GeoDID is a sub-collection or sub-item then it is referenced via path, and if it is an asset within the sub-item's service array, then it is referenced via fragment.
 
 **Standalone or Root GeoDIDs using the Base DID Identifier:**
 
@@ -60,12 +60,6 @@ The `links`  and `service` arrays in the GeoDID will contain several references 
 
 In order to create a GeoDID, a method specific identifier must be created, which will be used to build the document. 
 
-TODO: how do we build the document? 
-
-After the document is built, it will bind to the IDX instance for that particular user, essentially storing the GeoDID in their identity wallet. The IDX instance will act as our Verifiable Data Registry for the GeoDID Documents. However, at this point, there is no requirement for there to be any interaction with the target network. 
-
-TODO: is this ^^^ accurate? My vote is the GeoDID Core does not rely on IDX or Ceramic - am I understand this correctly? Essentially I understand the process to be:
-
 #### Required Assets
 
 * ECDSA keypair. \(for the alpha version of the specification - future versions may be agnostic to which digital signature algorithm is used\).
@@ -76,14 +70,6 @@ TODO: is this ^^^ accurate? My vote is the GeoDID Core does not rely on IDX or C
 
 1. Loop through the spatial data assets to be included in the GeoDID. If they are not URLs, compute the CIDs. For each, create an object containing the `did` \(including fragment\), `extension` and `serviceEndpoint,`like this: 
 
-```text
-      {
-        "id":"did:geo:123456789abcdefghi/did-item-raster#misc",
-        "type": "misc",
-        "serviceEndpoint": "<cid or url>" 
-      }
-```
-
 2. Generate a list of objects describing `links` - **TODO @jared can you describe how this works?**
 
 3. Generate initial `item_metadata`object:  a GeoJSON feature object including a polygon containing the area enclosed by the spatial data asset, as well as the bounding box and the date-time of the registration.  
@@ -92,75 +78,44 @@ TODO: Will we have a `collection_metadata` object for GeoDID Collections?
   
 **&gt; Question: Can we put this metadata into the service array? For some reason I get the sense that adding custom attributes to the top level of the DID Document is poor practice. Can we make it so the first object in `service` is the `did_metadata`, and the second is the `item_metadata` - then subsequent elements in the array are the assets like we have planned?** [**See how the Ocean Protocol DID Method Specification does it ...**](https://github.com/oceanprotocol/OEPs/blob/master/7/v0.2/README.md#ddo-services)\*\*\*\*
 
+  
+TODO: Will we have a `collection_metadata` object for GeoDID Collections? 
+
+Yes I think we should have collection\_metadata at some point. We can add the Provider Information etc. \(ex. 4 Earth Intelligence is the provider of this collection of items, and we can include fields that verify that 4 Earth Intelligence is actually the provider even though they aren't the DID controller\)  
+  
+&gt; Question: Can we put this metadata into the service array? For some reason I get the sense that adding custom attributes to the top level of the DID Document is poor practice. Can we make it so the first object in `service` is the `did_metadata`, and the second is the `item_metadata` - then subsequent elements in the array are the assets like we have planned? [See how the Ocean Protocol DID Method Specification does it ...](https://github.com/oceanprotocol/OEPs/blob/master/7/v0.2/README.md#ddo-services)
+
 4. Generate initial `did_metadata,`including the GeoDID type \(`item` or `collection`\) and the ISO 8601 timestamp in the format `YYYY-MM-DDThh:mm:ss.sTZD` \(e.g. `1997-07-16T19:20:30.45+01:00`\)
-
- \(TODO is this timestamp of the moment the GeoDID is created? Probs yeah?\).
-
-5. TODO What kind of digital signature is required, if any? 
-
-6. Assemble the document according to this schema:
-
-```text
-// GeoDID Document schema here
-```
-
-7. TODO: Does this need to be registered anywhere? Or can it be stored as a pairwise DID? How does resolution take place? Does it rely on IDX? Or some other resolver? Smart contract? etc. Check out [peer DIDs](https://identity.foundation/peer-did-method-spec/) ... oof that's a rabbit hole ... 
-
-For example:
-
-```text
-[Insert Example GeoDID]
-```
-
-#### TODO: Questions
-
-\[ Are we going to include Ceramic in the GeoDID Method Specification? Is it possible to not build reliance on this other network in? i.e. can't people create GeoDIDs on whatever network they want? I looked at [the `did:key` method](https://w3c-ccg.github.io/did-method-key/), which Mike Prorock suggested so it could be platform / blockchain agnostic ... it won't work because these DIDs [can't be updated](https://w3c-ccg.github.io/did-method-key/#update).
-
-However, the point that GeoDIDs shouldn't be bound to a single platform is valuable and should probably be at least mentioned in the draft spec. 
-
-Ideally: GeoDIDs can be implemented on any platform. The alpha implementation is built on Ceramic Network. This means that we probably need to specify which network its built on in the GeoDID, so the code knows how to resolve the document - no? Or am I getting this wrong?   \] 
-
-My thinking is:
-
-* Store `GeoDIDController` address in a mapping `GeoDID fragment => address controller` 
-* Store an array of `GeoDID Document CID` in a mapping `GeoDID fragment => CID[] GeoDIDDocs`
-* Store  `GeoDIDActive` boolean in a mapping `GeoDID fragment => boolean active`
-
-That way we can: 
-
-* Update the controller on chain. Any changes to a GeoDID must originate from the `GeoDIDController` address. So we can transfer ownership of the GeoDID. Possibly a step towards data tokens? 
-* Track version updates on chain, and fetch the entire version history. Should the CID reference an entire GeoDID Doc or just a diff file? I have a feeling we are solving a problem someone has already solved ...
-* The `GeoDIDActive` mapping is meant to enable GeoDID Controllers to delete / deactivate GeoDIDs. \(Q: can they re-activate?\) 
 
 ### Read \(Resolve\)
 
-In the alpha implementation of the specification a GeoDID document can be resolved by invoking the`resolve(<GeoDID fragment>)` method at contract address `<0x______>` on Ethereum's Ropsten testnet. This contract stores a mapping of GeoDID fragments to an array of GeoDID document CIDs. The last CID in the array identifies the current valid GeoDID  Document and is the CID returned by the `resolve` method.
+In the alpha implementation of the specification a GeoDID document can be resolved by invoking the `resolve(<GeoDID ID>)` method at contract address `<0x______>` on Ethereum's Ropsten testnet. This contract method will first verify that the user has access to this GeoDID by checking to make sure that his address registered the GeoDID via the create method. The contract will store a mapping from the user's address  to GeoDID IDs.  
 
-The GeoDID document identified by the CID can the be resolved using a browser with native IPFS support \(`ipfs://<CID>`\), or by  resolving via a gateway, like `ipfs.io/ipfs/<GeoDID Document CID>`
+Once the user has been authenticated, the contract will trigger an event that the astral-protocol-core package will be listening for. From there the geo-did-resolver will handle the rest, and dereference to the proper GeoDID Document. 
 
 The GeoDID Document can then be parsed and analyzed by the client, or spatial data assets can be fetched from their respective service endpoints. Do note that sometimes data assets will be identified by CIDs and stored on the IPFS network, while other service endpoints may be HTTP URLs - appropriate resolution methods will be required.
 
-#### Controller Address 
-
-TODO: @jared anything here?  
-
 #### Service Endpoints
 
-TODO @jared: anything here? 
+Service Endpoints are relevant in both GeoDID Controllers and Items. It exists to list relevant relationships to and from itself. The service array will contain fields that contain the GeoDID ID, its relationship to the DID ID, and a reference link if the controller needs to dereference it. The purpose of the link field is to enables browsers and crawlers to access the sets of Items, in an organized and straightforward way. These service endpoints can also contain references to assets that are related to a specific item.  
+
+The GeoDID Document identified by the CID can the be resolved using a browser with native IPFS support \(`ipfs://<CID>`\), or by  resolving via a gateway, like `ipfs.io/ipfs/<GeoDID Document CID>`
+
+**Authentication \[WIP\]**
+
+Not implemented yet. Still a work in progress but we will eventually add authentication features to the GeoDID, so the controller can enable selective access to certain datasets and assets. 
 
 ### Update
 
-The DID Document may be updated by invoking the `update(<GeoDID fragment>, <updated GeoDID CID??>)` method at contract address `<0x_____>` on the Ropsten testnet.  
+The DID Document may be updated by invoking the `update(<GeoDID ID>)` method at contract address `<0x_____>` on the Ropsten testnet.  
 
-The updated CID passed into the `update` method will identify the updated GeoDID Document. This appends the new CID to the end of the array of GeoDID Document CIDs, meaning users can `fetchVersionHistory(<GeoDID fragment>)` and retrieve all the CIDs of historical GeoDID documents. 
+Once the address has been verified as the DID controller, an oracle function will be invoked and will trigger an off chain event to open the GeoDID Document for the user to update. When user is done updating, they can submit the update, which will compute the CID of the GeoDID Document and compare the block to the previous CID version. 
 
-TODO @jared have you seen this pattern? Does this make sense? How do other projects do it? 
+If the CIDs differ, the client will append the timestamp of the update within the GeoDID Document, recalculate the finalized CID, and will append a new Record in the astral-core-package. The updated CID will be returned via the oracle, and appends to the end of the array of GeoDID Document CIDs, meaning users can `fetchVersionHistory(<GeoDID fragment>)` and retrieve all the CIDs of historical GeoDID documents. 
 
-TODO: @jared - how do we validate the changes in the GeoDID Document? i.e. that certain things haven't changed, and that 
+### Deactivate \(Revoke\)
 
-### Delete \(Revoke\)
-
-A GeoDID Controller can revoke access to a GeoDID by invoking the `delete(<GeoDID fragment>)` method. This simply sets that GeoDID's `GeoDIDActive` record to `false` - it does not remove information from the smart contract about the historical versions of the GeoDID. It does, however, mean that future attempts to resolve that GeoDID will not succeed. 
+A GeoDID Controller can revoke access to a GeoDID by invoking the `deactivate(<GeoDID fragment>)` method. This simply sets that GeoDID's `GeoDIDActive` record to `false` - it does not remove information from the smart contract about the historical versions of the GeoDID. It does, however, mean that future attempts to resolve that GeoDID will not succeed. 
 
 
 

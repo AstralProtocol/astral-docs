@@ -19,7 +19,7 @@
 * [Creating GeoDIDs](develop/creating-geodids.md)
 * [Resolving GeoDIDs](develop/resolving-geodids.md)
 * [Updating GeoDIDs](develop/updating-geodids.md)
-* [Deleting GeoDIDs](develop/deleting-geodids.md)
+* [Deactivating GeoDIDs](develop/deleting-geodids.md)
 
 ## GeoDIDs
 
@@ -28,8 +28,8 @@
 * [Introduction to GeoDIDs](geodids/introduction-to-geodids.md)
 * [GeoDID Core](geodids/geodid-core-specification/README.md)
   * [GeoDID Core Specification](geodids/geodid-core-specification/geodid-core-specification.md)
-  * [GeoDID Collection Specification](geodids/geodid-core-specification/geodid-collection-specification.md)
-  * [GeoDID Item Specification](geodids/geodid-core-specification/geodid-item-specification.md)
+  * [GeoDID Collection Example](geodids/geodid-core-specification/geodid-collection-specification.md)
+  * [GeoDID Item Example](geodids/geodid-core-specification/geodid-item-specification.md)
   * [GeoDID Extensions Overview](geodids/geodid-core-specification/geodid-extensions.md)
 * [GeoDID Extensions](geodids/geodid-extensions-1/README.md)
   * [GeoJSON](geodids/geodid-extensions-1/geojson.md)

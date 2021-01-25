@@ -10,9 +10,9 @@ description: >-
 
 There are two "types" of GeoDID Specifications under the Astral Protocol, that work together to enable structure between resources. At their core, they are both extensions of the DID and default GeoDID specification. However, they differ in their functionality and purpose, in order to enable a better user experience for all users.
 
-**The GeoDID Collection -** A GeoDID Collection is a simple, flexible JSON file of links that provides a structure to organize and browse GeoDID Items. The collection is responsible for bundling a set of items or sub collections, by utilizing links to reference other child Collections or Items . The division of sub-collections is up to the implementor, but is generally done in order to make the end user's UX easier. 
+**The GeoDID Collection -** A GeoDID Collection is a simple, flexible JSON file of service endpoints that provides a structure to organize and browse GeoDID Items. The collection is responsible for bundling a set of items or sub collections, by utilizing links to reference other child Collections or Items . The division of sub-collections is up to the implementor, but is generally done in order to make the end user's UX easier. 
 
-**The GeoDID Item -** A GeoDID Item is an extension of the Default GeoDID Structure except it has added fields like item metadata and service endpoints. Unlike its counterpart, the GeoDID Item is responsible for identifying a particular resources and referencing relative assets, through the service endpoints. GeoDID Items can only act as the leaves of the tree and cannot link to other items or collections. It can only reference assets like raster imagery, videos, geojson, etc. through its service endpoints. 
+**The GeoDID Item -** A GeoDID Item is an extension of the Default GeoDID Structure. Unlike its counterpart, the GeoDID Item is responsible for identifying a particular resources and referencing relative assets, through the service endpoints. GeoDID Items can only act as the leaves of the tree and cannot link to other items or collections. It can only reference assets like raster imagery, videos, geojson and reference linked parent DID Documents.
 
 ## Default GeoDID Structure
 
@@ -30,19 +30,27 @@ There are two "types" of GeoDID Specifications under the Astral Protocol, that w
          }
       ],
       "did_metadata":{
-            "type":"default",
+            "type":"collection",
             "created":"2019-03-23T06:35:22Z"
       },
-      "links":[
+      "service":[
+         {
+            "id":"did:geo:123456789abcdefghi#metadata",
+            "type":"metadata"
+            "rel":"self",
+            "serviceEndpoint":"<cid or url>"
+         },      
          {
             "id":"did:geo:123456789abcdefghi",
+            "type":"collection"
             "rel":"root",
-            "linkEndpoint":"<cid or url>"
+            "serviceEndpoint":"<cid or url>"
          },
          {
             "id":"did:geo:123456789abcdefghi",
+            "type":"collection",
             "rel":"self",
-            "linkEndpoint":"<cid or url>"
+            "serviceEndpoint":"<cid or url>"
          }
       ]
    }
@@ -78,13 +86,14 @@ The `authentication` [verification relationship](https://www.w3.org/TR/did-core/
 | updated  | string | **REQUIRED UPON UPDATE** The geodid package will automatically timestamp the GeoDID upon an update. If the GeoDID Document never updates then there will not be a  |
 | description | string | **OPTIONAL** A description describing the GeoDID Document. It can be anything but most likely the description will address the DID subject.  |
 
-## Link Object Fields
+## Service Endpoint Object Fields
 
 This object describes a relationship with another entity. These entities can be sub-collection GeoDIDs, GeoDID Items, or traditional specifications /assets like geoJson, STAC, etc.
 
 | Field | Type  | Description |
 | :--- | :--- | :--- |
-| linkEndpoint | string | **REQUIRED** The actual link in the format of an URL or CID. Relative and absolute links are both allowed. |
+| serviceEndpoint | string | **REQUIRED** The actual link in the format of an URL or CID. Relative and absolute links are both allowed. |
+| type | string | **REQUIRED** See chapter "Endpoint types" for more information. |
 | rel | string | **REQUIRED** Relationship between the current document and the linked document. See chapter "Relation types" for more information. |
 | id | string | **OPTIONAL** The DID URL that dereferences to the entity's GeoDID Document. This field is required if you want to create a hierarchy of GeoDID Documents \(ex. GeoDID collection is parent to GeoDID Items or Collections\).  |
 
