@@ -23,7 +23,7 @@ There are two "types" of GeoDID Specifications under the Astral Protocol, that w
       "id":"did:geo:123456789abcdefghi",
       "authentication":[
          {
-            "id":"did:geo:123456789abcdefghi#keys-1",
+            "id":"did:geo:123456789abcdefghi#key",
             "type":"Secp256k1VerificationKey2018",
             "controller":"did:geo:123456789abcdefghi",
             "publicKey":"-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"

@@ -26,15 +26,14 @@ A DID that uses this method MUST begin with the following prefix: `did:geo`. Per
 
 All GeoDIDs are base58 encoded using the Bitcoin / IPFS alphabets of a 16-byte UUID. 
 
-**TODO: more info here, similar to \[this\]\(**[**https://sovrin-foundation.github.io/sovrin/spec/did-method-spec-template.html\#namespace-specific-identifier-nsi**](https://sovrin-foundation.github.io/sovrin/spec/did-method-spec-template.html#namespace-specific-identifier-nsi)**\).**
+`geo-did = "did:geo:" geo-specific-idstring  
+geo-specific-idstring = new CID(0, 'dag-pb', hash, 'base58btc')   
+hash = multihash(byte, sha2-256)  
+byte = new TextEncoder().encode(ethereum address + UNIX Time)`
 
 #### Namestring Generation Method
 
-For the draft version of this specification, `<specific-identifier>` referenced above is created by computing a Keccak256 hash of the DID controller's public key concatenated with the UNIX time, `keccak256(pub_key + time).` In the future we will design a method for generated the `<geodid-specific-identifier>` that fulfills the following requirements:
-
-* Acts as a checksum: with the GeoDID, a user can verify the integrity of the GeoDID Document;
-* Uses IPFS's multibase [https://github.com/multiformats/multibase](https://github.com/multiformats/multibase);
-* Maybe in the DID fragment we can include information about how to resolve the GeoDID doc? Like bytes 5-10 indicate which blockchain it's stored on or something? Anticipating multi-chain scenarios ... but this is def more advanced than we need right now.
+For the draft version of this specification, `<specific-identifier>` referenced above is created by computing a sha2-256 multihash on the byte representation of the DID controller's ethereum address + Unix time `multihash(ethAddress + time, sha2-256).` Then we create a new CID Block by encoding the multihash with a base58 encoding. This will return a cid that will act as the identifier for the GeoDID. 
 
 #### Identifying the correct GeoDID 
 
@@ -86,15 +85,19 @@ Once the user has been authenticated, the contract will trigger an event that th
 
 The GeoDID Document can then be parsed and analyzed by the client, or spatial data assets can be fetched from their respective service endpoints. Do note that sometimes data assets will be identified by CIDs and stored on the IPFS network, while other service endpoints may be HTTP URLs - appropriate resolution methods will be required.
 
+**Controller Address**
+
+Each identity always has a controller address. To check the read only contract function `identityOwner(address identity)` on the deployed version of the ERC1056 contract.
+
+The identity controller will always have a `publicKey` with the id set as the DID with the fragment `#key` appended.
+
+An entry is also added to the `authentication` array of the DID document with type `Secp256k1SignatureAuthentication2018`.
+
 #### Service Endpoints
 
-Service Endpoints are relevant in both GeoDID Controllers and Items. It exists to list relevant relationships to and from itself. The service array will contain fields that contain the GeoDID ID, its relationship to the DID ID, and a reference link if the controller needs to dereference it. The purpose of the link field is to enables browsers and crawlers to access the sets of Items, in an organized and straightforward way. These service endpoints can also contain references to assets that are related to a specific item.  
+Service Endpoints are relevant in both GeoDID Controllers and Items. It exists to list relevant relationships to and from itself. The service array will contain a required link field and several  that contain the GeoDID ID, its relationship to the DID ID, and a reference link if the controller needs to dereference it. The purpose of the link field is to enables browsers and crawlers to access the sets of Items, in an organized and straightforward way. These service endpoints can also contain references to assets that are related to a specific item.  
 
 The GeoDID Document identified by the CID can the be resolved using a browser with native IPFS support \(`ipfs://<CID>`\), or by  resolving via a gateway, like `ipfs.io/ipfs/<GeoDID Document CID>`
-
-**Authentication \[WIP\]**
-
-Not implemented yet. Still a work in progress but we will eventually add authentication features to the GeoDID, so the controller can enable selective access to certain datasets and assets. 
 
 ### Update
 
@@ -107,16 +110,6 @@ If the CIDs differ, the client will append the timestamp of the update within th
 ### Deactivate \(Revoke\)
 
 A GeoDID Controller can revoke access to a GeoDID by invoking the `deactivate(<GeoDID fragment>)` method. This simply sets that GeoDID's `GeoDIDActive` record to `false` - it does not remove information from the smart contract about the historical versions of the GeoDID. It does, however, mean that future attempts to resolve that GeoDID will not succeed. 
-
-
-
-## Security Considerations
-
-TODO
-
-## Privacy Considerations
-
-TODO
 
 ## Reference Implementations
 

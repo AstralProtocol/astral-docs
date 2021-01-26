@@ -18,7 +18,7 @@ As of right now, the Collection extends the default GeoDID Specification without
    "id":"did:geo:123456789abcdefghi",
    "authentication":[
       {
-         "id":"did:geo:123456789abcdefghi#keys-1",
+         "id":"did:geo:123456789abcdefghi#key",
          "type":"Secp256k1VerificationKey2018",
          "controller":"did:geo:123456789abcdefghi",
          "publicKeyPem":"-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
