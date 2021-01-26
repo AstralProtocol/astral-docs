@@ -27,46 +27,53 @@ The Item extends the default GeoDID Specification. It can function as a standalo
       ],
       "did_metadata":{
          "type":"item",
+         "subtype":"raster",
          "created":"2019-03-23T06:37:45Z"
       },
-      "service":[
-         {
-            "id":"did:example:123456789abcdefghi/did-item-raster#item-metadata",
-            "type":"item-metadata",
-            "rel":"self",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:geo:123456789abcdefghi",
-            "type":"collection",
-            "rel":"root",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:geo:123456789abcdefghi",
-            "type":"sub-collection",
-            "rel":"parent",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:geo:123456789abcdefghi/did-item-raster",
-            "type":"item",
-            "rel":"self",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:example:123456789abcdefghi/did-item-raster#geotiff",
-            "type":"asset",
-            "type":"GeoTiff",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:example:123456789abcdefghi/did-item-raster#misc",
-            "type":"asset",
-            "type":"misc",
-            "serviceEndpoint":"<cid or url>"
-         },
-      ]
+      "service":{
+         "item-metadata":[
+            {
+               "id":"did:example:123456789abcdefghi/did-item-raster#item-metadata",
+               "type":"item-metadata",
+               "rel":"self",
+               "serviceEndpoint":"<cid or url>"
+            }
+         ],
+         "links":[
+            {
+               "id":"did:geo:123456789abcdefghi",
+               "type":"collection",
+               "rel":"root",
+               "serviceEndpoint":"<cid or url>"
+            },
+            {
+               "id":"did:geo:123456789abcdefghi",
+               "type":"sub-collection",
+               "rel":"parent",
+               "serviceEndpoint":"<cid or url>"
+            },
+            {
+               "id":"did:geo:123456789abcdefghi/did-item-raster",
+               "type":"item",
+               "rel":"self",
+               "serviceEndpoint":"<cid or url>"
+            }
+         ],
+         "assets":[
+            {
+               "id":"did:example:123456789abcdefghi/did-item-raster#geotiff",
+               "type":"asset",
+               "type":"GeoTiff",
+               "serviceEndpoint":"<cid or url>"
+            },
+            {
+               "id":"did:example:123456789abcdefghi/did-item-raster#misc",
+               "type":"asset",
+               "type":"misc",
+               "serviceEndpoint":"<cid or url>"
+            }
+         ],
+      }
    }
 ]
 ```
