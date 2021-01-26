@@ -10,10 +10,6 @@ The objective of the GeoDID is to encourage contribution to the DID specificatio
 
 The GeoDID is inspired by the STAC specification and utilizes a similar linked data structure. The structure alleviates a handful of problems associated with traversing large datasets, and allows for ease of use for the end user. We adopted relationship between Collections/Catalogs and Items. The general premise of these types is: each "Collection" can either contain one of the following types, sub collections or items; and each "Item" will contain several service endpoints that dereference to geo-spatial assets. This hierarchy of encapsulating linked data within the GeoDIDs will allow for user's to find or create the data/datasets that they need easily.
 
-### Motivation
-
-TODO
-
 ### 1. GeoDID Method
 
 The namestring that shall identify this DID method is: `geo`

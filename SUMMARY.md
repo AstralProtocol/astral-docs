@@ -25,12 +25,10 @@
 
 * [Spatial Data Primer](geodids/what-is-a-spatial-data-asset.md)
 * [DID Primer](geodids/did-primer.md)
-* [Introduction to GeoDIDs](geodids/introduction-to-geodids.md)
 * [GeoDID Core](geodids/geodid-core-specification/README.md)
   * [GeoDID Core Specification](geodids/geodid-core-specification/geodid-core-specification.md)
   * [GeoDID Collection Example](geodids/geodid-core-specification/geodid-collection-specification.md)
   * [GeoDID Item Example](geodids/geodid-core-specification/geodid-item-specification.md)
-  * [GeoDID Extensions Overview](geodids/geodid-core-specification/geodid-extensions.md)
 * [GeoDID Extensions](geodids/geodid-extensions-1/README.md)
   * [GeoJSON](geodids/geodid-extensions-1/geojson.md)
   * [GeoTIFF](geodids/geodid-extensions-1/geotiff/README.md)
