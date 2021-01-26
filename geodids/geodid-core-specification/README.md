@@ -113,9 +113,7 @@ A GeoDID Controller can revoke access to a GeoDID by invoking the `deactivate(<G
 
 ## Reference Implementations
 
-The code at [https://github.com/astraldao/astral-protocol-core](https://github.com/astraldao/astral-protocol-core) is intended to present a reference implementation of this DID method.
-
-\[ should we call this `js-astral` as the reference implementation in TypeScript? \]  
+The code at [https://github.com/astraldao/astral-protocol-core](https://github.com/astraldao/astral-protocol-core) is intended to present a reference implementation of this DID method.  
 
 
 
