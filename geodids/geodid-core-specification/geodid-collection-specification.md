@@ -44,37 +44,37 @@ As of right now, the Collection extends the default GeoDID Specification without
             "id":"did:geo:123456789abcdefghi",
             "type":"collection",
             "rel":"root",
-            "linkEndpoint":"<cid or url>"
+            "serviceEndpoint":"<cid or url>"
          },
          {
             "id":"did:geo:123456789abcdefghi",
             "type":"collection",
             "rel":"self",
-            "linkEndpoint":"<cid or url>"
+            "serviceEndpoint":"<cid or url>"
          },
          {
             "id":"did:geo:123456789abcdefghi/did-item-raster",
             "type":"sub-collection",
             "rel":"child",
-            "linkEndpoint":"<cid or url>"
+            "serviceEndpoint":"<cid or url>"
          },
          {
             "id":"did:geo:123456789abcdefghi/did-item-uk",
             "type":"sub-collection",
             "rel":"child",
-            "linkEndpoint":"<cid or url>"
+            "serviceEndpoint":"<cid or url>"
          },
          {
             "id":"did:geo:123456789abcdefghi/did-item-netherlands",
             "type":"sub-collection",
             "rel":"child",
-            "linkEndpoint":"<cid or url>"
+            "serviceEndpoint":"<cid or url>"
          },
          {
             "id":"did:geo:123456789abcdefghi/did-item-germany",
             "type":"sub-collection",
             "rel":"child",
-            "linkEndpoint":"<cid or url>"
+            "serviceEndpoint":"<cid or url>"
          }
       ]
    }
