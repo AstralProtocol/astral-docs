@@ -35,7 +35,6 @@ As of right now, the Collection extends the default GeoDID Specification without
          {
             "id":"did:example:123456789abcdefghi/did-item-raster#collection-metadata",
             "type":"collection-metadata",
-            "rel":"self",
             "serviceEndpoint":"<cid or url>"
          }
       ],

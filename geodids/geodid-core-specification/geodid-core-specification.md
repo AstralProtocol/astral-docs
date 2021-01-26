@@ -33,15 +33,7 @@ There are two "types" of GeoDID Specifications under the Astral Protocol, that w
             "type":"collection",
             "created":"2019-03-23T06:35:22Z"
       },
-      "service":{
-         "metadata":[
-            {
-               "id":"did:geo:123456789abcdefghi#metadata",
-               "type":"metadata"
-               "rel":"self",
-               "serviceEndpoint":"<cid or url>"
-            }
-         ],      
+      "service":{      
          "links":[
             {
                "id":"did:geo:123456789abcdefghi",
@@ -68,7 +60,7 @@ There are two "types" of GeoDID Specifications under the Astral Protocol, that w
 | id | string | **REQUIRED** The identifier for the DID Document. It can be the root DID ID or it can be a DID URL with a specific path or fragment. The id must be of the following format: did:&lt;method&gt;:&lt;specific identifier&gt;. The path\(.../path\), query\(...?query\), and fragment\(...\#fragment\) are optional but will be used later as identifiers for the children collections and items. |
 | authentication | \[Authentication Object\] | **OPTIONAL BY DEFAULT** Authentication is a process \(typically some type of protocol\) by which an entity can prove it has a specific attribute or controls a specific secret using one or more [verification methods](https://www.w3.org/TR/did-core/#dfn-verification-method). With [DIDs](https://www.w3.org/TR/did-core/#dfn-decentralized-identifiers), a common example would be proving control of the private key associated with a public key published in a [DID document](https://www.w3.org/TR/did-core/#dfn-did-documents). |
 | did\_metadata | did\_metadata Object | **REQUIRED** The did\_metadata object contains relative metadata pertaining to the particular GeoDID. For example, timestamps for the CRUD operations, the type of GeoDID, descriptions, etc. |
-| link | \[Link Object\] | **REQUIRED** A list of references to other DID documents. |
+| service | Service Object  | **REQUIRED** The service object contains several sub fields used to reference metadata, other GeoDIDs, and/or assets. |
 
 ## Authentication Object Fields
 
@@ -86,18 +78,47 @@ The `authentication` [verification relationship](https://www.w3.org/TR/did-core/
 | Field  | Type | Description |
 | :--- | :--- | :--- |
 | type | string | **REQUIRED** The type can either be a Collection or Item. **** |
+| subtype | string  | **REQUIRED** The subtype can either be a GeoJSON or Raster. |
 | created | string | **REQUIRED UPON CREATION** The geodid package will automatically timestamp the GeoDID upon creation. |
 | updated  | string | **REQUIRED UPON UPDATE** The geodid package will automatically timestamp the GeoDID upon an update. If the GeoDID Document never updates then there will not be a  |
 | description | string | **OPTIONAL** A description describing the GeoDID Document. It can be anything but most likely the description will address the DID subject.  |
 
 ## Service Endpoint Object Fields
 
-This object describes a relationship with another entity. These entities can be sub-collection GeoDIDs, GeoDID Items, or traditional specifications /assets like geoJson, STAC, etc.
+, or traditional specifications /assets like geoJson, STAC, etc.
+
+| Field  | Type | Description |
+| :--- | :--- | :--- |
+| metadata | \[Metadata Object\] | **OPTIONAL** The Metadata Object array will contain an array of Metadata related to the assets or links within the GeoDID. \(ex. List of Spatial Data Providers who provided the data, GeoJSON Feature\) |
+| links | \[Links Object\] | **REQUIRED** The Links Object array will contain the relationships to parent and child GeoDIDs. |
+| assets | \[Assets Object\]  | **OPTIONAL** The Assets Object array will contain a list of references to assets relative to the GeoDID Item.  |
+
+### Metadata Field
 
 | Field | Type  | Description |
 | :--- | :--- | :--- |
+| id | string | **REQUIRED** The DID URL that dereferences to the entity's metadata. \[\#metadata\] |
+| type | string | **REQUIRED** The type of metadata. \(ex. collection-metadata, item-metadata\) |
 | serviceEndpoint | string | **REQUIRED** The actual link in the format of an URL or CID. Relative and absolute links are both allowed. |
+
+### Links Field 
+
+This object list describes the one-to-many relationships with other GeoDIDs. These entities can be sub-collection or sub-item GeoDIDs. This object field will come in handy when a user needs to traverse or scrape a data collection.
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| id  | string | **REQUIRED** The DID URL that dereferences to the entity's GeoDID Document. This field is required if you want to create a hierarchy of GeoDID Documents \(ex. GeoDID collection is parent to GeoDID Items or Collections\).  |
 | type | string | **REQUIRED** See chapter "Endpoint types" for more information. |
-| rel | string | **REQUIRED** Relationship between the current document and the linked document. See chapter "Relation types" for more information. |
-| id | string | **OPTIONAL** The DID URL that dereferences to the entity's GeoDID Document. This field is required if you want to create a hierarchy of GeoDID Documents \(ex. GeoDID collection is parent to GeoDID Items or Collections\).  |
+| rel  | string | **REQUIRED** Relationship between the current document and the linked document. See chapter "Relation types" for more information. |
+| serviceEndpoint | string | **REQUIRED** The actual link in the format of an URL or CID. Relative and absolute links are both allowed. |
+
+### Assets Field 
+
+The Assets object list contains all the assets the GeoDID Item will need to reference. Keep in mind that GeoDID Collections will not have the assets field because they will not be referencing "Assets", their job is to reference Items that will contain the assets they need.
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| id | string | **REQUIRED** The DID URL that dereferences to the entity's asset. \[\#asset\] |
+| type | string | **REQUIRED** The type of the asset. \(ex. GeoTIFF, geoJSON, PNG, CSV\) |
+| serviceEndpoint | string | **REQUIRED** The actual link in the format of an URL or CID. Relative and absolute links are both allowed. |
 

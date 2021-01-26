@@ -35,7 +35,6 @@ The Item extends the default GeoDID Specification. It can function as a standalo
             {
                "id":"did:example:123456789abcdefghi/did-item-raster#item-metadata",
                "type":"item-metadata",
-               "rel":"self",
                "serviceEndpoint":"<cid or url>"
             }
          ],
@@ -62,13 +61,11 @@ The Item extends the default GeoDID Specification. It can function as a standalo
          "assets":[
             {
                "id":"did:example:123456789abcdefghi/did-item-raster#geotiff",
-               "type":"asset",
                "type":"GeoTiff",
                "serviceEndpoint":"<cid or url>"
             },
             {
                "id":"did:example:123456789abcdefghi/did-item-raster#misc",
-               "type":"asset",
                "type":"misc",
                "serviceEndpoint":"<cid or url>"
             }

@@ -68,24 +68,7 @@ In order to create a GeoDID, a method specific identifier must be created, which
 
 #### Process
 
-1. Loop through the spatial data assets to be included in the GeoDID. If they are not URLs, compute the CIDs. For each, create an object containing the `did` \(including fragment\), `extension` and `serviceEndpoint,`like this: 
-
-2. Generate a list of objects describing `links` - **TODO @jared can you describe how this works?**
-
-3. Generate initial `item_metadata`object:  a GeoJSON feature object including a polygon containing the area enclosed by the spatial data asset, as well as the bounding box and the date-time of the registration.  
-**TODO the Polygon will vary based on the extension I think ... what if it is a single point? Or a collection of points? / what if it is difficult to get access to the underlying data, i.e. they just want to register a large file's URL?**   
-TODO: Will we have a `collection_metadata` object for GeoDID Collections?   
-  
-**&gt; Question: Can we put this metadata into the service array? For some reason I get the sense that adding custom attributes to the top level of the DID Document is poor practice. Can we make it so the first object in `service` is the `did_metadata`, and the second is the `item_metadata` - then subsequent elements in the array are the assets like we have planned?** [**See how the Ocean Protocol DID Method Specification does it ...**](https://github.com/oceanprotocol/OEPs/blob/master/7/v0.2/README.md#ddo-services)\*\*\*\*
-
-  
-TODO: Will we have a `collection_metadata` object for GeoDID Collections? 
-
-Yes I think we should have collection\_metadata at some point. We can add the Provider Information etc. \(ex. 4 Earth Intelligence is the provider of this collection of items, and we can include fields that verify that 4 Earth Intelligence is actually the provider even though they aren't the DID controller\)  
-  
-&gt; Question: Can we put this metadata into the service array? For some reason I get the sense that adding custom attributes to the top level of the DID Document is poor practice. Can we make it so the first object in `service` is the `did_metadata`, and the second is the `item_metadata` - then subsequent elements in the array are the assets like we have planned? [See how the Ocean Protocol DID Method Specification does it ...](https://github.com/oceanprotocol/OEPs/blob/master/7/v0.2/README.md#ddo-services)
-
-4. Generate initial `did_metadata,`including the GeoDID type \(`item` or `collection`\) and the ISO 8601 timestamp in the format `YYYY-MM-DDThh:mm:ss.sTZD` \(e.g. `1997-07-16T19:20:30.45+01:00`\)
+1.
 
 ### Read \(Resolve\)
 
