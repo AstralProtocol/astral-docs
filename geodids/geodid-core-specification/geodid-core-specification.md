@@ -33,26 +33,30 @@ There are two "types" of GeoDID Specifications under the Astral Protocol, that w
             "type":"collection",
             "created":"2019-03-23T06:35:22Z"
       },
-      "service":[
-         {
-            "id":"did:geo:123456789abcdefghi#metadata",
-            "type":"metadata"
-            "rel":"self",
-            "serviceEndpoint":"<cid or url>"
-         },      
-         {
-            "id":"did:geo:123456789abcdefghi",
-            "type":"collection"
-            "rel":"root",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:geo:123456789abcdefghi",
-            "type":"collection",
-            "rel":"self",
-            "serviceEndpoint":"<cid or url>"
-         }
-      ]
+      "service":{
+         "metadata":[
+            {
+               "id":"did:geo:123456789abcdefghi#metadata",
+               "type":"metadata"
+               "rel":"self",
+               "serviceEndpoint":"<cid or url>"
+            }
+         ],      
+         "links":[
+            {
+               "id":"did:geo:123456789abcdefghi",
+               "type":"collection"
+               "rel":"root",
+               "serviceEndpoint":"<cid or url>"
+            },
+            {
+               "id":"did:geo:123456789abcdefghi",
+               "type":"collection",
+               "rel":"self",
+               "serviceEndpoint":"<cid or url>"
+            }
+         ]
+      }
    }
 ]
 ```

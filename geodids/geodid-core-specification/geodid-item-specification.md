@@ -31,7 +31,7 @@ The Item extends the default GeoDID Specification. It can function as a standalo
          "created":"2019-03-23T06:37:45Z"
       },
       "service":{
-         "item-metadata":[
+         "metadata":[
             {
                "id":"did:example:123456789abcdefghi/did-item-raster#item-metadata",
                "type":"item-metadata",

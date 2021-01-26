@@ -31,7 +31,7 @@ As of right now, the Collection extends the default GeoDID Specification without
       "description":"Collection of EU Jurisdiction Data geojson + Raster Imagery"
    },
    "service":{
-      "collection-metadata":[
+      "metadata":[
          {
             "id":"did:example:123456789abcdefghi/did-item-raster#collection-metadata",
             "type":"collection-metadata",
