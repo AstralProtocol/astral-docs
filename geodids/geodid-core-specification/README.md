@@ -76,7 +76,7 @@ In order to create a GeoDID, a method specific identifier must be created, which
 6. If the user decides to add children to the sub-collection, they repeat step 4, and use the returned GeoDID ID + Collection path to append more leaf nodes.
 7. If the user decides to add items to the collection, they repeat step 3, until they finish adding all items. 
 
-We will also create automation features to create trees, by uploading folders with files in it. We hope this will kill two birds with one stone, so the user will only need to prepare the data once, and upload it in bulk. 
+In the near future, we will also create automation features to create trees, by uploading folders with files in it. We hope this will kill two birds with one stone, so the user will only need to prepare the data once, and upload it in bulk. 
 
 ### Read \(Resolve\)
 
