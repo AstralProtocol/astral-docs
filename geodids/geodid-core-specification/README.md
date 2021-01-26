@@ -58,7 +58,7 @@ The `service` arrays in the GeoDID will contain several references to other GeoD
 
 ### Create \(Register\)
 
-In order to create a GeoDID, a method specific identifier must be created, which will be used to build the document. 
+In order to create a GeoDID, a method specific identifier must be created, which will be used to build the document. After the method specific identifier is created, the user will need to select the type of Document they would like to create, Collection or Item. 
 
 #### Required Assets
 
@@ -66,9 +66,17 @@ In order to create a GeoDID, a method specific identifier must be created, which
 * Spatial data asset\(s\), or URI\(s\) resolving to spatial data asset\(s\), along with relevant metadata / attribution.
 * If GeoDID Collection, some information about the relationships between the spatial data assets being identified.
 
-#### Process
+#### Proof of Concept Process
 
-1.
+1. Create Method Specific Identifier
+2. User chooses which type of GeoDID they want to create \(Collection or standalone Item\)
+3. If the user decides to create a standalone Item then they just upload the assets, did-metadata information, and item-metadata they want in the DID. The GeoDID will be built, pinned on IPFS, and anchored on the Ropsten Testnet.
+4. If the user decides to create a Collection then the client will build a collection GeoDID and return the GeoDID ID. The GeoDID will be built, pinned on IPFS, and anchored on the Ropsten Testnet.
+5. The user will save this GeoDID ID to append children sub-collections or sub-items as children. 
+6. If the user decides to add children to the sub-collection, they repeat step 4, and use the returned GeoDID ID + Collection path to append more leaf nodes.
+7. If the user decides to add items to the collection, they repeat step 3, until they finish adding all items. 
+
+We will also create automation features to create trees, by uploading folders with files in it. We hope this will kill two birds with one stone, so the user will only need to prepare the data once, and upload it in bulk. 
 
 ### Read \(Resolve\)
 
