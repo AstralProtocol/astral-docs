@@ -6,6 +6,8 @@ description: >-
 
 # GeoDID Core Specification
 
+![Figure 1: GeoDID Document Hierarchy ](../../.gitbook/assets/screen-shot-2021-01-26-at-4.06.34-pm.png)
+
 ## Types of GeoDIDs 
 
 There are two "types" of GeoDID Specifications under the Astral Protocol, that work together to enable structure between resources. At their core, they are both extensions of the DID and default GeoDID specification. However, they differ in their functionality and purpose, in order to enable a better user experience for all users.
