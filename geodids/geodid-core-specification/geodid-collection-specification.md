@@ -30,50 +30,54 @@ As of right now, the Collection extends the default GeoDID Specification without
       "updated":"2019-03-23T06:37:45Z",
       "description":"Collection of EU Jurisdiction Data geojson + Raster Imagery"
    },
-   "service":[
-      {
-         "id":"did:example:123456789abcdefghi/did-item-raster#collection-metadata",
-         "type":"collection-metadata",
-         "rel":"self",
-         "serviceEndpoint":"<cid or url>"
-      },
-      {
-         "id":"did:geo:123456789abcdefghi",
-         "type":"collection",
-         "rel":"root",
-         "linkEndpoint":"<cid or url>"
-      },
-      {
-         "id":"did:geo:123456789abcdefghi",
-         "type":"collection",
-         "rel":"self",
-         "linkEndpoint":"<cid or url>"
-      },
-      {
-         "id":"did:geo:123456789abcdefghi/did-item-raster",
-         "type":"sub-collection",
-         "rel":"child",
-         "linkEndpoint":"<cid or url>"
-      },
-      {
-         "id":"did:geo:123456789abcdefghi/did-item-uk",
-         "type":"sub-collection",
-         "rel":"child",
-         "linkEndpoint":"<cid or url>"
-      },
-      {
-         "id":"did:geo:123456789abcdefghi/did-item-netherlands",
-         "type":"sub-collection",
-         "rel":"child",
-         "linkEndpoint":"<cid or url>"
-      },
-      {
-         "id":"did:geo:123456789abcdefghi/did-item-germany",
-         "type":"sub-collection",
-         "rel":"child",
-         "linkEndpoint":"<cid or url>"
-      }
-   ]
+   "service":{
+      "collection-metadata":[
+         {
+            "id":"did:example:123456789abcdefghi/did-item-raster#collection-metadata",
+            "type":"collection-metadata",
+            "rel":"self",
+            "serviceEndpoint":"<cid or url>"
+         }
+      ],
+      "links":[
+         {
+            "id":"did:geo:123456789abcdefghi",
+            "type":"collection",
+            "rel":"root",
+            "linkEndpoint":"<cid or url>"
+         },
+         {
+            "id":"did:geo:123456789abcdefghi",
+            "type":"collection",
+            "rel":"self",
+            "linkEndpoint":"<cid or url>"
+         },
+         {
+            "id":"did:geo:123456789abcdefghi/did-item-raster",
+            "type":"sub-collection",
+            "rel":"child",
+            "linkEndpoint":"<cid or url>"
+         },
+         {
+            "id":"did:geo:123456789abcdefghi/did-item-uk",
+            "type":"sub-collection",
+            "rel":"child",
+            "linkEndpoint":"<cid or url>"
+         },
+         {
+            "id":"did:geo:123456789abcdefghi/did-item-netherlands",
+            "type":"sub-collection",
+            "rel":"child",
+            "linkEndpoint":"<cid or url>"
+         },
+         {
+            "id":"did:geo:123456789abcdefghi/did-item-germany",
+            "type":"sub-collection",
+            "rel":"child",
+            "linkEndpoint":"<cid or url>"
+         }
+      ]
+   }
 ]
 ```
 
