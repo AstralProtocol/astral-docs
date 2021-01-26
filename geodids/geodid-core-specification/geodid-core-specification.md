@@ -24,9 +24,9 @@ There are two "types" of GeoDID Specifications under the Astral Protocol, that w
       "authentication":[
          {
             "id":"did:geo:123456789abcdefghi#keys-1",
-            "type":"RsaVerificationKey2018",
+            "type":"Secp256k1VerificationKey2018",
             "controller":"did:geo:123456789abcdefghi",
-            "publicKeyPem":"-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
+            "publicKey":"-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
          }
       ],
       "did_metadata":{
@@ -64,14 +64,16 @@ There are two "types" of GeoDID Specifications under the Astral Protocol, that w
 
 ## Authentication Object Fields
 
-The `authentication` [verification relationship](https://www.w3.org/TR/did-core/#dfn-verification-relationship) is used to specify how the [DID subject](https://www.w3.org/TR/did-core/#dfn-did-subjects) is expected to be authenticatedField, such as performing CRUD operations on the DID Document. However, the Authentication Object is optional by default as stated by the [W3C working groups' DID specification](https://www.w3.org/TR/did-core/#authentication).
+The `authentication` [verification relationship](https://www.w3.org/TR/did-core/#dfn-verification-relationship) is used to specify how the [DID subject](https://www.w3.org/TR/did-core/#dfn-did-subjects) is expected to be authenticatedField, such as performing CRUD operations on the DID Document. However, the Authentication Object is **OPTIONAL** by default as stated by the [W3C working groups' DID specification](https://www.w3.org/TR/did-core/#authentication). 
 
 | Field | Description |  |
 | :--- | :--- | :--- |
-| id | string |  |
-| type | string |  |
-| controller | string |  |
-| publicKeyPem | string |  |
+| id | string | The GeoDID ID + key fragment which will be used to reference the controllers public key. |
+| type | string | The type of Verification method being used. \(ex. Ed25519VerificationKey2018, Secp256k1VerificationKey2018\) |
+| controller | string | The GeoDID ID which will be used to reference the controllers. |
+| publicKey | string | The publicKey of the controller. |
+
+_Note: Do not worry about this field as it will automatically be populated with the user's Ethereum address._ 
 
 ## DID\_Metadata Object Fields
 
@@ -79,8 +81,8 @@ The `authentication` [verification relationship](https://www.w3.org/TR/did-core/
 | :--- | :--- | :--- |
 | type | string | **REQUIRED** The type can either be a Collection or Item. **** |
 | subtype | string  | **REQUIRED** The subtype can either be a GeoJSON or Raster. |
-| created | string | **REQUIRED UPON CREATION** The geodid package will automatically timestamp the GeoDID upon creation. |
-| updated  | string | **REQUIRED UPON UPDATE** The geodid package will automatically timestamp the GeoDID upon an update. If the GeoDID Document never updates then there will not be a  |
+| created | string | **REQUIRED UPON CREATION** The GeoDID package will automatically timestamp the GeoDID upon creation. |
+| updated  | string | **REQUIRED UPON UPDATE** The GeoDID package will automatically timestamp the GeoDID upon an update. If the GeoDID Document never updates then there will not be a  |
 | description | string | **OPTIONAL** A description describing the GeoDID Document. It can be anything but most likely the description will address the DID subject.  |
 
 ## Service Endpoint Object Fields

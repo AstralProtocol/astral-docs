@@ -20,7 +20,7 @@ The Item extends the default GeoDID Specification. It can function as a standalo
       "authentication":[
          {
             "id":"did:geo:123456789abcdefghi/did-item-raster#keys-1",
-            "type":"RsaVerificationKey2018",
+            "type":"Secp256k1VerificationKey2018",
             "controller":"did:geo:123456789abcdefghi",
             "publicKeyPem":"-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
          }
