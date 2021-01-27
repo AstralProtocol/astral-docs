@@ -6,9 +6,19 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### 26 January 2020
+
+* Completed the draft GeoDID Method Specification - now we're architecting software modules for working with GeoDIDs
+* Spoke with @KERNEL0x Fellow @mattgcondon - the grandfather of NFTs - about trusted location proofs and using location in smart contracts.
+* Kicking ideas around with @naz about NFT markets and the NFT community.
+* First talk from @fairlaunch Capital in KERNEL Block 2 - learning about newfound paths to independent sustainability.
+* Early tests on [Spatial.sol](https://github.com/AstralProtocol/spatial-sol), a Solidity library of geometric and topological functions - watch this space ... 
+* Community
+  * 89 Twitter followers
+  * 
+
 #### **19 January 2020**
 
-* Early tests on [Spatial.sol](https://github.com/AstralProtocol/spatial-sol), a Solidity library of geometric and topological functions - watch this space!
 * Refinements of the draft GeoDID Method Specification.
 * Chat with a VC about the past, present and future of the spatial Web3.
 * Chatting about trusted location proofs with a security-minded developer in KERNEL.
@@ -29,7 +39,6 @@ description: Weekly updates from the Astral team
 #### 5 January 2020
 
 * Astral received a [Filecoin Development Grant](https://filecoin.io/blog/filecoin-dev-grants-wave-4-5-gitcoin/) to develop a few key pieces of the Astral Protocol: a GeoDID Method Specification \(more soon!\) and IPLD-encoded GeoTIFFs, for Web3-native geospatial imagery. [Our grant details](https://github.com/filecoin-project/devgrants/blob/efaac115b71df7b373354c72600aa9818fc6710a/open-grant-proposals/open-proposal-astral-protocol.md).
-* We've been developing our roadmap, identifying key pieces to \_\_\_\_\_\_.
 * The Astral team won the Ceramic Bounty for the SkyDB hackathon for building a version of Geolocker, a verifiable spatial data registry. 
 * Launched our new website, [https://astral.global](https://astral.global). \(Thanks for the awesome template, [@marrrguerite](https://twitter.com/marrrguerite)!\)
 
