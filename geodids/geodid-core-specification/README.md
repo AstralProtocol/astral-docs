@@ -4,11 +4,11 @@
 
 ## **Abstract**
 
-Geographic decentralized identifiers, or GeoDIDs, are DIDs designed to identify spatial data assets **and to be compatible with any distributed ledger or network &lt;this is tricky ...?&gt;**. Spatial data has unique properties that require special treatment - the GeoDID Method Specification defines an approach in creating, reading, updating and deleting identifiers for these assets using DIDs. In creating a GeoDID, data controllers permissionlessly create irrevocable, cryptographically-verifiable identities for spatial data assets that can be useful in decentralized applications
+Geographic decentralized identifiers, or GeoDIDs, are DIDs designed to identify spatial data assets and to be compatible with any distributed ledger or network. Spatial data has unique properties that require special treatment - the GeoDID Method Specification defines an approach in creating, reading, updating and deleting identifiers for these assets using DIDs. In creating a GeoDID, data controllers permissionlessly create irrevocable, cryptographically-verifiable identities for spatial data assets that can be useful in decentralized applications
 
 The objective of the GeoDID is to encourage contribution to the DID specification and Linked Data Signatures to identify and ensure trustable spatial data. This will allow rapid development of extensions to these without requiring the usage of trustless infrastructures such as blockchains or other distributed systems.
 
-The GeoDID is inspired by the [SpatioTemporal Asset Catalog \(STAC\) specification](https://stacspec.org/) and utilizes a similar linked data structure. The structure alleviates a handful of problems associated with traversing large datasets, and allows for ease of use for the end user. Spatial data assets are identified in the service endpoints of the GeoDID document. These service endpoints can be classed as either Collections or Items. Each "Collection" contains a number of child Collections or Items;  and each "Item" will contain **several service endpoints &lt;this doesn't sound right?&gt;** that dereference to geospatial data assets. This hierarchy of encapsulating linked data within the GeoDIDs will allow for user's to find or create the data/datasets that they need easily.
+The GeoDID is inspired by the [SpatioTemporal Asset Catalog \(STAC\) specification](https://stacspec.org/) and utilizes a similar linked data structure. The structure alleviates a handful of problems associated with traversing large datasets, and allows for ease of use for the end user. Spatial data assets are identified in the service endpoints of the GeoDID document. These service endpoints can be classed as either Collections or Items. Each "Collection" contains a number of child Collections or Items;  and each "Item" will contain several service endpoints that dereference to geospatial data assets. This hierarchy of encapsulating linked data within the GeoDIDs will allow for user's to find or create the data/datasets that they need easily.
 
 {% hint style="info" %}
 This data model is based on the STAC specification, which was designed for cataloging spatiotemporal data assets including satellite images, UAV imagery, LIDAR scans etc. 
@@ -40,7 +40,9 @@ For the draft version of this specification, `<geo-specific-identifier>` referen
 {% hint style="info" %}
 This `<geo-specific-identifier>` generation procedure achieves our design goals of enabling one Ethereum address to control multiple GeoDIDs. However, in future versions of the specification we intend to investigate the potential of encoding more information into the identifier, including a hash or checksum of the spatial data assets identified, similar to the [Ocean Protocol DID Method](https://github.com/oceanprotocol/OEPs/blob/master/7/v0.2/README.md#how-to-compute-a-did). 
 
-However, the GeoDID identifier should not change even if GeoDID Document contents are subsequently updated by the GeoDID controller. 
+We also could encode some segment of the identifier to indicate which blockchain the GeoDID is registered on, a possible approach to achieve our design goal of platform agnosticism.
+
+Fundamentally, the GeoDID identifier should not change even if GeoDID Document contents are subsequently updated by the GeoDID controller. 
 {% endhint %}
 
 #### Identifying the correct GeoDID 
