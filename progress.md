@@ -6,6 +6,15 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### 2 February 2020
+
+* Submitted the [GeoDID Method Specification](https://docs.astral.global/geodids/geodid-core-specification) for feedback - if you're interested, read it here, and give feedback by creating an issue on the [Github repo](https://github.com/AstralProtocol/astral-docs).
+* Fixed a bug in our prototype implementation of the Hyperaware Protocol - a spatial governance protocol for connected devices.
+* KERNEL Fairlaunch seminar with Brian Flynn from Rabbit Hole - got us thinking about the value of community.
+* Community
+  * 113 Twitter followers
+  * 13 new Gitcoin grant contributors
+
 #### 26 January 2020
 
 * Completed the draft GeoDID Method Specification - now we're architecting software modules for working with GeoDIDs
