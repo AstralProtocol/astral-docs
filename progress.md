@@ -6,6 +6,17 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### 9 February 2020
+
+* Broke ground on a research report on the intersection of spatial data and Web3.
+* Progress on the GeoDID Browser interface development and Astral modules for working with GeoDIDs - part of our work on a Filecoin Development Grant.
+* Spoke with an American entrepreneur working to onboard land parcel data onto Ethereum.
+* Fairlaunch session in[@KERNEL0x](https://twitter.com/KERNEL0x) with[@0xMaki](https://twitter.com/0xMaki) - hard-earned words of wisdom on early community growth.
+* Advisor calls.
+* Community: 
+  * 132 Twitter followers
+  * 5 new Gitcoin grant supporters
+
 #### 2 February 2020
 
 * Submitted the [GeoDID Method Specification](https://docs.astral.global/geodids/geodid-core-specification) for feedback - if you're interested, read it here, and give feedback by creating an issue on the [Github repo](https://github.com/AstralProtocol/astral-docs).
