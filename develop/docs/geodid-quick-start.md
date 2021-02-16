@@ -8,7 +8,9 @@ description: Documentation for the Astral Client class.
 
 ### Constructor
 
-**new AstralClient\(\_ethAddress\);**
+Creates a new AstralClient Instance to utilize the following functions.
+
+**`new AstralClient(_ethAddress);`**
 
 | Name | Type | Attributes | Description |
 | :--- | :--- | :--- | :--- |
