@@ -14,7 +14,10 @@
 ## Develop
 
 * [Build Astral](develop/build-with-astral.md)
-* [Quickstart](develop/geodid-quick-start.md)
+* [Quickstart](develop/quickstart.md)
+* [Docs](develop/docs/README.md)
+  * [Types](develop/docs/types.md)
+  * [Astral Client](develop/docs/geodid-quick-start.md)
 * [Storing spatial data](develop/storing-spatial-data.md)
 * [Creating GeoDIDs](develop/creating-geodids.md)
 * [Resolving GeoDIDs](develop/resolving-geodids.md)
