@@ -6,6 +6,16 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### 16 February 2020
+
+* Commits on modules for working with GeoDIDs, plus a check-in call with @filecoin on development grant progress. 
+* Call with @blairvee and Jonny, talking about GIS, Grassroots Economics and truly local currencies. 
+* Core community call. We talked through the road up to this point, and where it should lead. 
+* We created a Discord! If you are doing \*anything\* at the intersection of spatial / location data and Web3, join and say hi. [https://discord.gg/W2nFZF75](https://discord.gg/W2nFZF75)
+* Community: 
+  * 146 Twitter followers
+  * 6 new Gitcoin grant supporters
+
 #### 9 February 2020
 
 * Broke ground on a research report on the intersection of spatial data and Web3.
