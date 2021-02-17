@@ -1,16 +1,25 @@
 ---
-description: Description and quick-start
+description: Documentation about the Astral Protocol Core Package.
 ---
 
 # @astralprotocol/core
 
+## What is the @astralprotocol/core package?
+
+The **@astralprotocol/core** package is a Typescript NPM package that is responsible for any CRUD operations performed on the DID Documents. This includes the creation of DID Documents, loading the DID Documents, as well as updating them. The package also has utilities that enable the creation of the collision resistant GeoDID IDs, a custom [did-resolver](https://github.com/decentralized-identity/did-resolver) that enables DID Resolution, as well as pinning features for storing the Documents on IPFS or FFS. This package is meant to be used in conjunction with the @astralprotocol/contracts and @astralprotocol/subgraph packages. However, the package can also be used independently if it needs of the user does not want to rely on the Ethereum network.
+
+Note: This package is not responsible for keeping any information regarding the created documents \(mappings, etc.\), the created DID Documents are persisted through IPFS/FFS, and the metadata regarding the DID Documents are persisted through the subgraph and smart contracts.
+
+## **Installation:**
+
 **To get started with the Astral Core Package:**
 
-`yarn add @astralprotocol/core`
+`yarn add -D @astralprotocol/core`
 
-`npm install @astralprotocol/core`
+`npm install -D @astralprotocol/core`
 
-**Import the package into your project:**  
+## Getting Started:
+
 `import AstralClient from '@astralprotocol/core';`
 
 `const AstralClient = require('@astralprotocol/core');`

@@ -2,7 +2,7 @@
 description: Follow these simple steps to try Astral Protocol quickly
 ---
 
-# Quickstart
+# Getting Started
 
 ## Install the packages
 
@@ -111,8 +111,6 @@ module.exports = async function (callback) {
 
 ```
 {% endcode %}
-
-## Save the script execution in 'scripts' with package.json
 
 ```bash
 "deployGeoDIDs": "truffle exec scripts/deployGeoDIDs.js --network ropsten",
