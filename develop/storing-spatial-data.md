@@ -1,4 +1,4 @@
-# Storing spatial data
+# Quickstart
 
 Under construction - stay tuned! [@AstralProtocol](https://twitter.com/AstralProtocol)
 
