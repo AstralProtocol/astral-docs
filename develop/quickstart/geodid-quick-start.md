@@ -4,9 +4,7 @@ description: API for the @astralprotocol/core package
 
 # API
 
-## Class: AstralClient
-
-### Constructor
+## Constructor
 
 Creates a new AstralClient Instance to utilize the following functions.
 
@@ -16,9 +14,9 @@ Creates a new AstralClient Instance to utilize the following functions.
 | :--- | :--- | :--- | :--- |
 | **\_ethAddress** | string | REQUIRED | The Ethereum Address of the user. |
 
-### Methods 
+## Methods 
 
-**CreateGenesisGeoDID**
+### **CreateGenesisGeoDID**
 
 Creates a GenesisGeoDID Document. This creates a new root node for the linked data structure.
 
@@ -46,7 +44,7 @@ interface IDocumentInfo {
 {% endtab %}
 {% endtabs %}
 
-**CreateChildGeoDID** 
+### **CreateChildGeoDID** 
 
 Creates a Child GeoDIDDocument. This creates a child node for an existing linked data structure.
 
@@ -76,9 +74,9 @@ interface IDocumentInfo {
 {% endtab %}
 {% endtabs %}
 
-**PinDocument**
+### **PinDocument**
 
-Pins the Document to IPFS or FFS via Powergate. Cold Storage
+Pins the Document to IPFS or FFS via Powergate.
 
 **`async pinDocument(_documentInfo: IDocumentInfo, _token?: string): Promise<IPinInfo>{}`**
 
@@ -106,7 +104,7 @@ interface IPinInfo {
 {% endtab %}
 {% endtabs %}
 
-**LoadDocument**
+### **LoadDocument**
 
 Loads the Document by the DocID and the Powergate Auth token associated with it.
 
