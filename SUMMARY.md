@@ -14,7 +14,7 @@
 ## Develop
 
 * [Build Astral](develop/build-with-astral.md)
-* [Quickstart](develop/storing-spatial-data.md)
+* [Quickstart](develop/quickstart-1.md)
 * [@astralprotocol/core](develop/quickstart/README.md)
   * [API](develop/quickstart/geodid-quick-start.md)
   * [Types](develop/quickstart/types.md)

@@ -1,5 +1,5 @@
 ---
-description: Follow these simple steps to use Astral Protocol in your application!
+description: Follow these simple steps to try Astral Protocol quickly
 ---
 
 # Quickstart
