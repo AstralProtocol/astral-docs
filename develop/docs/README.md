@@ -1,18 +1,18 @@
 ---
-description: Description and quick-start
+description: Documentation about the Astral Protocol Contracts Package.
 ---
 
 # @astralprotocol/contracts
 
 [![Build Status](https://www.travis-ci.com/AstralProtocol/astralprotocol.svg?branch=master)](https://www.travis-ci.com/AstralProtocol/astralprotocol) [![Coverage Status](https://coveralls.io/repos/github/AstralProtocol/astralprotocol/badge.svg?branch=master)](https://coveralls.io/github/AstralProtocol/astralprotocol?branch=master)
 
-### **Description**
+## **Description**
 
 These contracts serve as the Registry for the Astral Protocol GeoDIDs. It allows binding of a GeoDID to an ethereum address and CID name resolving.
 
 By registering a spatial asset Smart Contract events are triggered, which are picked up by the subgraph indexer to build the tree of relationships for easy querying.
 
-### **To get started with the Astral Protocol Contracts package:**
+## **To get started with the Astral Protocol Contracts package:**
 
 `yarn add @astralprotocol/contracts`
 
@@ -21,5 +21,5 @@ By registering a spatial asset Smart Contract events are triggered, which are pi
 * Run tests with `yarn truffle-test` or do coverage check up `yarn coverage`
 * You can deploy an instance by running `yarn new-instance`. It builds a GeoDID tree with hardcoded GeoDID ids and CIDs.
 * You can test the removal of some links by running `yarn remove-links`.
-* Watch the changes in a locally deployed subgraph.
+* Watch the changes in a locally deployed [subgraph](../astralprotocol-subgraph.md).
 

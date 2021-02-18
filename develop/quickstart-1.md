@@ -51,7 +51,7 @@ module.exports = {
 
 ## Create a script for interacting with the Astral Client and Contracts
 
-{% code title="deployGeoDIDs.js" %}
+{% code title="scripts/deployGeoDIDs.js" %}
 ```bash
 import AstralClient from '@astralprotocol/core';
 const SpatialAssets = artifacts.require("./SpatialAssets.sol");
