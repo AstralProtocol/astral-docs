@@ -83,7 +83,7 @@ async function run(){
 }
 ```
 
-## **To develop or try the Astral Protocol Subgraph locally**
+## **To develop or try the Astral Protocol Core locally**
 
 #### 
 
