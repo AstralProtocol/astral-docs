@@ -28,11 +28,9 @@ yarn add @astralprotocol/subgraph
 #### Prerequisites
 
 * Clone the astralprotocol repository and go to packages/subgraph
-
-  `sudo apt-get install libsecret-1-dev`
-
+* Run `sudo apt-get install libsecret-1-dev`
 * [Docker Instalation](https://docs.docker.com/install/linux/docker-ce/debian/)
-* `git clone https://github.com/graphprotocol/graph-node/` \(check setup instructions for docker version  on [https://thegraph.com/docs/](https://thegraph.com/docs/)\)
+* Run `git clone https://github.com/graphprotocol/graph-node/` \(check setup instructions for docker version  on [https://thegraph.com/docs/](https://thegraph.com/docs/)\)
 
 #### Deployment
 
