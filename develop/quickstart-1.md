@@ -64,7 +64,7 @@ const bs58 = require('bs58')
 module.exports = async function (callback) {
   const stringToBytes = (string) => web3.utils.asciiToHex(string)
 
-    // based on https://ethereum.stackexchange.com/questions/17094/how-to-store-ipfs-hash-using-bytes32
+  // based on https://ethereum.stackexchange.com/questions/17094/how-to-store-ipfs-hash-using-bytes32
   // Return bytes32 hex string from base58 encoded ipfs hash,
   // stripping leading 2 bytes from 34 byte IPFS hash
   // Assume IPFS defaults: function:0x12=sha2, size:0x20=256 bits
