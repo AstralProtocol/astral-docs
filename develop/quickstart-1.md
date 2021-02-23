@@ -17,6 +17,10 @@ const HDWalletProvider = require("@truffle/hdwallet-provider");
 require('dotenv').config();
 
 // Create a .env file with your MNEMONIC and a ROPSTEN API key from INFURA
+// Must have the following format:
+// MNEMONIC="words here "
+// ROPSTEN_API_KEY=https://ropsten.infura.io/v3/key
+
 let mnemonic = process.env.MNEMONIC
 let ropstenURL = process.env.ROPSTEN_API_KEY
 
