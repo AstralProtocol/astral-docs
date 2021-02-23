@@ -17,13 +17,20 @@ wss://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv03
 
 You can connect to these with your GraphQL client of choice or try them at [The Graph's playground](https://thegraph.com/explorer/subgraph/astralprotocol/spatialassetsv03).
 
-## **To get started with the Astral Protocol Subgraph package:**
+## **To add Astral Protocol Subgraph to your application**
 
-`yarn add @astralprotocol/subgraph`
+```text
+yarn add @astralprotocol/subgraph
+```
+
+## **To develop or try the Astral Protocol Subgraph locally**
 
 #### Prerequisites
 
-* `sudo apt-get install libsecret-1-dev`
+* Clone the astralprotocol repository and go to packages/subgraph
+
+  `sudo apt-get install libsecret-1-dev`
+
 * [Docker Instalation](https://docs.docker.com/install/linux/docker-ce/debian/)
 * `git clone https://github.com/graphprotocol/graph-node/` \(check setup instructions for docker version  on [https://thegraph.com/docs/](https://thegraph.com/docs/)\)
 
