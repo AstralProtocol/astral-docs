@@ -6,6 +6,17 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### 23 February 2020
+
+* Our Discord is gathering steam. We've seen new members this week from startup projects, the GIS world, economics graduate schools and more. Join if you want to learn more: [https://discord.gg/9Kv8tRvWVG](https://discord.gg/9Kv8tRvWVG)
+* Discord member Econometrie raised some great points about how systems built on Astral could solve an interesting problem: how do we know where we can park rental e-bikes and e-scooters? We are working out how to adapt Hyperaware to help solve this. 
+* A new member - Kiran - joined and shared a draft post he's writing about applying principles of token engineering to manage road network usage. 
+* We have written a master document with overviews of the different tools and protocols we are building. This is open - feedback very welcome: [https://hackmd.io/0p7uwOijSMuFXcNE\_anDWA](https://hackmd.io/0p7uwOijSMuFXcNE_anDWA)
+* Community
+  * 160 Twitter followers
+  * 18 Discord members
+  * 5 new Gitcoin grant supporters - plus a 246.98 DAI CLR match
+
 #### 16 February 2020
 
 * Commits on modules for working with GeoDIDs, plus a check-in call with @filecoin on development grant progress. 
