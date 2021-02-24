@@ -20,11 +20,29 @@ yarn add @astralprotocol/contracts
 
 ## **To develop or try the Astral Protocol Contracts locally**
 
-* Clone the astralprotocol repository and go to packages/contracts
+* Clone the [astralprotocol repository](https://github.com/AstralProtocol/astralprotocol) and go to packages/contracts:
+
+```text
+git clone git@github.com:AstralProtocol/astralprotocol.git
+cd astralprotocol/packages/contracts
+```
+
 * Run ganache `yarn ganache`
-* Deploy contracts with `yarn truffle`
-* Run tests with `yarn truffle-test` or do coverage check up `yarn coverage`
+* In a new terminal, deploy contracts with `yarn truffle`
+* Run tests with `yarn truffle-test` 
 * You can deploy an instance by running `yarn new-instance`. It builds a GeoDID tree with hardcoded GeoDID ids and CIDs.
 * You can test the removal of some links by running `yarn remove-links`.
 * Watch the changes in a locally deployed [subgraph](../astralprotocol-subgraph.md).
+* Do coverage check up by killing the `ganache` process in the first terminal and running `yarn coverage`
+
+## **To deploy your own contracts in the Ropsten testnet**
+
+* Create a `.env` file in `/packages/contracts` with a `MNEMONIC` and `ROPSTEN_API_KEY`
+
+{% code title=".env" %}
+```text
+MNEMONIC="mnemonic phrase goes here with testnet ether in address[0] on ropsten cool"
+ROPSTEN_API_KEY=https://ropsten.infura.io/v3/<PROJECT ID HERE>
+```
+{% endcode %}
 
