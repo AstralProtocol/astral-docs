@@ -4,6 +4,26 @@ description: Follow these simple steps to try Astral Protocol quickly
 
 # Getting Started
 
+## Setting up local Powergate Client
+
+In order to store the GeoDIDs created by the core package, you will need to start up a local Powergate client or connect to an existing hosted client. Below will be a brief overview on how to setup a local powergate client on your system. Further information is available at: [https://github.com/textileio/powergate](https://github.com/textileio/powergate).
+
+{% hint style="info" %}
+In order to setup the Powergate Client locally on your system you must have [Docker](https://docs.docker.com/engine/install/), [Docker-Compose](https://docs.docker.com/compose/install/), and [Go 1.16](https://golang.org/dl/) installed. 
+{% endhint %}
+
+In your terminal, create a new directory and clone the Powergate repo into it:
+
+`git clone https://github.com/textileio/powergate.git`
+
+After you clone the repo, enter the following commands:
+
+`cd powergate/docker`
+
+`make localnet`
+
+More information regarding Powergate's Localnet mode, please refer to their documentation: [https://github.com/textileio/powergate\#localnet-mode](https://github.com/textileio/powergate#localnet-mode)
+
 ## Install the packages
 
 ```
