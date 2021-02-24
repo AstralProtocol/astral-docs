@@ -12,7 +12,7 @@ The **@astralprotocol/core** package is a Typescript NPM package that is respons
 This package is not responsible for persistence of the documents \(mappings, etc.\), the created DID Documents are persisted through IPFS/FFS, and the metadata regarding the DID Documents are persisted through the subgraph and smart contracts.
 {% endhint %}
 
-## **To add Astral Protocol Contracts to your application**
+## **To add Astral Protocol Core to your application**
 
 ```text
 yarn add -D @astralprotocol/core
@@ -23,6 +23,12 @@ import AstralClient from '@astralprotocol/core';
 OR
 const AstralClient = require('@astralprotocol/core');
 ```
+
+## **To develop or try the Astral Protocol Core locally**
+
+* **Step 1**
+* **Step 2**
+* **Step 3**
 
 **Example Implementation of core package:**
 
@@ -82,8 +88,6 @@ async function run(){
     
 }
 ```
-
-## **To develop or try the Astral Protocol Core locally**
 
 #### 
 
