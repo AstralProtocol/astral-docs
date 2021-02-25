@@ -8,14 +8,14 @@ description: Documentation about the Astral Protocol Subgraph Package.
 
 The **@astralprotocol/subgraph** serves as the indexing engine of the protocol, capturing the registration and modification events of GeoDIDs in the [**@astralprotocol/contracts**](docs/)**.** It acts like a decentralized querying database where it is substantially easier to make complex queries to the Spatial Assets registry. It is used to create the tree of GeoDID nodes that represents their relationships and groupings.
 
-The current version of the subgraph \(**v04**\) is indexing the Ethereum **Roptsten** network at the following GraphQL endpoints:
+The current version of the subgraph \(**v06**\) is indexing the Ethereum **Roptsten** network at the following GraphQL endpoints:
 
 ```text
-https://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv04
-wss://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv04
+https://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv06
+wss://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv06
 ```
 
-You can connect to these with your GraphQL client of choice or try them at [The Graph's playground](https://thegraph.com/explorer/subgraph/astralprotocol/spatialassetsv04).
+You can connect to these with your GraphQL client of choice or try them at [The Graph's playground](https://thegraph.com/explorer/subgraph/astralprotocol/spatialassetsv06).
 
 ## **To add Astral Protocol Subgraph to your application**
 
