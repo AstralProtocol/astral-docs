@@ -8,11 +8,15 @@ description: API for the @astralprotocol/core package
 
 Creates a new AstralClient Instance to utilize the following functions.
 
-**`new AstralClient(_ethAddress);`**
+**`new AstralClient(_ethAddress, _endpoint?);`**
 
 | Name | Type | Attributes | Description |
 | :--- | :--- | :--- | :--- |
 | **\_ethAddress** | string | REQUIRED | The Ethereum Address of the user. |
+| **\_endpoint**  | string | OPTIONAL | The Graph Endpoint. Already has a default value that can be overloaded with another endpoint. |
+
+The Graph Endpoint is:    
+`https://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv06`
 
 ## Methods 
 
