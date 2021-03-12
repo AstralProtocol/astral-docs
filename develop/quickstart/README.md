@@ -53,7 +53,11 @@ import AstralClient from '@astralprotocol/core';
 async function run(){
 
     // Create a new Astral Client Instance with the user's ethAddress
-    let astral = new AstralClient('0xa3e1c2602f628112E591A18004bbD59BDC3cb512');
+    // and a subgraph endpoint (check the latest one @astralprotocol/subgraph)
+    let astral = new AstralClient(
+        '0xa3e1c2602f628112E591A18004bbD59BDC3cb512', 
+        'https://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv06'
+    );
     
     try{
     

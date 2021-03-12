@@ -84,7 +84,7 @@ const bs58 = require('bs58')
 module.exports = async function (callback) {
   const stringToBytes = (string) => web3.utils.asciiToHex(string)
 
-  // based on https://ethereum.stackexchange.com/questions/17094/how-to-store-ipfs-hash-using-bytes32
+    // based on https://ethereum.stackexchange.com/questions/17094/how-to-store-ipfs-hash-using-bytes32
   // Return bytes32 hex string from base58 encoded ipfs hash,
   // stripping leading 2 bytes from 34 byte IPFS hash
   // Assume IPFS defaults: function:0x12=sha2, size:0x20=256 bits
@@ -104,8 +104,11 @@ module.exports = async function (callback) {
       from: userAccount,
       data: SpatialAssets.deployedBytecode,
     });
+
+    // update the endpoint to the latest
+    const subgraphEndpoint = "https://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv06"
   
-    const astral = new AstralClient(userAccount);
+    const astral = new AstralClient(userAccount, subgraphEndpoint);
   
     const storage = stringToBytes('FILECOIN');
     // Enable a storage first
@@ -166,7 +169,6 @@ module.exports = async function (callback) {
 
     
     // With the Auth Token and the GeoDID ID we can load the document with the loadDocument function
-
     const loadResults = await astral.loadDocument(results.geodidid, token);
     console.log(loadResults);
 
@@ -177,7 +179,6 @@ module.exports = async function (callback) {
 
     callback()
 };
-
 ```
 {% endcode %}
 
