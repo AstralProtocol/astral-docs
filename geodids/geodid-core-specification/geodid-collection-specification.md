@@ -14,69 +14,40 @@ As of right now, the Collection extends the default GeoDID Specification without
 
 ```text
 [
-   "@context":"https://www.w3.org/ns/did/v1",
-   "id":"did:geo:123456789abcdefghi",
-   "authentication":[
+   '@context':'https://w3id.org/did/v1',
+   id:'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre',
+   publicKey: [
       {
-         "id":"did:geo:123456789abcdefghi#key",
-         "type":"Secp256k1VerificationKey2018",
-         "controller":"did:geo:123456789abcdefghi",
-         "publicKeyPem":"-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
+         id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre#controller',
+         type: 'Secp256k1VerificationKey2018',
+         controller: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre',
+         ethereumAddress: '0x4B11B9A1582E455c2C5368BEe0FF5d2F1dd4d28e'
       }
    ],
-   "did_metadata":{
-      "type":"collection",
-      "created":"2019-03-23T06:35:22Z",
-      "updated":"2019-03-23T06:37:45Z",
-      "description":"Collection of EU Jurisdiction Data geojson + Raster Imagery"
+   did_metadata:{
+      type:'collection',
+      created:'2019-03-23T06:35:22Z',
+      updated:'2019-03-23T06:37:45Z'
    },
-   "service":{
-      "metadata":[
-         {
-            "id":"did:example:123456789abcdefghi/did-item-raster#collection-metadata",
-            "type":"collection-metadata",
-            "serviceEndpoint":"<cid or url>"
-         }
-      ],
-      "links":[
-         {
-            "id":"did:geo:123456789abcdefghi",
-            "type":"collection",
-            "rel":"root",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:geo:123456789abcdefghi",
-            "type":"collection",
-            "rel":"self",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:geo:123456789abcdefghi/did-item-raster",
-            "type":"sub-collection",
-            "rel":"child",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:geo:123456789abcdefghi/did-item-uk",
-            "type":"sub-collection",
-            "rel":"child",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:geo:123456789abcdefghi/did-item-netherlands",
-            "type":"sub-collection",
-            "rel":"child",
-            "serviceEndpoint":"<cid or url>"
-         },
-         {
-            "id":"did:geo:123456789abcdefghi/did-item-germany",
-            "type":"sub-collection",
-            "rel":"child",
-            "serviceEndpoint":"<cid or url>"
-         }
-      ]
-   }
+   links:[
+      {
+         id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre',
+         type: 'collection',
+         rel: 'root'
+      },
+      {
+         id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre',
+         type: 'collection',
+         rel: 'self'
+      }
+   ],
+   service:[
+      {
+         id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre#collection-metadata'
+         type: collection-metadata
+         serviceEndpoint: <CID or URL>
+      }
+   ]
 ]
 ```
 

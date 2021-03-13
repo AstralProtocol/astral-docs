@@ -14,64 +14,63 @@ The Item extends the default GeoDID Specification. It can function as a standalo
 
 ```text
 [
-   {
-      "@context":"https://www.w3.org/ns/did/v1",
-      "id":"did:geo:123456789abcdefghi/did-item-raster",
-      "authentication":[
-         {
-            "id":"did:geo:123456789abcdefghi/did-item-raster#key",
-            "type":"Secp256k1VerificationKey2018",
-            "controller":"did:geo:123456789abcdefghi",
-            "publicKeyPem":"-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
-         }
-      ],
-      "did_metadata":{
-         "type":"item",
-         "subtype":"raster",
-         "created":"2019-03-23T06:37:45Z"
-      },
-      "service":{
-         "metadata":[
-            {
-               "id":"did:example:123456789abcdefghi/did-item-raster#item-metadata",
-               "type":"item-metadata",
-               "serviceEndpoint":"<cid or url>"
-            }
-         ],
-         "links":[
-            {
-               "id":"did:geo:123456789abcdefghi",
-               "type":"collection",
-               "rel":"root",
-               "serviceEndpoint":"<cid or url>"
-            },
-            {
-               "id":"did:geo:123456789abcdefghi",
-               "type":"sub-collection",
-               "rel":"parent",
-               "serviceEndpoint":"<cid or url>"
-            },
-            {
-               "id":"did:geo:123456789abcdefghi/did-item-raster",
-               "type":"item",
-               "rel":"self",
-               "serviceEndpoint":"<cid or url>"
-            }
-         ],
-         "assets":[
-            {
-               "id":"did:example:123456789abcdefghi/did-item-raster#geotiff",
-               "type":"GeoTiff",
-               "serviceEndpoint":"<cid or url>"
-            },
-            {
-               "id":"did:example:123456789abcdefghi/did-item-raster#misc",
-               "type":"misc",
-               "serviceEndpoint":"<cid or url>"
-            }
-         ],
+  {
+    '@context': 'https://w3id.org/did/v1',
+    id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre',
+    publicKey: [
+      {
+        id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre#controller',
+        type: 'Secp256k1VerificationKey2018',
+        controller: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre',
+        ethereumAddress: '0x4B11B9A1582E455c2C5368BEe0FF5d2F1dd4d28e'
       }
-   }
+    ],
+    didmetadata: { type: 'item', created: '2021-03-12T15:56:10.937Z' },
+    links: [
+      {
+        id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre',
+        type: 'item',
+        rel: 'root'
+      },
+      {
+        id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre',
+        type: 'item',
+        rel: 'self'
+      }
+    ],
+    service: [
+      {
+        id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre#item-metadata-1'
+        type: item-metadata
+        serviceEndpoint: <CID or URL>
+      },
+      {
+        id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre#geojson-1'
+        type: geojson
+        serviceEndpoint: <CID or URL>
+      },
+      {
+        id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre#geojson-2'
+        type: geojson
+        serviceEndpoint: <CID or URL>
+      },
+      {
+        id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre#geotiff-1'
+        type: geotiff
+        serviceEndpoint: <CID or URL>
+      },
+      {
+        id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre#json-1'
+        type: json
+        serviceEndpoint: <CID or URL>
+      },
+      {
+        id: 'did:geo:QmdDEcQbiFEY5YWvKgk2exd6XLetgfVmswZvXRgNkpehre#misc-1'
+        type: misc
+        serviceEndpoint: <CID or URL>
+      }
+    ]
+  }
 ]
 ```
 
