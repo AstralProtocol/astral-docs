@@ -42,4 +42,5 @@
 ---
 
 * [Roadmap](roadmap.md)
+* [GeoDIDs v0.2](geodids-v0.2.md)
 
