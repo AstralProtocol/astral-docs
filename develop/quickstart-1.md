@@ -106,7 +106,7 @@ module.exports = async function (callback) {
     });
 
     // update the endpoint to the latest
-    const subgraphEndpoint = "https://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv06"
+    const subgraphEndpoint = "https://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv07"
   
     const astral = new AstralClient(userAccount, subgraphEndpoint);
   
