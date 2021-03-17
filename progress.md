@@ -6,7 +6,41 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
-#### 23 February 2020
+#### 16 March 2021
+
+* Coming into the final weeks of our Filecoin development grant - developing IPLD-encoded GeoTIFFs, which will complement the GeoDID spec we designed. The idea is to use DIDs to create permanent, resolvable identities for satellite images. More soon.
+* We started outlining [v0.2 of the GeoDID spec](geodids-v0.2.md) - a brief summary below.
+
+  We want to build DIDs that support spatial querying and raster clipping, so a DID can represent a subset of a larger spatial dataset. 
+
+* We met with[@KERNEL0x](https://twitter.com/KERNEL0x) 2 Fellow [@hollygrimm](https://twitter.com/hollygrimm), who is building [@0xDynamiculture](https://twitter.com/0xDynamiculture) - a DAO for Indigenous tribes to track their environmental projects using satellite imagery and sensor inputs We'll be looking at using GeoDIDs in their technical architecture![Satellite](https://abs-0.twimg.com/emoji/v2/svg/1f6f0.svg)
+* Advisory calls with[@MaxGlass](https://twitter.com/MaxGlass) - we'll be helping him design a spatial data crowdsourcing protocol with[@RaidGuild](https://twitter.com/RaidGuild)
+* The community put together a response to a [post on ethresear.ch](https://ethresear.ch/t/how-to-implement-digital-community-currencies-with-ethereum/8801/8) on local + community tokens. Astral member [@BlairVee](https://twitter.com/BlairVee) is working with[@grassEcon](https://twitter.com/grassEcon) on this, and[@johnx25bd](https://twitter.com/johnx25bd) prototyped a location-aware smart contract wallet at ETHParis 2019. 
+* Community:
+  * 200 followers on Twitter 
+  * 7 new Gitcoin grant supporters
+  * 31 Discord members
+
+#### 11 March 2021
+
+* Still building for our Filecoin Development Grant - working on IPLD-encoded GeoTIFFs and a front end GeoDID browser for Web3-native satellite imagery ...
+* Working with a new community member building to collect land parcel data - watch this space
+* Initial security reviews of Spatial.sol - much more to come.
+* Architecting verifiable spatial data registries built on GeoDIDs and IPFS. Who do we know who would find a smart contract registry of geographic zones useful? Congestion zones - insurance protocols - local currencies - voting - what else??
+
+
+
+#### 4 March 2021
+
+* Initial tests for Spatial.sol. Point in Polygon is \*mostly\* working.
+* Submitted initial implementation of the @astralprotocol Typescript modules for the Filecoin Development Grant. GeoDID client libraries and solidity contracts are functional.
+* Release of the vision and roadmap for community review.
+* Community
+  * 176 Twitter followers
+  * 5 new Gitcoin grant supporters
+  * 23 Discord members
+
+#### 23 February 2021
 
 * Our Discord is gathering steam. We've seen new members this week from startup projects, the GIS world, economics graduate schools and more. Join if you want to learn more: [https://discord.gg/9Kv8tRvWVG](https://discord.gg/9Kv8tRvWVG)
 * Discord member Econometrie raised some great points about how systems built on Astral could solve an interesting problem: how do we know where we can park rental e-bikes and e-scooters? We are working out how to adapt Hyperaware to help solve this. 
@@ -17,7 +51,7 @@ description: Weekly updates from the Astral team
   * 18 Discord members
   * 5 new Gitcoin grant supporters - plus a 246.98 DAI CLR match
 
-#### 16 February 2020
+#### 16 February 2021
 
 * Commits on modules for working with GeoDIDs, plus a check-in call with @filecoin on development grant progress. 
 * Call with @blairvee and Jonny, talking about GIS, Grassroots Economics and truly local currencies. 
@@ -27,7 +61,7 @@ description: Weekly updates from the Astral team
   * 146 Twitter followers
   * 6 new Gitcoin grant supporters
 
-#### 9 February 2020
+#### 9 February 2021
 
 * Broke ground on a research report on the intersection of spatial data and Web3.
 * Progress on the GeoDID Browser interface development and Astral modules for working with GeoDIDs - part of our work on a Filecoin Development Grant.
@@ -38,7 +72,7 @@ description: Weekly updates from the Astral team
   * 132 Twitter followers
   * 5 new Gitcoin grant supporters
 
-#### 2 February 2020
+#### 2 February 2021
 
 * Submitted the [GeoDID Method Specification](https://docs.astral.global/geodids/geodid-core-specification) for feedback - if you're interested, read it here, and give feedback by creating an issue on the [Github repo](https://github.com/AstralProtocol/astral-docs).
 * Fixed a bug in our prototype implementation of the Hyperaware Protocol - a spatial governance protocol for connected devices.
@@ -47,7 +81,7 @@ description: Weekly updates from the Astral team
   * 113 Twitter followers
   * 13 new Gitcoin grant contributors
 
-#### 26 January 2020
+#### 26 January 2021
 
 * Completed the draft GeoDID Method Specification - now we're architecting software modules for working with GeoDIDs
 * Spoke with @KERNEL0x Fellow @mattgcondon - the grandfather of NFTs - about trusted location proofs and using location in smart contracts.
@@ -58,7 +92,7 @@ description: Weekly updates from the Astral team
   * 89 Twitter followers
   * 
 
-#### **19 January 2020**
+#### **19 January 2021**
 
 * Refinements of the draft GeoDID Method Specification.
 * Chat with a VC about the past, present and future of the spatial Web3.
@@ -67,7 +101,7 @@ description: Weekly updates from the Astral team
   * 80 Twitter followers
   * 2 new Gitcoin grant contributors
 
-#### 12 January 2020
+#### 12 January 2021
 
 * Joined KERNEL 2 - Fairlaunch track!
 * Published our [Gitbook](https://docs.astral.global/) with Astral documentation.
@@ -77,7 +111,7 @@ description: Weekly updates from the Astral team
   * 61 Twitter followers
   * 29 Gitcoin grant contributors
 
-#### 5 January 2020
+#### 5 January 2021
 
 * Astral received a [Filecoin Development Grant](https://filecoin.io/blog/filecoin-dev-grants-wave-4-5-gitcoin/) to develop a few key pieces of the Astral Protocol: a GeoDID Method Specification \(more soon!\) and IPLD-encoded GeoTIFFs, for Web3-native geospatial imagery. [Our grant details](https://github.com/filecoin-project/devgrants/blob/efaac115b71df7b373354c72600aa9818fc6710a/open-grant-proposals/open-proposal-astral-protocol.md).
 * The Astral team won the Ceramic Bounty for the SkyDB hackathon for building a version of Geolocker, a verifiable spatial data registry. 
