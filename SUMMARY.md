@@ -21,7 +21,7 @@
 * [@astralprotocol/contracts](develop/docs/README.md)
   * [API](develop/docs/api.md)
 * [@astralprotocol/subgraph](develop/astralprotocol-subgraph.md)
-* [IPLD and GeoTIFFs](develop/ipld-and-geotiffs/README.md)
+* [GeoTIFFs and IPLD](develop/ipld-and-geotiffs/README.md)
   * [Encoding the GeoTIFF](develop/ipld-and-geotiffs/encoding-the-geotiff.md)
   * [Decoding the GeoTIFF](develop/ipld-and-geotiffs/decoding-the-geotiff.md)
 
