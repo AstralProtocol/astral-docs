@@ -1,8 +1,12 @@
+---
+description: Page Describing how the Tile is requested and then deserialized.
+---
+
 # Decoding the GeoTIFF
 
 DAG-CBOR
 
-Getting Started
+## Example
 
 ```text
 import { getImageFromUrl, startTile, getGeoTile } from "ipld-geotiff";
@@ -32,6 +36,12 @@ Using the Resolve function again we can see
 
 
 Router
+
+We used the [interface-ipld-format](https://github.com/ipld/interface-ipld-format#resolverresolvebinaryblob-path) to figure out the utility functions for the IPLD Blocks. The following utility function in the [js-ipld-dag-cbor](https://github.com/ipld/js-ipld-dag-cbor) package is:
+
+`const gen = await dagCBOR.resolver.tree(block.data);` 
+
+Next, we mapped the iterator to an Array. The Array contained all possible paths , in order to access the serialized binary of the tile. When encoding with DAB-CBOR
 
 ```text
 [
@@ -104,7 +114,13 @@ Router
 ]
 ```
 
-The serialized binary data of the Tile that we encoded earlier.
+Using `resolver.resolve(binaryBlob, path)` ,another utility function, we can take one of the paths in the Array and use it to query the data we need.
+
+`const path = '0,240,240,480/data';`
+
+`const result = await dagCBOR.resolver.resolve(binary, path);`
+
+If we pass in a path with a `/data` tag, the deserialized binary will represent the source raw binary of the tile.  The serialized binary data of the Tile that we encoded earlier.
 
 ```text
 <Buffer 81 59 e1 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ... 57554 more bytes>
@@ -112,15 +128,15 @@ The serialized binary data of the Tile that we encoded earlier.
 
 We need to deserialize the binary data in order to get back the source binary. 
 
+`const raw_binary = await dagCBOR.util.deserialize(tile_binary.value);`
+
 ```text
 [
   <Buffer 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ... 57550 more bytes>
 ]
 ```
 
-After we get the data back to source binary we can use the binary data and some metadata in to write back into a TIFF. 
-
-
+After we get the data back to source binary we can use the binary data and some metadata in to write back into a TIFF, with [writeArrayBuffer](https://geotiffjs.github.io/geotiff.js/global.html#writeArrayBuffer):
 
 ```text
 ArrayBuffer {
