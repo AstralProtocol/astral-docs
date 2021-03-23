@@ -15,6 +15,14 @@ import { IPFS, create } from "ipfs";
 async function example(){
     const url = 'http://download.osgeo.org/geotiff/samples/gdal_eg/cea.tif';
     
+    // bbox that is sent from client
+    const request = [
+        -28493.166784412522,
+        4224973.143255847,
+        2358.211624949061,
+        4255884.5438021915
+    ];
+    
     // First create instance of IPFS
     const ipfs: IPFS = await create();
     
@@ -23,25 +31,18 @@ async function example(){
     // Start the tiling and encoding process 
     const ires: IResponse =  await startTile(ipfs, image);
 
-    // 
-    const targetWindow: ImageMetadata = await GeoUtils.bboxtoWindow(ires.window, ires.bbox, request);
-
     // Use GetGeoTile to obtain the tile that you would like
     const tiff_of_tile = await getGeoTile(ipfs, ires.cid, ires.max_Dimensions);
 }
 ```
 
-Using the Resolve function again we can see
-
-
-
-Router
+## Using IPLD to resolve tile paths
 
 We used the [interface-ipld-format](https://github.com/ipld/interface-ipld-format#resolverresolvebinaryblob-path) to figure out the utility functions for the IPLD Blocks. The following utility function in the [js-ipld-dag-cbor](https://github.com/ipld/js-ipld-dag-cbor) package is:
 
-`const gen = await dagCBOR.resolver.tree(block.data);` 
+`const iter = await dagCBOR.resolver.tree(block.data);` 
 
-Next, we mapped the iterator to an Array. The Array contained all possible paths , in order to access the serialized binary of the tile. When encoding with DAB-CBOR
+The iterator `iter` contained all possible paths , in the object to outline the tree. In order to access the serialized binary of the tile, we just have to use the corresponding path with its respective `/data` tag.
 
 ```text
 [
@@ -56,39 +57,8 @@ Next, we mapped the iterator to an Array. The Array contained all possible paths
   '0,0,240,240/tileSize',
   '0,0,240,240/tileSize/width',
   '0,0,240,240/tileSize/height',
-  '0,240,240,480',
-  '0,240,240,480/cid',
-  '0,240,240,480/data',
-  '0,240,240,480/window',
-  '0,240,240,480/window/0',
-  '0,240,240,480/window/1',
-  '0,240,240,480/window/2',
-  '0,240,240,480/window/3',
-  '0,240,240,480/tileSize',
-  '0,240,240,480/tileSize/width',
-  '0,240,240,480/tileSize/height',
-  '240,0,480,240',
-  '240,0,480,240/cid',
-  '240,0,480,240/data',
-  '240,0,480,240/window',
-  '240,0,480,240/window/0',
-  '240,0,480,240/window/1',
-  '240,0,480,240/window/2',
-  '240,0,480,240/window/3',
-  '240,0,480,240/tileSize',
-  '240,0,480,240/tileSize/width',
-  '240,0,480,240/tileSize/height',
-  '480,0,514,240',
-  '480,0,514,240/cid',
-  '480,0,514,240/data',
-  '480,0,514,240/window',
-  '480,0,514,240/window/0',
-  '480,0,514,240/window/1',
-  '480,0,514,240/window/2',
-  '480,0,514,240/window/3',
-  '480,0,514,240/tileSize',
-  '480,0,514,240/tileSize/width',
-  '480,0,514,240/tileSize/height',
+  ...
+  ...
   '240,240,480,480',
   '240,240,480,480/cid',
   '240,240,480,480/data',
@@ -144,10 +114,4 @@ ArrayBuffer {
   byteLength: 58600
 }
 ```
-
-
-
-using ipfs 
-
-decode / deserialize
 
