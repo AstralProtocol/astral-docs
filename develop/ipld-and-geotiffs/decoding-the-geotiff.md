@@ -4,8 +4,6 @@ description: Page Describing how the Tile is requested and then deserialized.
 
 # Decoding the GeoTIFF
 
-DAG-CBOR
-
 ## Example
 
 ```text

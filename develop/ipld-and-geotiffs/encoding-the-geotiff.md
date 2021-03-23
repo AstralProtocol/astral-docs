@@ -103,9 +103,6 @@ Beforehand the GeoTIFF is tiled at different resolutions and sizes, and the bina
     '0,240,514,480': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
     '0,480,514,0': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy)
   },
-  '480x480': {
-    '0,480,514,515': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy)
-  },
   '515x514': {
     '0,0,514,0': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy)
   }

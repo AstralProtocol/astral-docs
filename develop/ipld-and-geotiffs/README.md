@@ -28,17 +28,15 @@ Essentially our goal is to take a GeoTIFF \(that is a STRIPE image in this stage
 
 In theory it sounds like it would work, and we know there will be some downsides to this approach \(speed, efficiency, and lack of adoption for right now\). But we would still like to see where this could go and if IPLD could be used to enable CID GET Range requests for geospatial raster data. 
 
-## Approach
+## Mental Model
 
-TODO: explain the approach  
+TODO: explain the mental model of this approach 
 
 
 
 ![Visualization](../../.gitbook/assets/screen-shot-2020-12-04-at-9.39.52-am.png)
 
 ## Conclusion
-
-
 
 ### How we plan to further our research?
 
