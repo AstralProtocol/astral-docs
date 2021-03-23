@@ -24,32 +24,15 @@ In order to achieve this, the client uses HTTP GET Range requests to request the
 
 ### Replacing the GeoTIFFs IFD with IPLD
 
-Essentially our goal is to take a GeoTIFF \(that is a STRIPE image in this stage\), pre-process the image by tiling the STRIPE image and then creating the respective overviews for each tile. Instead of the tiles and overviews being stored in the TIFFs IFD \(Image File Directory\), we’re thinking we can use IPLD to store the tiles and overviews instead. With each tile/overview having their own CID, then we can Then use IPLD Selectors to query the proper tiles/overviews. 
+Essentially our goal is to take a GeoTIFF \(that is a STRIPE image in this stage\), pre-process the image by tiling the STRIPE image and then creating the respective overviews for each tile. Instead of the tiles and overviews being stored in the TIFFs IFD \(Image File Directory\), we’re thinking we can use IPLD to store the tiles and overviews instead. With each tile/overview having their own CID, we can then use  to query the proper tiles/overviews. 
 
-In theory it sounds like it would work, and we know there will be some downsides to this approach \(speed, efficiency, and lack of adoption for right now\). But we would still like to see where this could go and if IPLD could be used to enable CID GET Range requests for geospatial raster data.  
-  
-  
-
-
-## 
-
-Pain Points when working with Traditional GeoTIFFs 
-
-Heavy file size; each image strip could be 20-40 GBs
-
-Minimize Data Duplication
-
-Real Time & Dynamic Processing
-
-
-
-
-
-TODO: explain motives / problems / potential solutions 
+In theory it sounds like it would work, and we know there will be some downsides to this approach \(speed, efficiency, and lack of adoption for right now\). But we would still like to see where this could go and if IPLD could be used to enable CID GET Range requests for geospatial raster data. 
 
 ## Approach
 
-TODO: explain the approach 
+TODO: explain the approach  
+
+
 
 ![Visualization](../../.gitbook/assets/screen-shot-2020-12-04-at-9.39.52-am.png)
 
@@ -70,8 +53,6 @@ Instead of using HTTP GET Range requests, we can enable CID GET Range requests, 
 * Minimize Data Duplication
 * See if Custom Codec is necessary, or if DAB-CBOR still suffices
 * Leverage IPLD Selectors to query data efficiently.
-
-### **Thank you**
 
 
 

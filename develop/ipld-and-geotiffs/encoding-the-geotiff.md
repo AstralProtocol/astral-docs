@@ -8,28 +8,7 @@ Encoding the GeoTIFF
 
 ### Tile Object 
 
-```text
-{
-    window: [0, 0, 15, 15]
-    cid: CID(bafyreia6gruiikhbgbbo3w7cmrnjcjvjxlxyhoaem4eayqjn6m3bdjvkwq),
-    data: Uint8Array(904) [
-      129,  89,   3, 132, 123,  25,  58,  33,  25,  25,  74, 115,
-       58,  66, 123,  99,  66,  58, 247, 230, 214, 165, 165, 148,
-       99,  82, 107,  33, 132,  49,   0,  25,   8,   0,  90,  58,
-       58,   0,  66,  66,  58,  33,  41,  49, 214, 222, 181, 214,
-      197, 255, 189, 132, 123, 140,  99, 132,  49,  33,  33,   8,
-        0,   8,  25,   0,  33,   0,   0,   0,   0,   0,   8,   8,
-        8, 148, 255, 222, 255, 247, 247, 255, 189, 115,  58,  82,
-       90,  58,  90,  33,   0,  16,  25,  33,  41,  82,  16,   0,
-        8,  16,   0,   0,
-      ... 804 more items
-    ],
-    tileSize: {
-        width: 15,
-        height: 15
-    }
-}
-```
+Beforehand the GeoTIFF is tiled at different resolutions and sizes, and the binary of the image is then serialized into an IPLD Block. This block contains the serialized binary of the tile, and its respective CID \(Content Identifier\). This data is then stored into an Object that also contains the tiles respective window and size. 
 
 ### Wrapper Object wrapping Tile Object
 
@@ -132,8 +111,6 @@ Encoding the GeoTIFF
   }
 }
 ```
-
-
 
 ### Response after the GeoTIFF is successfully Tiled and pinned to IPFS
 
