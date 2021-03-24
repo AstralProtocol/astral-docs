@@ -6,6 +6,8 @@ description: Page Describing how the Tile is requested and then deserialized.
 
 ## Example
 
+Example implementation of the 
+
 ```text
 import { getImageFromUrl, startTile, getGeoTile } from "ipld-geotiff";
 import { IPFS, create } from "ipfs";
