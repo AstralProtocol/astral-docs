@@ -44,11 +44,17 @@ This is independent of the tiling part, but combining both allows to make effici
 * Multiple overviews, to match different zoom levels.
 * Adds to overall file size, but is served much faster.
 
+### Image Pyramids
+
+The use of image tiling and image pyramids supports the display of high-resolution images with a high level of performance. An image pyramid consists of a base image and a series of successively smaller sub-images, each at half the resolution of the previous image. The following figure shows the base image and successively smaller sub-images. The sub-images correspond to lower resolution levels.
+
+![Figure 1: Overview of Image Pyramids](../../.gitbook/assets/screen-shot-2021-03-24-at-10.23.18-am.png)
+
 ## IPLD
 
+IPLD is an ecosystem of formats and data structures for building applications that can be fully decentralized. This ecosystem has a set of tools that allow us to serialize pieces of data, into CIDs and its respective binary, then encode them with a codec that creates a "linked data model" between the various CIDs. If you would like to know more about the specifics of IPLD, please refer to the official [documentation](https://docs.ipld.io/#what-is-ipld). 
 
-
-
+![Figure 2: IPLD Overview](https://lh6.googleusercontent.com/PVCl9IZeLMnP8eM2TESiN7I0Vhfo8SIUzRjcDT3bDuH7piabzBZOXz57NhV7tDa3c3OB9cSgi--iHkOKeSUkuE-Q6qtqYiYB1jHEAIRl1rPfJgbKZHCCNm3GW2Dd_O0mE8S2cDqv)
 
 ### Replacing the GeoTIFFs IFD with IPLD
 
@@ -58,13 +64,19 @@ In theory it sounds like it would work, and we know there will be some downsides
 
 ## Mental Model
 
+Below are some visualizations of the mental model of the IPLD TIFFs. Each block, regardless of size or color, has a [IPLD Block](https://github.com/ipld/js-block#readme) associated with it, meaning that it contains a `cid` and binary `data` field.
 
+#### Tile Overview
 
-![Figure 1: The same image with different sized tiles.](https://lh5.googleusercontent.com/J1FO57jG6vXzIZwUb8HtVeAAV3LsRoYt4f6CwndwJBYW4Rz4ZpLUTw7TaT1FQoTmwMaEDaF9QbZk_8ChKPxWFMEy5B3uxCs41SsZIsbWUYiIhE4MHIG3P5a86Fb1T_e4x04dgejt)
+![Figure 3: The same image with different sized tiles.](https://lh5.googleusercontent.com/J1FO57jG6vXzIZwUb8HtVeAAV3LsRoYt4f6CwndwJBYW4Rz4ZpLUTw7TaT1FQoTmwMaEDaF9QbZk_8ChKPxWFMEy5B3uxCs41SsZIsbWUYiIhE4MHIG3P5a86Fb1T_e4x04dgejt)
 
+Figure 3, is a generic example of a GeoTIFF image and what it looks like when tiled. If you're zoomed out the client will most likely pull the whole image\(yellow\). But say that you only want the raster imagery corresponding to a small area within the GeoTIFF. Then the client should at this point use the bounding box data to fetch the appropriate tile and the proper overview \(ex. \[A2, B1, A4, B3\]\).
 
+#### Relationship Overview
 
-![Figure 2: Tree showing the relationships between the nested Tiles and their parents.  ](../../.gitbook/assets/screen-shot-2020-12-04-at-9.39.52-am.png)
+![Figure 4: Tree showing the relationships between the nested Tiles and their parents.  ](../../.gitbook/assets/screen-shot-2020-12-04-at-9.39.52-am.png)
+
+Figure 4, shows the relationships that we tried to emulate, but ended up creating a variant of this model. This model is just for you to visualize how we can wrap sub tiles within larger ones. Just like how the IFD creates tags at the offsets for the data Overviews and TIFF metadata. The DAG-CBOR encoded Blocks, also create tags to identify nested CIDs within it. By leveraging the tag feature, we can query and quickly access the information we need.
 
 ### Example of the implementation in the package:
 
@@ -102,7 +114,7 @@ async function example(){
 
 ### What could be improved?
 
-As of right now, the pre-processing of the image isn't as effective as it could be. Basically we are trying to tile the image ahead of time, but there are infinite possibilities within the image. So realistically we cannot really select ONLY the bits we need. We have to request the bits and some, as we need to query the tiles that encompass the bbox/window. Another disadvantage with our current solution is that we are actually pinning duplications of the image at different tile sizes. This is because we completely get rid of the IFD within the GeoTIFF. The problem with this approach is that we have to process the image multiple times, compared to processing the image once, and using the already tiled pieces to build larger tiles. 
+As of right now, the pre-processing of the image isn't as effective as it could be. Basically we are trying to tile the image ahead of time, but there are infinite possibilities within the image. So realistically we cannot really select ONLY the bits we need. We have to request the bits and some, as we need to query the tiles that encompass the bbox/window. Another disadvantage with our current solution is that we are actually pinning duplications of the image at different overview/ tile sizes. This is because we completely get rid of the IFD within the GeoTIFF. The problem with this approach is that we have to process the image multiple times, compared to processing the image once, calculating the overview and then using the already tiled pieces to build larger tiles. 
 
 ### How we plan to further our research?
 
@@ -118,6 +130,7 @@ Instead of using HTTP GET Range requests, we can enable CID GET Range requests, 
 * Minimize Data Duplication
 * See if Custom Codec is necessary, or if DAB-CBOR still suffices
 * Leverage IPLD Selectors to query data efficiently.
+* Explore the IPLD's Advanced Data Layouts 
 
 
 
