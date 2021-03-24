@@ -69,55 +69,35 @@ The Master Document is the document that contains all the Rows, Tiles, and their
 
 ```text
 {
-  '15x15': {
-    '0,15,514,30': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,45,514,60': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,75,514,90': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,105,514,120': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,135,514,150': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,165,514,180': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,195,514,210': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,225,514,240': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,255,514,270': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,285,514,300': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,315,514,330': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,345,514,360': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,375,514,390': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,405,514,420': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,435,514,450': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,465,514,480': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,495,514,510': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,510,514,0': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy)
+  '30': {
+    '480,0,514,60': CID(bafyreidslhcfyghycmpqtsvboms4623cinhtkqfctz64dvqyxw3ervo6t4),
+    '480,60,514,120': CID(bafyreihmweufxt2nq3axnujiurnsgkzkejzakwvkr56fgp6tsureujrzcm),
+    '480,120,514,180': CID(bafyreid7zfogsdrkl3ng22yqeny5aj7hhioph75kik7xjfxuyhvivaeave),
+    '480,180,514,240': CID(bafyreidjxno5kq7riwykklict4zu7kfk5b4wycvgxlhtkwgpkgoqsgwxhi),
+    '480,240,514,300': CID(bafyreigs3udscqv2mqvkmas3b6g2fy42dh3uy7orr4tvmhrfs6xneesfny),
+    '480,300,514,360': CID(bafyreighxzwr3sfyzjmkdppdhengkgdf2qxqx5nbefaqkm6kp7ghqajesi),
+    '480,360,514,420': CID(bafyreife3lpyz4vkvsmhlp6r46r72wkr3kxb5t4a3e3luhlzfw3rz3fbu4),
+    '480,420,514,480': CID(bafyreihyexbwogtgjhk6lwt5p577ls6hcoi53ggvjb24xnh7kfmsobnphe),
+    '480,480,514,515': CID(bafyreie6dflpabv3ywckcigfpkljlvvlruexpfjhzaiwv7lxz6gjqwk54q)
   },
-  '30x30': {
-    '0,30,514,60': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,90,514,120': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,150,514,180': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,210,514,240': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,270,514,300': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,330,514,360': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,390,514,420': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,450,514,480': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,510,514,515': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy)
+  '60': {
+    '480,0,514,120': CID(bafyreibjdiqovqvopi4owtk36iyenqe7reykkfsromy3l4fsmc6iuydd7y),
+    '480,120,514,240': CID(bafyreih2jnnsgsvhjouhy5h3fpdmsahm5v545taljdgmbdruprzo2txbs4),
+    '480,240,514,360': CID(bafyreicfd6cmsjc6taxx7kgw3qaol7ourfbsh57qajs6bwt333b3q5pfoi),
+    '480,360,514,480': CID(bafyreiffelgsnbcl352drv7hdmlisjh3owlfut2cdmtvahcxlygdwxnvjy),
+    '480,480,514,515': CID(bafyreieupxskp4jnhrva6t3wohsqn4uzgfngti74sysu3jypdsgpkkzyma)
   },
-  '60x60': {
-    '0,60,514,120': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,180,514,240': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,300,514,360': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,420,514,480': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,480,514,0': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy)
+  '120': {
+    '480,0,514,240': CID(bafyreiggzc74xwce3wn6je2bx5evpuun3gi7evjcbzwtkp3ck2hkzq4lmq),
+    '480,240,514,480': CID(bafyreiax5o26tyun3miuvv7zsyf47cmtihinplkxjrccuiemuwmztisy74),
+    '480,480,514,515': CID(bafyreib6xrt6daxw45t342miu7mk6yugso4f4sq25wtimdb4iv4omutf7e)
   },
-  '120x120': {
-    '0,120,514,240': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,360,514,480': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,480,514,0': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy)
+  '240': {
+    '480,0,514,480': CID(bafyreigkdgkrgpnpnqcion3vaiq72dyedq2qdkvb2sulpln4tkhefkkfb4),
+    '480,480,514,515': CID(bafyreiahb7az6lnj63bfefogbp6w5vq5aczz3ouoh2aeen7zgbb2j5wzge)
   },
-  '240x240': {
-    '0,240,514,480': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy),
-    '0,480,514,0': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy)
-  },
-  '515x514': {
-    '0,0,514,0': CID(bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy)
+  '515': {
+    '0,0,514,515': CID(bafyreibwt4pakge4urf63bwn2ot2juolaaayval6wlwnokt4ztc2uyisbe)
   }
 }
 ```
@@ -141,7 +121,7 @@ Note that any future requests must be within the bbox or window returned in this
 {
   cid: 'bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy',
   max_Dimensions: [
-     15,  30,  60, 120,
+    30,  60, 120,
     240, 515
   ],
   window: [ 0, 0, 514, 515 ],
