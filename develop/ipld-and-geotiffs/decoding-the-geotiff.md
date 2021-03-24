@@ -1,39 +1,21 @@
----
-description: Page Describing how the Tile is requested and then deserialized.
----
-
 # Decoding the GeoTIFF
 
-## Example
-
-Example implementation of the 
+## Process to Decode GeoTIFF and Retrieve Tile
 
 ```text
-import { getImageFromUrl, startTile, getGeoTile } from "ipld-geotiff";
-import { IPFS, create } from "ipfs";
+// bbox that is sent from client
+const request = [
+    -28493.166784412522,
+    4224973.143255847,
+    2358.211624949061,
+    4255884.5438021915
+];
 
-async function example(){
-    const url = 'http://download.osgeo.org/geotiff/samples/gdal_eg/cea.tif';
-    
-    // bbox that is sent from client
-    const request = [
-        -28493.166784412522,
-        4224973.143255847,
-        2358.211624949061,
-        4255884.5438021915
-    ];
-    
-    // First create instance of IPFS
-    const ipfs: IPFS = await create();
-    
-    // Request TIFF from Endpoint
-    const image = await getImageFromUrl(url);
-    // Start the tiling and encoding process 
-    const ires: IResponse =  await startTile(ipfs, image);
+// convert to window to round to nearest tile size
+const targetWindow: ImageMetadata = await GeoUtils.bboxtoWindow(max_window, max_bbox, request);
 
-    // Use GetGeoTile to obtain the tile that you would like
-    const tiff_of_tile = await getGeoTile(ipfs, ires.cid, ires.max_Dimensions);
-}
+// Use GetGeoTile to obtain the tile that you would like
+const tiff_of_tile = await getGeoTile(ipfs, cid, ires.max_Dimensions);
 ```
 
 ## Using IPLD to resolve tile paths

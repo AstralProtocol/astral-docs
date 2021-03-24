@@ -1,16 +1,27 @@
 # Encoding the GeoTIFF
 
-Encoding the GeoTIFF
+## Process of Tiling and Encoding GeoTIFF
 
 ```text
+const url = 'http://download.osgeo.org/geotiff/samples/gdal_eg/cea.tif';
+    
+// First create instance of IPFS
+const ipfs: IPFS = await create();
+    
+// Request TIFF from Endpoint
+const image = await getImageFromUrl(url);
 
+// Start the tiling and encoding process 
+const ires: IResponse =  await startTile(ipfs, image);
 ```
 
-### Tile Object 
+## Tile Object 
 
 Beforehand the GeoTIFF is tiled at different resolutions and sizes, and the binary of the image is then serialized into an IPLD Block. This block contains the serialized binary of the tile, and its respective CID \(Content Identifier\). This data is then stored into an Object that also contains the tiles respective window and size. 
 
-### Wrapper Object wrapping Tile Object
+### Wrapper Object wrapping Tile Objects
+
+The Wrapper Object wraps the Tile Objects by row, as to act as a "key", when we need the path to pull these tiles. The Wrapper Object should be grouping them by the row \*2\(tileSize\), in order to encapsulate the scaled up version of the tile. 
 
 ```text
 {
@@ -53,6 +64,8 @@ Beforehand the GeoTIFF is tiled at different resolutions and sizes, and the bina
 ```
 
 ### MasterDocument Output
+
+The Master Document is the document that contains all the Rows, Tiles, and their respective Overviews. This is essentially the "IFD", except it is done with IPLD, and is stored as a JSON object. 
 
 ```text
 {
@@ -111,12 +124,25 @@ Beforehand the GeoTIFF is tiled at different resolutions and sizes, and the bina
 
 ### Response after the GeoTIFF is successfully Tiled and pinned to IPFS
 
+The response after the GeoTIFF is successfully Tiled returns an Object that contains metadata related to the tiling job. 
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| cid | string | CID of the pinned MasterDoc |
+| max\_Dimensions | Array&lt;number&gt; | Array of numbers used to understand the Size of each Tile |
+| window  | Array&lt;number&gt; | The max window of the image. |
+| bbox | Array&lt;number&gt; | The max bbox of the image. |
+
+{% hint style="info" %}
+Note that any future requests must be within the bbox or window returned in this object. If it isn't the request will be rejected. 
+{% endhint %}
+
 ```text
 {
   cid: 'bafyreigdmqpykrgxyaxtlafqpqhzrb7qy2rh75nldvfd4kok6gl47quzvy',
   max_Dimensions: [
      15,  30,  60, 120,
-    240, 480, 960
+    240, 515
   ],
   window: [ 0, 0, 514, 515 ],
   bbox: [

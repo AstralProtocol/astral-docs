@@ -110,27 +110,30 @@ async function example(){
 
 ## Conclusion
 
-
+By using IPLD and pre processing the GeoTIFF, we were successfully able to replicate the IFD functionality. With IPLD tagging the nested CIDs of the serialized tiles, we can resolve to the proper tile that we need if we have the path configured ahead of time. This is how we approached enabling "byte-serving" capabilities on IPFS, but we acknowledge that there are some improvements that could be made in future iterations. These improvements could drastically improve the performance of the tool, and user experience. 
 
 ### What could be improved?
 
-As of right now, the pre-processing of the image isn't as effective as it could be. Basically we are trying to tile the image ahead of time, but there are infinite possibilities within the image. So realistically we cannot really select ONLY the bits we need. We have to request the bits and some, as we need to query the tiles that encompass the bbox/window. Another disadvantage with our current solution is that we are actually pinning duplications of the image at different overview/ tile sizes. This is because we completely get rid of the IFD within the GeoTIFF. The problem with this approach is that we have to process the image multiple times, compared to processing the image once, calculating the overview and then using the already tiled pieces to build larger tiles. 
+As of right now, the pre-processing of the image isn't as effective as it could be. Basically we are trying to tile the image ahead of time, but there are infinite possibilities within the image. So realistically we cannot really select ONLY the bits we need. We have to request the bits and some, as we need to query the tiles that encompass the bbox/window. Another disadvantage with our current solution is that we are actually pinning duplications of the image at different overview/ tile sizes. This is because we completely get rid of the IFD within the GeoTIFF. The problem with this approach is that we have to process the image multiple times. Instead we hope to process the image less than before, and combine the IPLD and IFD, so that they can compliment one another. 
 
 ### How we plan to further our research?
 
-In order to further our research, we would like to develop an IPLD-encoded GeoTIFF, which can hopefully be extended to provide byte serving capabilities to other files types as well. We think we can do this by developing a custom IPLD codec that is specifically meant for TIFF filetypes. We can encode the GeoTIFF, by breaking the GeoTIFF into tiles and their respective overviews, encoding it with our custom codec, which should tag the CIDs of the tiles, so we can enable "byte serving capabilities".
+In order to further our research, we would like to develop another iteration of  IPLD-encoded GeoTIFF, which can hopefully be extended to provide byte serving capabilities to other files types as well. We want to experiment with a custom IPLD codec that is specifically meant for TIFF filetypes. Maybe the codec's structure could compliment the TIFFs structure? 
 
-Instead of using HTTP GET Range requests, we can enable CID GET Range requests, where the selected/targeted bytes are encoded within the CID, for ease of access from the client. We’re thinking that we can accomplish this by the use of IPLD selectors. This will enable a more effective way to query data from IPFS by significantly reducing downloading times, costs, and resource use - and serve as a step towards IPFS-native geospatial technology.
+We also need to incorporate the function/package that will auto-resolve to the proper piece of data, so that the UX is easier and the end user doesn't have to know paths and CIDs beforehand. Instead we want to enable CID GET Range requests, where the selected/targeted bytes are encoded within the CID, for ease of access from the client. 
+
+This will enable a more effective way to query data from IPFS by significantly reducing downloading times, costs, and resource use - and serve as a step towards IPFS-native geospatial technology.
 
 #### We plan to focus on the following:
 
-* Chunking and Distribution of Large Files
-* Compression
+* Chunking and Distribution of Large Files \(LANDSAT\)
 * Real Time & Dynamic Processing
 * Minimize Data Duplication
 * See if Custom Codec is necessary, or if DAB-CBOR still suffices
 * Leverage IPLD Selectors to query data efficiently.
 * Explore the IPLD's Advanced Data Layouts 
+* Compression
+* IPLD Byte Serving Spec
 
 
 
