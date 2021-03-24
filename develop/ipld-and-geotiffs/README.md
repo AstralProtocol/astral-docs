@@ -34,6 +34,10 @@ TODO: explain the mental model of this approach
 
 
 
+![Visualization of tile](https://lh5.googleusercontent.com/J1FO57jG6vXzIZwUb8HtVeAAV3LsRoYt4f6CwndwJBYW4Rz4ZpLUTw7TaT1FQoTmwMaEDaF9QbZk_8ChKPxWFMEy5B3uxCs41SsZIsbWUYiIhE4MHIG3P5a86Fb1T_e4x04dgejt)
+
+
+
 ![Visualization](../../.gitbook/assets/screen-shot-2020-12-04-at-9.39.52-am.png)
 
 ## Conclusion
