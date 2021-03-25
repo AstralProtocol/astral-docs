@@ -30,7 +30,7 @@ By pre-processing the GeoTIFF and breaking it into several pieces, a number of i
 
 In addition, during the pre-processing, multiple ‘overviews’ will be computed and incorporated into the image file - basically several downsampled versions of the same image - so that you can query the highest quality version depending on the level of resolution desired.
 
-In order to achieve this, the client uses HTTP GET Range requests to request the range of bytes that are within the zoom scope, from the server. This method is also called byte serving, where the client can request just the bytes that it needs from the server. On the broader web it is very useful for serving things like video, so clients don’t have to download the entire file to begin playing it.
+In order to achieve this, the client uses HTTP GET Range requests to request the range of bytes that are within the zoom scope, or map viewport, from the server. This method is also called byte serving, where the client can request just the bytes that it needs from the server. On the broader web it is very useful for serving things like _video_, so clients don’t have to download the entire file to begin playing it.
 
 ### TIFF Internal Overview
 
@@ -46,7 +46,7 @@ This is independent of the tiling part, but combining both allows to make effici
 
 ### Image Pyramids
 
-The use of image tiling and image pyramids supports the display of high-resolution images with a high level of performance. An image pyramid consists of a base image and a series of successively smaller sub-images, each at half the resolution of the previous image. The following figure shows the base image and successively smaller sub-images. The sub-images correspond to lower resolution levels.
+The use of image tiling and image pyramids supports the display of high-resolution images with a high level of performance. An image pyramid consists of a base image and a series of successively smaller sub-images, each at half the resolution of the previous image. The following figure shows the tiled base image \(Level 0\) and successively smaller sub-images. The sub-images correspond to lower resolution levels. 
 
 ![Figure 1: Overview of Image Pyramids](../../.gitbook/assets/screen-shot-2021-03-24-at-10.23.18-am.png)
 
@@ -58,7 +58,7 @@ IPLD is an ecosystem of formats and data structures for building applications th
 
 ### Replacing the GeoTIFFs IFD with IPLD
 
-Essentially our goal is to take a GeoTIFF \(that is a STRIPE image in this stage\), pre-process the image by tiling the STRIPE image and then creating the respective overviews for each tile. Instead of the tiles and overviews being stored in the TIFFs IFD \(Image File Directory\), we’re thinking we can use IPLD to store the tiles and overviews instead. With each tile/overview having their own CID, we can then use  to query the proper tiles/overviews. 
+Essentially our goal is to take a GeoTIFF \(that is a STRIPE image in this stage\), pre-process the image by tiling the STRIPE image and then creating the respective overviews for each tile. Instead of the tiles and overviews being stored in the TIFF's IFD \(Image File Directory\), we’re thinking we can use IPLD to store the tiles and overviews instead. With each tile/overview having their own CID, we can then use these to query the proper tiles/overviews. 
 
 In theory it sounds like it would work, and we know there will be some downsides to this approach \(speed, efficiency, and lack of adoption for right now\). But we would still like to see where this could go and if IPLD could be used to enable CID GET Range requests for geospatial raster data. 
 
@@ -80,7 +80,7 @@ Figure 4, shows the relationships that we tried to emulate, but ended up creatin
 
 ### Example of the implementation in the package:
 
-```text
+```typescript
 import { getImageFromUrl, startTile, getGeoTile } from "ipld-geotiff";
 import { IPFS, create } from "ipfs";
 
@@ -114,15 +114,17 @@ By using IPLD and pre processing the GeoTIFF, we were successfully able to repli
 
 ### What could be improved?
 
-As of right now, the pre-processing of the image isn't as effective as it could be. Basically we are trying to tile the image ahead of time, but there are infinite possibilities within the image. So realistically we cannot really select ONLY the bits we need. We have to request the bits and some, as we need to query the tiles that encompass the bbox/window. Another disadvantage with our current solution is that we are actually pinning duplications of the image at different overview/ tile sizes. This is because we completely get rid of the IFD within the GeoTIFF. The problem with this approach is that we have to process the image multiple times. Instead we hope to process the image less than before, and combine the IPLD and IFD, so that they can compliment one another. 
+As of right now, the pre-processing of the image isn't as effective as it could be. Basically we are trying to tile the image ahead of time, but there are infinite possibilities within the image. So realistically we cannot really select ONLY the bits we need. We have to request the bits and some, as we need to query the tiles that encompass the bbox/window. Another disadvantage with our current solution is that we are actually pinning duplications of the image at different overview/ tile sizes. This is because we completely get rid of the IFD within the GeoTIFF. The problem with this approach is that we have to process the image multiple times. Instead we hope to process the image less than before, and combine the IPLD and IFD, so that they can complement one another. 
 
 ### How we plan to further our research?
 
-In order to further our research, we would like to develop another iteration of  IPLD-encoded GeoTIFF, which can hopefully be extended to provide byte serving capabilities to other files types as well. We want to experiment with a custom IPLD codec that is specifically meant for TIFF filetypes. Maybe the codec's structure could compliment the TIFFs structure? 
+In order to further our research, we would like to develop another iteration of  IPLD-encoded GeoTIFF, which can hopefully be extended to provide byte serving capabilities to other files types as well. We want to experiment with a custom IPLD codec that is specifically meant for TIFF filetypes. Maybe the codec's structure could complement the TIFFs structure? 
 
 We also need to incorporate the function/package that will auto-resolve to the proper piece of data, so that the UX is easier and the end user doesn't have to know paths and CIDs beforehand. Instead we want to enable CID GET Range requests, where the selected/targeted bytes are encoded within the CID, for ease of access from the client. 
 
-This will enable a more effective way to query data from IPFS by significantly reducing downloading times, costs, and resource use - and serve as a step towards IPFS-native geospatial technology.
+We'd also like to apply the technique to vector tiles, which use a similar tiling system to create downsampled PBF files of vector geometries. 
+
+These will each enable a more effective way to query spatial data from IPFS by significantly reducing downloading times, costs, and resource use - and serve as a step towards Web3-native geospatial technology.
 
 #### We plan to focus on the following:
 
