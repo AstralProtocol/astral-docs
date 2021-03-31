@@ -6,6 +6,22 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### 31 March 2021
+
+* Completed initial implementation of IPLD-encoded GeoTIFFs in Typescript for our Filecoin Development Grant - [docs here](develop/ipld-and-geotiffs/).
+* Finishing the GeoDID Explorer client interface.
+* Spoke on Web3 Spatial at the Open Geospatial Consortium Blockchain Domain Working Group - recording forthcoming.
+* Met with the innovation team at a national land registry to talk about their research and development efforts to digitize the real estate conveyancing process. 
+* [@BlairVee](https://twitter.com/BlairVee) gave a talk with Grassroots Economics at the MetaFEST - find it [here](https://www.youtube.com/watch?v=iPcBrxWzNwU).
+* Community:
+  * 205 followers on Twitter
+  * 24 new Gitcoin grant supports
+  * 50 Discord members
+
+#### 23 March 2021
+
+* Work week.
+
 #### 16 March 2021
 
 * Coming into the final weeks of our Filecoin development grant - developing IPLD-encoded GeoTIFFs, which will complement the GeoDID spec we designed. The idea is to use DIDs to create permanent, resolvable identities for satellite images. More soon.
