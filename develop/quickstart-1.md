@@ -106,30 +106,12 @@ module.exports = async function (callback) {
     });
 
     // update the endpoint to the latest
-    const subgraphEndpoint = "https://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsv08"
-  
-    const astral = new AstralClient(userAccount, subgraphEndpoint);
+    const subgraphEndpoint = "https://api.thegraph.com/subgraphs/name/astralprotocol/spatialassetsfinalv1"
+
+    const astral = await AstralClient.build(userAccount, subgraphEndpoint, "https://astralinstance.tk");
   
     const storage = stringToBytes('FILECOIN');
-    // Enable a storage first
 
-    try {
-      await SpatialAssetsContract.methods.enableStorage(storage).send()
-      .on('receipt', function(receipt){
-        // receipt example
-        console.log(receipt);
-  
-      })
-      .on('error', function() { // If the transaction was rejected by the network with a receipt, the second parameter will be the receipt.
-        console.log('Already enabled storage: ' + storage);
-      });
-    } 
-    catch (err) {
-      // Will throw an error if storage is already active
-      console.log(err)
-    }
-
-  
     // Creates a Genesis GeoDID 
     
     const genDocRes = await astral.createGenesisGeoDID('collection')
@@ -137,12 +119,9 @@ module.exports = async function (callback) {
   
     // With the returned IDocumentInfo from the last function, we can pin it.
     // Since no token was specified the client will assign a new auth Token to the user.
-    
     const results = await astral.pinDocument(genDocRes);
     console.log(results);
-    
-    const token = results.token;
-          
+              
     // register the geodid id and cid obtained. Type 0 because it is a collection
 
     console.log(results.geodidid)
@@ -169,7 +148,7 @@ module.exports = async function (callback) {
 
     
     // With the Auth Token and the GeoDID ID we can load the document with the loadDocument function
-    const loadResults = await astral.loadDocument(results.geodidid, token);
+    const loadResults = await astral.loadDocument(results.geodidid);
     console.log(loadResults);
 
   }
@@ -179,6 +158,7 @@ module.exports = async function (callback) {
 
     callback()
 };
+
 ```
 {% endcode %}
 
