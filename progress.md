@@ -6,6 +6,24 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### 13 April 2021
+
+* Met with Alex from Distributed Town 
+* Spencer and Tae from Raid Guild, talking about @CommitPool
+
+#### 6 April 2021
+
+* Submitted the GeoDID Explorer client application to Filecoin, completing our Development Grant. You can explore the Astral Studio - live on Ropsten - [here](https://studio.astral.global/). Working on docs.
+* Lots of community building this week:
+  * Max from Earthify is building a data DAO that is crowdsourcing, standardizing, and publishing public / government records, with a focus on real estate data. We are advising Max and got to listen in to his design sprint with @RaidGuild.
+  * Connected with David from KERNEL0x, started a conversation about privacy and data markets.
+  * Another check-in with Grant and Pylyp from Copernic Space, building a Web3 marketplace for space assets including satellite imagery. 
+  * One-to-one with community member @BlairVee talking through verifiable impact claims and community inclusion currencies.
+* Drafted a concept note: [Impact NFTs](https://hackmd.io/@astral/B1Cl4YUBd), which represent impact claims made by people doing some environmental or social project. Reviewers would analyze evidence referenced by the NFT - threshold approvals could trigger bounty transfers to Impact NFT minters. [https://hackmd.io/@astral/B1Cl4YUBd](https://hackmd.io/@astral/B1Cl4YUBd)
+* Community
+  * 207 followers on Twitter
+  * 58 Discord members
+
 #### 31 March 2021
 
 * Completed initial implementation of IPLD-encoded GeoTIFFs in Typescript for our Filecoin Development Grant - [docs here](develop/ipld-and-geotiffs/).
