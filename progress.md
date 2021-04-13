@@ -8,9 +8,10 @@ description: Weekly updates from the Astral team
 
 #### 13 April 2021
 
-* Met with Alex from Distributed Town 
-* Spencer and Tae from Raid Guild, talking about @CommitPool
-
+* Met with jabyl from [Distributed Town](https://distributed.town/), where they're building a DAO for DAOs and a universal "skills wallet" enabling you to port your reputation with you in the mutual credit network . 
+* Spencer and the [Commit Pool](https://commitpool.com/) team joined the Astral Discord - really exciting work designing an app to help people hold themselves accountable. Set goals and stake money - by exercising claim your crypto back.   
+* On Discord we're discussing verifiable impact claims - a common problem that many teams are solving. One take: Impact NFTs - 
+* 
 #### 6 April 2021
 
 * Submitted the GeoDID Explorer client application to Filecoin, completing our Development Grant. You can explore the Astral Studio - live on Ropsten - [here](https://studio.astral.global/). Working on docs.
