@@ -6,12 +6,18 @@ description: Weekly updates from the Astral team
 
 ### Weekly Updates
 
+#### 27 April 2021
+
+* Call with Ryan John King, CEO of FOAM space, a pioneer in the geospatial decentralized web. FOAM recently launched their [FOAM Lite Ethereum transaction relay device](https://twitter.com/foamspace/status/1336424195501285379?s=20), and is working on trustless "[presence claims](https://foam.space/location)".
+* Reviewed the draft whitepaper for the Kolektivo Framework, a crypto-institutional framework that seeks to promote socio-ecological sustainability through cryptoeconomic mechanisms. Watch this space ... 
+* Exploring ways to keep pushing forward with the Web3-native geospatial vision, which we first explored with a Filecoin development grant. More soon ... 
+
 #### 13 April 2021
 
 * Met with jabyl from [Distributed Town](https://distributed.town/), where they're building a DAO for DAOs and a universal "skills wallet" enabling you to port your reputation with you in the mutual credit network . 
 * Spencer and the [Commit Pool](https://commitpool.com/) team joined the Astral Discord - really exciting work designing an app to help people hold themselves accountable. Set goals and stake money - by exercising claim your crypto back.   
-* On Discord we're discussing verifiable impact claims - a common problem that many teams are solving. One take: Impact NFTs - 
-* 
+* On Discord we're discussing verifiable impact claims - a common problem that many teams are solving. One take: Impact NFTs.
+
 #### 6 April 2021
 
 * Submitted the GeoDID Explorer client application to Filecoin, completing our Development Grant. You can explore the Astral Studio - live on Ropsten - [here](https://studio.astral.global/). Working on docs.
