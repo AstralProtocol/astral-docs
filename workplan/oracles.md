@@ -1,4 +1,4 @@
-# Oracles
+# Spatial Oracles
 
 We have done little work on spatial oracles, instead focusing to date on the data storage and spatial contracts layers of the protocol stack. Our early thinking suggests that making a full suite of spatial analytics algorithms \(raster and vector\) available at the oracle layer would be useful for on-demand processing of geospatial data.
 

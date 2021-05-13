@@ -54,6 +54,6 @@
 * [Spatial.sol](workplan/spatial.sol.md)
 * [Verifiable Spatial Data Registries](workplan/verifiable-spatial-data-registries.md)
 * [GeoDIDs](workplan/geodids.md)
-* [Oracles](workplan/oracles.md)
+* [Spatial Oracles](workplan/oracles.md)
 * [Universal Location Proofs](workplan/universal-location-proofs.md)
 

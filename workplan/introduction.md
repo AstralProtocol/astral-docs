@@ -21,8 +21,9 @@ Our goal is to produce a suite of tools, libraries and SDKs that would let devel
 To achieve this goal, we are currently working on a few initiatives:
 
 * [Spatial.sol](spatial.sol.md), a Solidity library of topological and geometric functions
-* Verifiable spatial data registries
-* GeoDIDs
-* IPLD-encoded raster and vector spatial datasets
-* Universal location proofs
+* [Verifiable spatial data registries](verifiable-spatial-data-registries.md)
+* [GeoDIDs](geodids.md)
+* [IPLD-encoded raster and vector spatial datasets](../develop/ipld-and-geotiffs/)
+* [Spatial oracles](oracles.md)
+* [Universal location proofs](universal-location-proofs.md)
 
