@@ -8,7 +8,7 @@
     * [Data](astral-protocol/the-overall-capability/geodids-1.md)
     * [Oracles](astral-protocol/the-overall-capability/oracles.md)
     * [Spatial Contracts](astral-protocol/the-overall-capability/spatial-contracts.md)
-  * [Astral Protocol](astral-protocol/astral.md)
+  * [A Web3-Native Geospatial Vision](astral-protocol/astral.md)
 * [Progress](progress.md)
 
 ## Develop
@@ -47,4 +47,13 @@
 * [Roadmap](roadmap.md)
 * [GeoDIDs v0.2](geodids-v0.2.md)
 * [Resources](resources.md)
+
+## Workplan
+
+* [Introduction](workplan/introduction.md)
+* [Spatial.sol](workplan/spatial.sol.md)
+* [Verifiable Spatial Data Registries](workplan/verifiable-spatial-data-registries.md)
+* [GeoDIDs](workplan/geodids.md)
+* [Oracles](workplan/oracles.md)
+* [Universal Location Proofs](workplan/universal-location-proofs.md)
 
