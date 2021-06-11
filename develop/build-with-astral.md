@@ -12,7 +12,7 @@ Specifically, we are looking for:
 
 ### Data
 
-We're developing Geographic Decentralized Identifiers \(GeoDIDs\) as the primitive to wrap spatial data. 
+We're developing Geographic Decentralized Identifiers \(GeoDIDs\) to provide a Web3-native format for identifying spatial data assets.
 
 ### Oracles
 

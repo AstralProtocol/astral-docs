@@ -1,5 +1,5 @@
 ---
-description: Follow these simple steps to try Astral Protocol quickly
+description: Follow these simple steps to register GeoDIDs quickly
 ---
 
 # Getting Started

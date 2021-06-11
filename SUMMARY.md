@@ -11,6 +11,15 @@
   * [A Web3-Native Geospatial Vision](astral-protocol/astral.md)
 * [Progress](progress.md)
 
+## Workplan
+
+* [Introduction](workplan/introduction.md)
+* [Spatial.sol](workplan/spatial.sol.md)
+* [Verifiable Spatial Data Registries](workplan/verifiable-spatial-data-registries.md)
+* [GeoDIDs](workplan/geodids.md)
+* [Spatial Oracles](workplan/oracles.md)
+* [Universal Location Proofs](workplan/universal-location-proofs.md)
+
 ## Develop
 
 * [Build Astral](develop/build-with-astral.md)
@@ -24,6 +33,15 @@
 * [GeoTIFFs and IPLD](develop/ipld-and-geotiffs/README.md)
   * [Encoding the GeoTIFF](develop/ipld-and-geotiffs/encoding-the-geotiff.md)
   * [Decoding the GeoTIFF](develop/ipld-and-geotiffs/decoding-the-geotiff.md)
+
+## Spatial.sol
+
+* [Quickstart](spatial.sol/quickstart.md)
+* [API Reference](spatial.sol/api-reference.md)
+* [Design Considerations](spatial.sol/design-considerations.md)
+* [Examples](spatial.sol/examples.md)
+* [eth-spatial.js](spatial.sol/eth-spatial.js.md)
+* [eth-spatial.py](spatial.sol/eth-spatial.py.md)
 
 ## GeoDIDs
 
@@ -47,13 +65,4 @@
 * [Roadmap](roadmap.md)
 * [GeoDIDs v0.2](geodids-v0.2.md)
 * [Resources](resources.md)
-
-## Workplan
-
-* [Introduction](workplan/introduction.md)
-* [Spatial.sol](workplan/spatial.sol.md)
-* [Verifiable Spatial Data Registries](workplan/verifiable-spatial-data-registries.md)
-* [GeoDIDs](workplan/geodids.md)
-* [Spatial Oracles](workplan/oracles.md)
-* [Universal Location Proofs](workplan/universal-location-proofs.md)
 
