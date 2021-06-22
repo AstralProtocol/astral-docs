@@ -32,5 +32,17 @@ We're researching how to efficiently design a system that would enable this kind
 
 One early adopter of the verifiable spatial data registry standard is the Kolektivo Framework, which is designing a Decentralized Exchange Trading System that relies on natural capital currencies. The Kolektivo implementation of these currencies, which are backed by ecosystem assets and ecosystem services, will rely on Astral's verifiable spatial data registries. 
 
+Another early adopter is Geo Web, "a set of open protocols with a system of property rights for anchoring digital content to physical land" \([Geo Web Gitcoin grant](https://gitcoin.co/grants/1403/the-geo-web)\). At the moment Geo Web parcels are grid cells, a regular raster. By using Astral verifiable spatial data registries, version 2 of the Geo Web protocol could support irregular geometries as NFTs - an application much better suited to mirror the real, physical world.
+
 Ultimately we aim to publish an Ethereum Improvement Proposal describing this new standard and develop an open source reference implementation in Solidity.
+
+### Questions
+
+* Who has the right to create or register parcels / zones? Under what conditions? 
+* Can zones overlap / intersect? 
+* How can we build tools to gracefully recover from lost or abandoned parcels?
+
+{% embed url="https://twitter.com/alexgausman/status/1404163591146668032?s=20" %}
+
+
 
