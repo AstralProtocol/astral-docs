@@ -38,7 +38,7 @@ All GeoDIDs are base58 encoded using the Bitcoin / IPFS alphabets of a 16-byte U
 For the draft version of this specification, `<geo-specific-identifier>` referenced above is created by computing a sha2-256 multihash on the byte representation of the DID controller's ethereum address + Unix time: `multihash(ethAddress + time, sha2-256).` Then we create a new CID Block by encoding the multihash with a base58 encoding. This will return a cid that will act as the identifier for the GeoDID.&#x20;
 
 {% hint style="info" %}
-This `<geo-specific-identifier>` generation procedure achieves our design goals of enabling one Ethereum address to control multiple GeoDIDs. However, in future versions of the specification we intend to investigate the potential of encoding more information into the identifier, including a hash or checksum of the spatial data assets identified, similar to the [Ocean Protocol DID Method](https://github.com/oceanprotocol/OEPs/blob/master/7/v0.2/README.md#how-to-compute-a-did).&#x20;
+This `<geo-specific-identifier>` generation procedure achieves our design goals of enabling one Ethereum address to control multiple GeoDIDs. However, in future versions of the specification we intend to investigate the potential of encoding more information into the identifier, including a hash or checksum of the spatial data assets identified, similar to the [Ocean Protocol DID Method](https://github.com/oceanprotocol/docs/blob/main/content/concepts/did-ddo.md).&#x20;
 
 We also could encode some segment of the identifier to indicate which blockchain the GeoDID is registered on, a possible approach to achieve our design goal of platform agnosticism.
 
@@ -127,7 +127,7 @@ A GeoDID Controller can revoke access to a GeoDID by invoking the `deactivate(<G
 
 ## Reference Implementations
 
-Once we develop it, we will store code at [https://github.com/astraldao/astral-protocol-core](https://github.com/astraldao/astral-protocol-core) as a reference implementation of this DID method.\
+Once we develop it, we will store code at [https://github.com/AstralProtocol](https://github.com/AstralProtocol) as a reference implementation of this DID method.\
 
 
 

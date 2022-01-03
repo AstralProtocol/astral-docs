@@ -89,6 +89,6 @@ More on [GeoJSON](https://macwright.com/2015/03/23/geojson-second-bite.html) and
 
 More information about [GeoTIFFs](https://www.gislounge.com/what-is-a-geotiff/), plus a [sample](https://cbers.stac.cloud/item/wMAdB8x2xmsNbdUHrc28srEdZpy/A6ExZs3csirxV7jSsrFicBf2TKBJB9xubxeAy/h88cG3tZLsmVu6iM7Mjx5Pg5agdpJnF346adC9/5XYvhxvrpCphAXhLWgKjphETpsBRhKdZV1d8LAooTo3K/93J54CWKozr1bRfaJ86XbTqHyztjFiPbckxGhpGCb9tDFFyG9NFRRyXGchpjoZzHNL2HJ2PYVENgW9?si=0&t=preview#6/-34.060280/-64.037544).
 
-Learn more background theory on spatial data [here](https://observablehq.com/@johnx25bd/1-introducing-spatial).
+Learn more background theory on spatial data [here](https://observablehq.com/collection/@johnx25bd/a-guide-to-spatial-data).
 {% endhint %}
 

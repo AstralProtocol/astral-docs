@@ -6,7 +6,7 @@ description: Smart contracts for raster and vector spatial data assets
 
 Leveraging [Spatial.sol](spatial.sol/), we are early in the process of developing a standard contract for **verifiable spatial data registries**. There is a wide breadth of opportunities in this design space.
 
-Specifically, we are building on work we've done to let self sovereign users register geographic zones on smart contract platforms, starting with EVM-compatible chains. This capability is required for a number of use cases - a spatial governance system like [Hyperaware](https://hyperaware.io), sustainability-linked bonds and other spatial DeFi applications, parametric insurance policies like those [IBISA](https://ibisa.network) provides, location-based Web3 games including AR and [Pebble Go](https://twitter.com/go\_pebble?lang=en), and so on.
+Specifically, we are building on work we've done to let self sovereign users register geographic zones on smart contract platforms, starting with EVM-compatible chains. This capability is required for a number of use cases - a spatial governance system like [Hyperaware](https://hyperaware.io), sustainability-linked bonds and other spatial DeFi applications, parametric insurance policies like those [IBISA](https://ibisa.network) provides, location-based Web3 games including AR and [Pebble Go](https://twitter.com/pebble\_go), and so on.
 
 We believe that a smart contract standard would promote the composability of these spatial data registries. We see value in building on existing work and designing these spatial data registries to interoperate with existing protocols. To this end, our plan is to represent these spatial data assets - vector or raster data objects - as tokens.&#x20;
 
@@ -42,5 +42,4 @@ Ultimately we aim to publish an Ethereum Improvement Proposal describing this ne
 * Can zones overlap / intersect?&#x20;
 * How can we build tools to gracefully recover from lost or abandoned parcels?
 
-{% embed url="https://twitter.com/alexgausman/status/1404163591146668032?s=20" %}
 

@@ -13,7 +13,7 @@ We're taking a modular approach, architecting our tools so each component useful
 {% hint style="info" %}
 We've been exploring the intersection of spatial data and consensus technologies for the past few years. We're dedicated to building in the open and sharing our findings — so we are leaving everything we've worked on available to read.
 
-**We are embarking on the next phase of development of Astral, which is independent from past work. The docs here are NOT accurate to what we're building now. Instead, the show the meandering path we've taken to this point.**
+**We are embarking on the next phase of development of Astral, which is independent from past work. The docs here are NOT accurate to what we're building now. Instead, they show the meandering path we've taken to this point.**
 {% endhint %}
 
 **For an up-to-date summary of what we are working on now, read our litepaper:**
