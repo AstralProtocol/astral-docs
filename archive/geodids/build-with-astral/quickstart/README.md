@@ -6,15 +6,15 @@ description: Documentation about the Astral Protocol Core Package.
 
 ## Description
 
-The **@astralprotocol/core** package is a Typescript NPM package that is responsible for any CRUD operations performed on the DID Documents. This includes the creation of DID Documents, loading the DID Documents, as well as updating them. The package also has utilities that enable the creation of the collision resistant GeoDID IDs, a custom ****[**did-resolver**](https://github.com/decentralized-identity/did-resolver) that enables DID Resolution, as well as pinning features for storing the Documents on IPFS or FFS. This package is meant to be used in conjunction with the [**@astralprotocol/contracts**](../docs/) ****and [**@astralprotocol/subgraph**](../astralprotocol-subgraph.md) ****packages. However, the package can also be used independently if the user does not want to rely on the Ethereum network.
+The **@astralprotocol/core** package is a Typescript NPM package that is responsible for any CRUD operations performed on the DID Documents. This includes the creation of DID Documents, loading the DID Documents, as well as updating them. The package also has utilities that enable the creation of the collision resistant GeoDID IDs, a custom **** [**did-resolver**](https://github.com/decentralized-identity/did-resolver) that enables DID Resolution, as well as pinning features for storing the Documents on IPFS or FFS. This package is meant to be used in conjunction with the [**@astralprotocol/contracts**](../docs/) **** and [**@astralprotocol/subgraph**](../astralprotocol-subgraph.md) **** packages. However, the package can also be used independently if the user does not want to rely on the Ethereum network.
 
 {% hint style="info" %}
-This package is not responsible for persistence of the documents \(mappings, etc.\), the created DID Documents are persisted through IPFS/FFS, and the metadata regarding the DID Documents are persisted through the subgraph and smart contracts.
+This package is not responsible for persistence of the documents (mappings, etc.), the created DID Documents are persisted through IPFS/FFS, and the metadata regarding the DID Documents are persisted through the subgraph and smart contracts.
 {% endhint %}
 
 ## **To add Astral Protocol Core to your application**
 
-```text
+```
 yarn add -D @astralprotocol/core
 OR
 npm install -D @astralprotocol/core
@@ -30,7 +30,7 @@ const AstralClient = require('@astralprotocol/core');
 
 In order to store the GeoDIDs created by the core package, you will need to start up a local Powergate client or connect to an existing hosted client. Below will be a brief overview on how to setup a local Powergate client on your system. Further information is available at: [https://github.com/textileio/powergate](https://github.com/textileio/powergate).
 
-In order to setup the Powergate Client locally on your system you must have [Docker](https://docs.docker.com/engine/install/), [Docker-Compose](https://docs.docker.com/compose/install/), and [Go 1.16](https://golang.org/dl/) installed. 
+In order to setup the Powergate Client locally on your system you must have [Docker](https://docs.docker.com/engine/install/), [Docker-Compose](https://docs.docker.com/compose/install/), and [Go 1.16](https://golang.org/dl/) installed.&#x20;
 
 * In your terminal, create a new directory and clone the Powergate repo into it:
 
@@ -42,12 +42,12 @@ In order to setup the Powergate Client locally on your system you must have [Doc
 
 `make localnet`
 
-`For more`information regarding Powergate's Localnet mode, please refer to their documentation: [https://github.com/textileio/powergate\#localnet-mode](https://github.com/textileio/powergate#localnet-mode)
+`For more`information regarding Powergate's Localnet mode, please refer to their documentation: [https://github.com/textileio/powergate#localnet-mode](https://github.com/textileio/powergate#localnet-mode)
 
 **Check an implementation of core package:**
 
 {% code title="testScript.js" %}
-```text
+```
 import AstralClient from '@astralprotocol/core';
 
 async function run(){
@@ -111,9 +111,7 @@ async function run(){
 
 #### Run the script
 
-```text
+```
 node testScript.js
 ```
-
-
 

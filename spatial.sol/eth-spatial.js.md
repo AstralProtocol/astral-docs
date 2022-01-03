@@ -1,4 +1,0 @@
-# eth-spatial.js
-
-TODO
-

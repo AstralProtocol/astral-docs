@@ -1,4 +1,0 @@
-# eth-spatial.py
-
-TODO
-

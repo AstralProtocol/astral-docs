@@ -9,7 +9,7 @@ description: Follow these simple steps to register GeoDIDs quickly
 In order to store the GeoDIDs created by the core package, you will need to start up a local Powergate client or connect to an existing hosted client. Below will be a brief overview on how to setup a local Powergate client on your system. Further information is available at: [https://github.com/textileio/powergate](https://github.com/textileio/powergate).
 
 {% hint style="info" %}
-In order to setup the Powergate Client locally on your system you must have [Docker](https://docs.docker.com/engine/install/), [Docker-Compose](https://docs.docker.com/compose/install/), and [Go 1.16](https://golang.org/dl/) installed. 
+In order to setup the Powergate Client locally on your system you must have [Docker](https://docs.docker.com/engine/install/), [Docker-Compose](https://docs.docker.com/compose/install/), and [Go 1.16](https://golang.org/dl/) installed.&#x20;
 {% endhint %}
 
 In your terminal, create a new directory and clone the Powergate repo into it:
@@ -22,7 +22,7 @@ After you clone the repo, enter the following commands:
 
 `make localnet`
 
-More information regarding Powergate's Localnet mode, please refer to their documentation: [https://github.com/textileio/powergate\#localnet-mode](https://github.com/textileio/powergate#localnet-mode)
+More information regarding Powergate's Localnet mode, please refer to their documentation: [https://github.com/textileio/powergate#localnet-mode](https://github.com/textileio/powergate#localnet-mode)
 
 ## Install the packages
 
@@ -173,8 +173,7 @@ yarn deployGeoDIDs
 ```
 
 {% hint style="info" %}
-**The steps executed in this page have been reproduced in a public github that you can consult:**  
-  
-[**https://github.com/AstralProtocol/wrapperTest**](https://github.com/AstralProtocol/wrapperTest)\*\*\*\*
+**The steps executed in this page have been reproduced in a public github that you can consult:**\
+****\
+****[**https://github.com/AstralProtocol/wrapperTest**](https://github.com/AstralProtocol/wrapperTest)****
 {% endhint %}
-

@@ -1,68 +1,52 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Astral Protocol](astral-protocol/README.md)
-  * [Motivation](astral-protocol/whitepaper-description.md)
-  * [Value](astral-protocol/value-of-the-protocol.md)
-  * [The Stack](astral-protocol/the-overall-capability/README.md)
-    * [Data](astral-protocol/the-overall-capability/geodids-1.md)
-    * [Oracles](astral-protocol/the-overall-capability/oracles.md)
-    * [Spatial Contracts](astral-protocol/the-overall-capability/spatial-contracts.md)
-  * [A Web3-Native Geospatial Vision](astral-protocol/astral.md)
+* [Astral Litepaper](astral-litepaper.md)
+
+## ARCHIVE
+
+* [Introduction](archive/introduction.md)
+* [Spatial Data Primer](archive/what-is-a-spatial-data-asset.md)
+* [Background](archive/astral-protocol/README.md)
+  * [Motivation](archive/astral-protocol/whitepaper-description.md)
+  * [Value](archive/astral-protocol/value-of-the-protocol.md)
+  * [The Stack](archive/astral-protocol/the-overall-capability/README.md)
+    * [Data](archive/astral-protocol/the-overall-capability/geodids-1.md)
+    * [Oracles](archive/astral-protocol/the-overall-capability/oracles.md)
+    * [Spatial Contracts](archive/astral-protocol/the-overall-capability/spatial-contracts.md)
+* [A Web3-Native Geospatial Vision](archive/astral/README.md)
+  * [GeoTIFFs and IPLD](archive/astral/ipld-and-geotiffs/README.md)
+    * [Encoding the GeoTIFF](archive/astral/ipld-and-geotiffs/encoding-the-geotiff.md)
+    * [Decoding the GeoTIFF](archive/astral/ipld-and-geotiffs/decoding-the-geotiff.md)
+* [Spatial.sol](archive/spatial.sol/README.md)
+  * [Design Considerations](archive/spatial.sol/design-considerations.md)
+* [Verifiable Spatial Data Registries](archive/verifiable-spatial-data-registries.md)
+* [GeoDIDs](archive/geodids/README.md)
+  * [DID Primer](archive/geodids/did-primer.md)
+  * [GeoDID Core](archive/geodids/geodid-core-specification/README.md)
+    * [GeoDID Core Specification](archive/geodids/geodid-core-specification/geodid-core-specification.md)
+    * [GeoDID Collection Example](archive/geodids/geodid-core-specification/geodid-collection-specification.md)
+    * [GeoDID Item Example](archive/geodids/geodid-core-specification/geodid-item-specification.md)
+  * [GeoDID Extensions](archive/geodids/geodid-extensions-1/README.md)
+    * [GeoJSON](archive/geodids/geodid-extensions-1/geojson.md)
+    * [GeoTIFF](archive/geodids/geodid-extensions-1/geotiff/README.md)
+      * [IPLD-encoded GeoTIFF](archive/geodids/geodid-extensions-1/geotiff/ipld-encoded-geotiff.md)
+      * [Cloud-optimized GeoTIFF](archive/geodids/geodid-extensions-1/geotiff/cloud-optimized-geotiff.md)
+    * [STAC](archive/geodids/geodid-extensions-1/stac/README.md)
+      * [STAC Items](archive/geodids/geodid-extensions-1/stac/stac-items.md)
+      * [STAC Catalogs](archive/geodids/geodid-extensions-1/stac/stac-catalogs.md)
+  * [Build with GeoDIDs](archive/geodids/build-with-astral/README.md)
+    * [Getting Started](archive/geodids/build-with-astral/quickstart-1.md)
+    * [@astralprotocol/core](archive/geodids/build-with-astral/quickstart/README.md)
+      * [API](archive/geodids/build-with-astral/quickstart/geodid-quick-start.md)
+      * [Types](archive/geodids/build-with-astral/quickstart/types.md)
+    * [@astralprotocol/contracts](archive/geodids/build-with-astral/docs/README.md)
+      * [API](archive/geodids/build-with-astral/docs/api.md)
+    * [@astralprotocol/subgraph](archive/geodids/build-with-astral/astralprotocol-subgraph.md)
+  * [GeoDIDs v0.2](archive/geodids/geodids-v0.2.md)
+* [Spatial Oracles](archive/oracles.md)
+* [Universal Location Proofs](archive/universal-location-proofs.md)
+
+***
+
 * [Progress](progress.md)
-
-## Workplan
-
-* [Introduction](workplan/introduction.md)
-* [Spatial.sol](workplan/spatial.sol.md)
-* [Verifiable Spatial Data Registries](workplan/verifiable-spatial-data-registries.md)
-* [GeoDIDs](workplan/geodids.md)
-* [Spatial Oracles](workplan/oracles.md)
-* [Universal Location Proofs](workplan/universal-location-proofs.md)
-
-## Develop
-
-* [Build Astral](develop/build-with-astral.md)
-* [Getting Started](develop/quickstart-1.md)
-* [@astralprotocol/core](develop/quickstart/README.md)
-  * [API](develop/quickstart/geodid-quick-start.md)
-  * [Types](develop/quickstart/types.md)
-* [@astralprotocol/contracts](develop/docs/README.md)
-  * [API](develop/docs/api.md)
-* [@astralprotocol/subgraph](develop/astralprotocol-subgraph.md)
-* [GeoTIFFs and IPLD](develop/ipld-and-geotiffs/README.md)
-  * [Encoding the GeoTIFF](develop/ipld-and-geotiffs/encoding-the-geotiff.md)
-  * [Decoding the GeoTIFF](develop/ipld-and-geotiffs/decoding-the-geotiff.md)
-
-## Spatial.sol
-
-* [Quickstart](spatial.sol/quickstart.md)
-* [API Reference](spatial.sol/api-reference.md)
-* [Design Considerations](spatial.sol/design-considerations.md)
-* [Examples](spatial.sol/examples.md)
-* [eth-spatial.js](spatial.sol/eth-spatial.js.md)
-* [eth-spatial.py](spatial.sol/eth-spatial.py.md)
-
-## GeoDIDs
-
-* [Spatial Data Primer](geodids/what-is-a-spatial-data-asset.md)
-* [DID Primer](geodids/did-primer.md)
-* [GeoDID Core](geodids/geodid-core-specification/README.md)
-  * [GeoDID Core Specification](geodids/geodid-core-specification/geodid-core-specification.md)
-  * [GeoDID Collection Example](geodids/geodid-core-specification/geodid-collection-specification.md)
-  * [GeoDID Item Example](geodids/geodid-core-specification/geodid-item-specification.md)
-* [GeoDID Extensions](geodids/geodid-extensions-1/README.md)
-  * [GeoJSON](geodids/geodid-extensions-1/geojson.md)
-  * [GeoTIFF](geodids/geodid-extensions-1/geotiff/README.md)
-    * [IPLD-encoded GeoTIFF](geodids/geodid-extensions-1/geotiff/ipld-encoded-geotiff.md)
-    * [Cloud-optimized GeoTIFF](geodids/geodid-extensions-1/geotiff/cloud-optimized-geotiff.md)
-  * [STAC](geodids/geodid-extensions-1/stac/README.md)
-    * [STAC Items](geodids/geodid-extensions-1/stac/stac-items.md)
-    * [STAC Catalogs](geodids/geodid-extensions-1/stac/stac-catalogs.md)
-
----
-
-* [Roadmap](roadmap.md)
-* [GeoDIDs v0.2](geodids-v0.2.md)
-* [Resources](resources.md)
-
