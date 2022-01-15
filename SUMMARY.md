@@ -15,6 +15,7 @@
     * [Oracles](archive/astral-protocol/the-overall-capability/oracles.md)
     * [Spatial Contracts](archive/astral-protocol/the-overall-capability/spatial-contracts.md)
 * [A Web3-Native Geospatial Vision](archive/astral/README.md)
+  * [A rationale for GeoDIDs](archive/astral/a-rationale-for-geodids.md)
   * [GeoTIFFs and IPLD](archive/astral/ipld-and-geotiffs/README.md)
     * [Encoding the GeoTIFF](archive/astral/ipld-and-geotiffs/encoding-the-geotiff.md)
     * [Decoding the GeoTIFF](archive/astral/ipld-and-geotiffs/decoding-the-geotiff.md)
