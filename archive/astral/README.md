@@ -6,13 +6,13 @@ Satellite images are big. One 8-band Landsat 7 scene we examined (`LE71660522010
 
 {% tabs %}
 {% tab title="Cloud-Optimized GeoTIFFs (COGs)" %}
-To solve this problem, the satellite imagery community has designed the [Cloud-Optimized GeoTIFF](https://www.cogeo.org) (COG) standard. COGs are GeoTIFFs, but they are organized so that they can be hosted in the cloud and users can send HTTP range requests to only access the parts of the file they need, when they need them. By tiling the image, users only need to request the geographic extent relevant to their workflow; overviews allow users to load lower resolution versions of the image, which is often all that is required in many applications. COGs are a major step forward to unlock the potential of earth observation data, and a key component of the cloud-native geospatial vision the community is moving toward.&#x20;
+To solve this problem, the satellite imagery community has designed the [Cloud-Optimized GeoTIFF](https://www.cogeo.org/) (COG) standard. COGs are GeoTIFFs, but they are organized so that they can be hosted in the cloud and users can send HTTP range requests to only access the parts of the file they need, when they need them. By tiling the image, users only need to request the geographic extent relevant to their workflow; overviews allow users to load lower resolution versions of the image, which is often all that is required in many applications. COGs are a major step forward to unlock the potential of earth observation data, and a key component of the cloud-native geospatial vision the community is moving toward.&#x20;
 
 (Next read about STAC catalogues ->)
 {% endtab %}
 
 {% tab title="SpatioTemporal Asset Catalogs (STAC)" %}
-The Cloud-Native Geospatial community has designed another specification, intended to complement COGs: [SpatioTemporal Asset Catalogs](https://stacspec.org). "The SpatioTemporal Asset Catalog (STAC) specification provides a common language to describe a range of geospatial information, so it can more easily be indexed and discovered." ([https://stacspec.org/](https://stacspec.org)).
+The Cloud-Native Geospatial community has designed another specification, intended to complement COGs: [SpatioTemporal Asset Catalogs](https://stacspec.org/). "The SpatioTemporal Asset Catalog (STAC) specification provides a common language to describe a range of geospatial information, so it can more easily be indexed and discovered." ([https://stacspec.org/](https://stacspec.org/)).
 
 The problem was that various satellite imagery providers were using their own custom-designed systems for indexing and cataloging satellite images and other spatio-temporal assets. Each of these indexing systems were roughly the same, but were not interoperable. STAC standardizes the way these collections of data are organized and referenced.
 

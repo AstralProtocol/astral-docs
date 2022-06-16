@@ -2,6 +2,7 @@
 
 * [Welcome](README.md)
 * [Astral Litepaper](astral-litepaper.md)
+* [Geospatial Data Registry PoC](geospatial-data-registry-poc.md)
 
 ## ARCHIVE
 
