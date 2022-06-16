@@ -3,6 +3,7 @@
 * [Welcome](README.md)
 * [Astral Litepaper](astral-litepaper.md)
 * [Geospatial Data Registry PoC](geospatial-data-registry-poc.md)
+* [Progress](progress.md)
 
 ## ARCHIVE
 
@@ -48,7 +49,3 @@
   * [GeoDIDs v0.2](archive/geodids/geodids-v0.2.md)
 * [Spatial Oracles](archive/oracles.md)
 * [Universal Location Proofs](archive/universal-location-proofs.md)
-
-***
-
-* [Progress](progress.md)
