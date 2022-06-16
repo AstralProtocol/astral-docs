@@ -10,7 +10,7 @@ With [geodata-anchor](https://github.com/dclimate/geodata-anchor) (Junø/CosmWas
 * Validation compute currently occurs via a REST endpoint based on userid/role and is not yet tied to a validator’s specific replica instance.
 * Integration tests for both geodata-anchor and geodata-rest run against a local instance of [Junø](https://docs.junonetwork.io/juno/readme) via Docker; we have not yet deployed to a testnet.
 
-![Verifiable Spatial Registry PoC](.gitbook/assets/PoC.png)
+![Verifiable Spatial Data Registry PoC](.gitbook/assets/PoC.png)
 
 ### Possibilities:
 
