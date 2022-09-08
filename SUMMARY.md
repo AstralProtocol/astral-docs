@@ -2,6 +2,13 @@
 
 * [Welcome](README.md)
 * [Astral Litepaper](astral-litepaper.md)
+* [Celo Verifiable Spatial Data Registry MVP](celo-verifiable-spatial-data-registry-mvp/README.md)
+  * [Technical Design](celo-verifiable-spatial-data-registry-mvp/technical-design/README.md)
+    * [Ingestion](celo-verifiable-spatial-data-registry-mvp/technical-design/ingestion.md)
+    * [Anchoring](celo-verifiable-spatial-data-registry-mvp/technical-design/anchoring.md)
+    * [Validation](celo-verifiable-spatial-data-registry-mvp/technical-design/validation.md)
+    * [List on Ocean](celo-verifiable-spatial-data-registry-mvp/technical-design/list-on-ocean.md)
+  * [Summary](celo-verifiable-spatial-data-registry-mvp/summary.md)
 * [Geospatial Data Registry PoC](geospatial-data-registry-poc.md)
 * [Progress](progress.md)
 
