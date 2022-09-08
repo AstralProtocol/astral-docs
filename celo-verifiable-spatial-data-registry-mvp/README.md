@@ -1,7 +1,5 @@
 # Celo Verifiable Spatial Data Registry MVP
 
-
-
 ## Introduction
 
 The purpose of this MVP was to demonstrate a workflow from an MRV data provider, supplying raw measurement data based on both stationary and mobile sources, to a backend with the following features:
@@ -17,3 +15,5 @@ The purpose of this MVP was to demonstrate a workflow from an MRV data provider,
 * account-based authentication and authorization, separating the above functionality by role
 * a means to create a public HTTP endpoint to list the results of queries on the Ocean marketplace
 * a test layer covering the above functionality
+
+This MVP builds on the [Geospatial Data Registry PoC](../geospatial-data-registry-poc.md) built on CosmWasm.
