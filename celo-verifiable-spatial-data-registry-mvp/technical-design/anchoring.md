@@ -1,6 +1,6 @@
 # Anchoring
 
-<figure><img src="../../.gitbook/assets/anchor.png" alt=""><figcaption><p>Anchor process outlined</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/anchor.png" alt=""><figcaption><p>Anchor process highlighted</p></figcaption></figure>
 
 
 
