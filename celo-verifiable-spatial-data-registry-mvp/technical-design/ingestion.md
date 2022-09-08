@@ -1,6 +1,6 @@
 # Ingestion
 
-<figure><img src="../../.gitbook/assets/ingest.png" alt=""><figcaption><p>Ingestion layer outlined</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ingestion.png" alt=""><figcaption><p>Ingestion layer outlined</p></figcaption></figure>
 
 
 
