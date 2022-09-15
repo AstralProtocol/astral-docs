@@ -45,5 +45,5 @@ struct EcologicalIndex {
 }
 ```
 
-The `Ecological Index` is an on-chain variable representing the value of the asset defined by the GeoNFT. A common design pattern is to fractionalize an NFT into fungible ERC-20 tokens for usage within community reserves and currencies. The `Ecological Index` could be a parameter to determine the number of ERC-20 tokens that are created.
+The `Ecological Index` is an on-chain variable representing the value of the asset defined by the GeoNFT. A common design pattern is to fractionalize an NFT into fungible ERC-20 tokens for usage within community reserves and currencies. The `Ecological Index` could be a parameter to determine the amount of ERC-20 tokens that are created. As the `Ecological Index` changes, the supply of tokens may be responsive to this value.
 
