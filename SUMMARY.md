@@ -2,7 +2,8 @@
 
 * [Welcome](README.md)
 * [Astral Litepaper](astral-litepaper.md)
-* [GeoNFT](geonft.md)
+* [GeoNFT](geonft/README.md)
+  * [Ecological State](geonft/ecological-state.md)
 * [Celo Verifiable Spatial Data Registry MVP](celo-verifiable-spatial-data-registry-mvp/README.md)
   * [Technical Design](celo-verifiable-spatial-data-registry-mvp/technical-design/README.md)
     * [Ingestion](celo-verifiable-spatial-data-registry-mvp/technical-design/ingestion.md)

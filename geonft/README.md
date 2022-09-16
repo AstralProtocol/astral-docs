@@ -6,7 +6,7 @@ description: Geospatial Non-fungible Token
 
 A GeoNFT represents geospatial assets by extending the non-fungible token (ERC-721) contract with location information.
 
-Geospatial data is defined as a GeoJSON string defining a `FeatureCollection` of one or more `Features` (`Polygon` or `Point`):
+Geospatial data is defined as a [GeoJSON](https://www.rfc-editor.org/rfc/rfc7946) string defining a `FeatureCollection` of one or more `Features` (`Polygon` or `Point`):
 
 ```typescript
 export const GEOJSON2: FeatureCollection<Polygon> = {
