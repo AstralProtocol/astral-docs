@@ -12,7 +12,7 @@ Below is a description of how we calculated the ellipsoidal area of `Polygon` an
 
 The area calculation of a surface can be approached in different ways. A very simple and straightforward one is to display the coordinates on a flat plane. Doing so, the area calculation is similar to any irregular geometric figure. It’s very common to use the planar representation of maps (called “projected” coordinate systems) because they are easier to view and work with. One example is Google Maps, which uses the [Pseudo-Mercator](https://en.wikipedia.org/wiki/Web\_Mercator\_projection) (or Web Mercator) projection. It was initially conceived as a variant of the Mercator projection (the one used on typical physical maps), and has become the standard for mapping applications.
 
-However, in our implementation, we calculate the ellipsoidal area based on the spherical representation of the Earth instead of on a flat plane. Calculating the area over a sphere is more difficult, but the result is more accurate.
+In our implementation, however, we calculate the ellipsoidal area based on the spherical representation of the Earth instead of on a flat plane. Calculating the area over a sphere is more difficult, but the result is more accurate.
 
 ### Challenges
 
@@ -27,7 +27,7 @@ Handling decimals is a well-known topic in the Solidity community: you need to m
 
 #### Trigonometric Functions
 
-However, using trigonometric functions in Solidity is not an easy thing. Typically, trigonometric functions (sine, cosine, tangent) work with radians, and the result lives bounded in a very specific domain. For example, the range of sine and cosine values is \[-1, 1]. Given that, it is impossible to operate without decimals, and there is no built-in sine function in Solidity.
+Using trigonometric functions in Solidity is not straightforward. Typically, trigonometric functions (sine, cosine, tangent) work with radians, and the result lives bounded in a very specific domain. For example, the range of sine and cosine values is \[-1, 1]. Given that, it is impossible to operate without decimals, and there is no built-in sine function in Solidity.
 
 <figure><img src="../.gitbook/assets/Sine.svg" alt=""><figcaption><p><em>Graph of the sine function.</em> By <a href="http://commons.wikimedia.org/wiki/User:Geek3">Geek3</a> - Own work, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=4013293">Link</a></p></figcaption></figure>
 
