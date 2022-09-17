@@ -25,7 +25,7 @@ description: Weekly updates from the Astral team
 
 #### 20 May 2022
 
-* Completed Astral [Geospatial Data Registry PoC](geospatial-data-registry-poc.md) (dClimate)
+* Completed Astral [Geospatial Data Registry PoC](spatial-data-registry/cosmwasm-anchored-spatial-data-registry.md) (dClimate)
 
 #### 18 May 2022
 

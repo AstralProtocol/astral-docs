@@ -1,4 +1,4 @@
-# Geospatial Data Registry PoC
+# CosmWasm Anchored Spatial Data Registry
 
 With [geodata-anchor](https://github.com/dclimate/geodata-anchor) (Junø/CosmWasm contract) and [geodata-rest](https://github.com/dclimate/geodata-rest) (HTTP REST Server) we address the feasibility of providing performant and scalable access to geospatial data in geojson format, leveraging MongoDB’s [geospatial data and queries](https://docs.mongodb.com/manual/geospatial-queries/#geospatial-queries). When a data item is ingested into the database, a hash of the relevant data is generated and stored on a CosmWasm contract which implements a [cw-storage-plus](https://crates.io/crates/cw-storage-plus) indexed datastore. Validation results are stored on both the database and the contract. Validators would each run a [MongoDB Atlas](https://www.mongodb.com/basics/mongodb-atlas-tutorial) replica instance, with an independent compute instance performing the same hashing algorithm.
 
@@ -10,7 +10,7 @@ With [geodata-anchor](https://github.com/dclimate/geodata-anchor) (Junø/CosmWas
 * Validation compute currently occurs via a REST endpoint based on userid/role and is not yet tied to a validator’s specific replica instance.
 * Integration tests for both geodata-anchor and geodata-rest run against a local instance of [Junø](https://docs.junonetwork.io/juno/readme) via Docker; we have not yet deployed to a testnet.
 
-![Verifiable Spatial Data Registry PoC](.gitbook/assets/PoC.png)
+![Verifiable Spatial Data Registry PoC](../.gitbook/assets/PoC.png)
 
 ### Possibilities:
 

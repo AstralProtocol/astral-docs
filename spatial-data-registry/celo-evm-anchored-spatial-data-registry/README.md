@@ -1,4 +1,4 @@
-# Celo Verifiable Spatial Data Registry MVP
+# Celo/EVM Anchored Spatial Data Registry
 
 ## Introduction
 
@@ -16,4 +16,4 @@ The purpose of this MVP was to demonstrate a workflow from an MRV data provider,
 * a means to create a public HTTP endpoint to list the results of queries on the Ocean marketplace
 * a test layer covering the above functionality
 
-This MVP builds on the [Geospatial Data Registry PoC](../geospatial-data-registry-poc.md) built on CosmWasm.
+This MVP builds on the [CosmWasm Anchored Geospatial Data Registry](../cosmwasm-anchored-spatial-data-registry.md).

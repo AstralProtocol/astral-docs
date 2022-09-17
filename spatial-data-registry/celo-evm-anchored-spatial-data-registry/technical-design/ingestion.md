@@ -1,6 +1,6 @@
 # Ingestion
 
-<figure><img src="../../.gitbook/assets/ingestion.png" alt=""><figcaption><p>Ingestion layer highlighted</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ingestion.png" alt=""><figcaption><p>Ingestion layer highlighted</p></figcaption></figure>
 
 
 
@@ -8,7 +8,7 @@ A client MRV Provider authenticates and receives a token containing the 'provide
 
 
 
-<figure><img src="../../.gitbook/assets/schema (1).png" alt=""><figcaption><p>Details of ingested data point</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/schema (1).png" alt=""><figcaption><p>Details of ingested data point</p></figcaption></figure>
 
 
 

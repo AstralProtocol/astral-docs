@@ -1,6 +1,6 @@
-# List on Ocean
+# List on Ocean Marketplace
 
-<figure><img src="../../.gitbook/assets/list (1).png" alt=""><figcaption><p>Listing query data on Ocean marketplace highlighted</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/list (1).png" alt=""><figcaption><p>Listing query data on Ocean marketplace highlighted</p></figcaption></figure>
 
 
 

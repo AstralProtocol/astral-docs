@@ -1,6 +1,6 @@
 # Validation
 
-<figure><img src="../../.gitbook/assets/validation (1).png" alt=""><figcaption><p>Validation process highlighted</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/validation (1).png" alt=""><figcaption><p>Validation process highlighted</p></figcaption></figure>
 
 The validation process, running under the 'validator' role, retrieves a requested number of unvalidated anchors, and for each one, retrieves the associated data points, recalculates the summary hash.&#x20;
 

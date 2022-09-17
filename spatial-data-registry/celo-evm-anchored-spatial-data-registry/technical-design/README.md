@@ -1,6 +1,6 @@
 # Technical Design
 
-<figure><img src="../../.gitbook/assets/main.png" alt=""><figcaption><p>Celo Verifiable Spatial Data Registry MVP - technical design</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/main.png" alt=""><figcaption><p>Celo Verifiable Spatial Data Registry MVP - technical design</p></figcaption></figure>
 
 
 
