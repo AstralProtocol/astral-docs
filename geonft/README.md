@@ -8,15 +8,12 @@ A GeoNFT represents geospatial assets by extending the non-fungible token (ERC-7
 
 Geospatial data is defined as a [GeoJSON](https://www.rfc-editor.org/rfc/rfc7946) string defining a `FeatureCollection` of one or more `Features` (`Polygon` or `Point`):
 
-```typescript
-export const GEOJSON2: FeatureCollection<Polygon> = {
+```json
+{
   type: "FeatureCollection",
   features: [
     {
       type: "Feature",
-      properties: {
-        area_m2: 417.54,
-      },
       geometry: {
         type: "Polygon",
         coordinates: [
@@ -33,7 +30,7 @@ export const GEOJSON2: FeatureCollection<Polygon> = {
       },
     },
   ],
-};ty
+}
 ```
 
 Additionally, GeoNFTs contain an `Ecological Index` as a measure of ecological state:
