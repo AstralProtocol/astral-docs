@@ -20,7 +20,7 @@ Our current implementation of the spatial data registry only indexes a single la
 
 The registry stores data at level 8, which corresponds to a square of 20x20 meters. Any point inside that square will be resolved to the same geohash.
 
-### GeoTree
+## GeoTree
 
 Here is a simple tree data structure to index the two-dimensional data using geohashes. The top nodes of the tree correspond to geohash level 1. Child nodes represent level 2. In the GeoTree, nodes only contain one character, as the child nodes inherit their parent’s value. By traversing from the root node to the end node, we can access each geohash character and build the complete geohash.
 
@@ -35,3 +35,34 @@ The tree allows us to query data assets at any resolution by picking any node an
 The GeoTree data structure would look like this:
 
 <figure><img src="../.gitbook/assets/intermediatenodes (1).png" alt=""><figcaption><p>intermediate node creation in a geotree</p></figcaption></figure>
+
+Note that we’ve created all the intermediate nodes of the tree, including `d` and `z`, even though they don’t contain data. This way, we can query any subtree at any level and get all of its children.
+
+### Optimization
+
+The above data structure allows us to query the GeoTree on a time complexity `O(n)`. However, this was improved by caching all the enclosed assets at each intermediate node. On every insertion, the asset will be stored on the end node and every parent of that node. The following illustration shows this:
+
+<figure><img src="../.gitbook/assets/cacheddata.png" alt=""><figcaption><p>caching asset information at every node</p></figcaption></figure>
+
+Even though this variant may have some drawbacks, it pays off in terms of query efficiency. Time complexity would be as follows:
+
+* **Insertion**: Process would be executed on every level (`k`). In a system with a depth of 8, `k` would be 8, so time complexity is `O(1)`.
+* **Query**: Given that every node contains all its children assets, the querying process would only need one step, being time complexity `O(1)`.
+
+Regarding the storage, the size will increase from `n` to `(k+1)*n`. The depth of the tree (`k`) would usually be a low number, so the memory requirement would be `O(n)`, same as the non-cached version.
+
+### Solidity Implementation
+
+Nested data structures such as trees are hard to implement in Solidity due to its limited functionality. However, the cached implementation of the GeoTree was achieved with a simple hash map. The key is the full geohash mapped to an array of asset values. Our previous example would be represented as follows:&#x20;
+
+```
+{
+    "gbsuv"    =>  {1, 2, 3}
+    "gbsuv7"   =>  {1, 2, 3}
+    "gbsuv7d"  =>  {1}
+    "gbsuv7dg" =>  {1}
+    "gbsuv7z"  =>  {2, 3}
+    "gbsuv7zw" =>  {2}
+    "gbsuv7zy" =>  {3}
+}
+```
