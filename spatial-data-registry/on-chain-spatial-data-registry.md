@@ -15,3 +15,19 @@ The short alphanumeric format of a geohash lends itself well to a Solidity imple
 Our current implementation of the spatial data registry only indexes a single latitude/longitude point. For polygons, we calculate the centroid off-chain and use that value to register a location.
 
 The registry stores data at level 8, which corresponds to a square of 20x20 meters. Any point inside that square will be resolved to the same geohash.
+
+### GeoTree
+
+Here is a simple tree data structure to index the two-dimensional data using geohashes. The top nodes of the tree correspond to geohash level 1. Child nodes represent level 2. In the GeoTree, nodes only contain one character, as the child nodes inherit their parent’s value. By traversing from the root node to the end node, we can access each geohash character and build the complete geohash.
+
+<figure><img src="../.gitbook/assets/geotree (3).png" alt=""><figcaption><p>level 1 node with two child nodes at level 2, full geohash value in parentheses</p></figcaption></figure>
+
+The tree allows us to query data assets at any resolution by picking any node and traversing through all of its children to find all enclosed assets. For example, the level 5 geohash `gbsuv` represents a rectangle of approximately 5x5 km. To find all assets inside this area we would select all child nodes with geohashes beginning with `gbsuv`. Let’s assume the end nodes of our system are the following:
+
+* `gbsuv7dq`
+* `gbsuv7zw`
+* `gbsuv7zy`
+
+The GeoTree data structure would look like this:
+
+<figure><img src="../.gitbook/assets/intermediatenodes.png" alt=""><figcaption><p>intermediate node creation in a geotree</p></figcaption></figure>
