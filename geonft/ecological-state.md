@@ -39,7 +39,7 @@ bytes constant SIN_TABLE = "\x00\x00\x00\x00\x00\xc9\x0f\x88\x01"; //truncated f
 
 But, how is that table built? Excluding decimal values, a circle can be split in 360 parts, each one representing an angle of 1 degree. We could calculate the real sine value for each degree and store it on the hash table. But this doesn’t give us a lot of precision, especially in a geospatial coordinate system context (68.1º and 68.9º will relate to the same value).
 
-<figure><img src="../.gitbook/assets/30_degree_reference_angles.svg" alt=""><figcaption><p><em>30 degree reference angles.</em> By <a href="https://commons.wikimedia.org/wiki/User:Adrignola">Adrignola</a> - Own work, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=12885430">Link</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/30_degree_reference_angles.png" alt=""><figcaption><p><em>30 degree reference angles.</em> By <a href="https://commons.wikimedia.org/wiki/User:Adrignola">Adrignola</a> - Own work, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=12885430">Link</a></p></figcaption></figure>
 
 A way of improving this is to split the circle into more units, thus increasing precision. Splitting the circle into 16,384 units allows storing the angle parameters as unsigned 16-bit data types (as used in the trigint library). In our case, we needed even more precision in order to accurately calculate the area. We used a 256-bit data type to store the values of up to 1,073,741,824 angle units in a circle. With this method we were able to achieve an error deviation of < 0.1% on very small areas.
 
