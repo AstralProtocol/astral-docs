@@ -2,8 +2,6 @@
 
 <figure><img src="../../../.gitbook/assets/list (1).png" alt=""><figcaption><p>Listing query data on Ocean marketplace highlighted</p></figcaption></figure>
 
-
-
 The sample queries take a polygon, date range, and provider id and return the average temperature, and the raw data points, respectively. The query endpoints are public so no access token is required to run:
 
 ```bash
@@ -33,9 +31,12 @@ curl -s \
 
 The data query is more appropriate for the Ocean marketplace than the previous average temperature query, which is more an example of a composable intermediate endpoint for an inference toolchain.
 
-Data from the second query was listed on the Ocean Rinkeby test network: [Sample query test listing](https://market.oceanprotocol.com/asset/did:op:6408cb610c9efec38055ccbcaa4dfd6a2e4ff03e95bbf202e4b612a88ac025a5)&#x20;
+Data from the second query was listed on the Ocean Görli test network:
 
-Note that you need Rinkeby ETH and Rinkeby OCEAN tokens to purchase.
+* [Sample query test listing](https://market.oceanprotocol.com/asset/did:op:cc3b1f3c38110b303ece32fa7d56ef11921d61a4d48e8793c3b5e1959773f08c)
+* [Data NFT ](https://testnets.opensea.io/assets/goerli/0x3414f8e9f479a3a8305d0808ce84a46b5d351fef/1)on Opensea Görli Testnet&#x20;
+
+Note that you need Görli ETH and Görli OCEAN tokens to purchase. [Faucet for Görli OCEAN](https://faucet.goerli.oceanprotocol.com/)
 
 ### Relevant code:
 
